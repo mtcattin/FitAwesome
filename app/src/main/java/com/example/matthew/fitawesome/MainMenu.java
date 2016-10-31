@@ -11,8 +11,6 @@ import android.view.View;
 
 import java.util.List;
 
-import static android.R.id.list;
-
 public class MainMenu extends AppCompatActivity {
 
     @Override
@@ -76,4 +74,46 @@ class Weekday {
         return exerciseList;
     }
 
-};
+}
+
+class Exercise{
+
+    private String dayName;
+    private List <Sets> exerciseSet;
+    public String getExerciseName(){
+        return dayName;
+    }
+
+    public void setExerciseName(String name){
+        dayName = name;
+    }
+
+    public List<Sets>  getExerciseSet(){
+        return exerciseSet;
+    }
+
+    public void setExerciseSet(List <Sets> newList){
+        exerciseSet = newList;
+    }
+}
+
+class Sets{
+    private int reps;
+    private float weight;
+
+    public void setReps(int number){
+        reps = number;
+    }
+
+    public int getReps(){
+        return reps;
+    }
+
+    public void setWeight(float pounds){
+        weight = pounds;
+    }
+
+    public float getWeight(){
+        return weight;
+    }
+}
