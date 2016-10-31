@@ -5,9 +5,13 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+
+import java.util.List;
+
+import static android.R.id.list;
 
 public class MainMenu extends AppCompatActivity {
 
@@ -49,6 +53,27 @@ public class MainMenu extends AppCompatActivity {
             return true;
         }
 
+
         return super.onOptionsItemSelected(item);
     }
 }
+
+
+class Weekday {
+    private String weekDay;
+    private List<Exercise> exerciseList;
+
+    public String getWeekDay(){
+        return weekDay;
+    }
+    public void setWeekDay(String day){
+        weekDay = day;
+    }
+    public void setExerciseList(List<Exercise> exerciseList1){
+        exerciseList = exerciseList1;
+    }
+    public List getExerciseList() {
+        return exerciseList;
+    }
+
+};
