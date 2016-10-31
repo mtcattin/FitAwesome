@@ -66,6 +66,7 @@ class Weekday {
     public String getWeekDay(){
         return weekDay;
     }
+
     public void setWeekDay(String day){
         weekDay = day;
     }
@@ -75,5 +76,4 @@ class Weekday {
     public List getExerciseList() {
         return exerciseList;
     }
-
 };
