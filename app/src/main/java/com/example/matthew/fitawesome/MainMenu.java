@@ -56,6 +56,23 @@ public class MainMenu extends AppCompatActivity {
     }
 }
 
+class Phase {
+    private int numWeeksInProgram;
+    private String weekDayList[7];
+    private int phaseNumber;
+
+    public Phase() {
+        //check to see what phase you are in
+    }
+    public int getNumWeeksInProgram() {
+        return numWeeksInProgram;
+    }
+    public void setNumWeeksInProgram() {
+        numWeeksInProgram = 12;
+    }
+
+};
+
 
 class Weekday {
     private String weekDay;
