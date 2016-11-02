@@ -51,7 +51,6 @@ public class MainMenu extends AppCompatActivity {
             return true;
         }
 
-
         return super.onOptionsItemSelected(item);
     }
 }
@@ -72,7 +71,6 @@ class Phase {
     }
 
 };
-
 
 class Weekday {
     private String weekDay;
