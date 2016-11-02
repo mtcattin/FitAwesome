@@ -58,11 +58,14 @@ public class MainMenu extends AppCompatActivity {
 
 class Phase {
     private int numWeeksInProgram;
-    private String weekDayList[7];
+    private String[] weekDayList;
     private int phaseNumber;
 
     public Phase() {
         //check to see what phase you are in
+
+        setNumWeeksInProgram();
+        weekDayList = new String[] {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
     }
     public int getNumWeeksInProgram() {
         return numWeeksInProgram;
@@ -78,6 +81,10 @@ class Weekday {
     private String weekDay;
     private List<Exercise> exerciseList;
 
+    public Weekday(String day, List <Exercise> newList){
+        setWeekDay(day);
+        setExerciseList(newList);
+    }
     public String getWeekDay(){
         return weekDay;
     }
@@ -97,6 +104,12 @@ class Exercise{
 
     private String dayName;
     private List <Sets> exerciseSet;
+
+    Exercise(String nameofDay, List <Sets> exerciseList1){
+
+        setExerciseName(nameofDay);
+        setExerciselist(exerciseList1);
+    }
     public String getExerciseName(){
         return dayName;
     }
@@ -105,11 +118,11 @@ class Exercise{
         dayName = name;
     }
 
-    public List<Sets>  getExerciseSet(){
+    public List<Sets>  getExerciseList(){
         return exerciseSet;
     }
 
-    public void setExerciseSet(List <Sets> newList){
+    public void setExerciselist(List <Sets> newList){
         exerciseSet = newList;
     }
 }
@@ -117,6 +130,11 @@ class Exercise{
 class Sets{
     private int reps;
     private float weight;
+
+    public Sets(int repetitions, float mass){
+        setReps(repetitions);
+        setWeight(mass);
+    }
 
     public void setReps(int number){
         reps = number;
