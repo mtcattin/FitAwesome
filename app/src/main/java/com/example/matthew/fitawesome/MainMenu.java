@@ -12,9 +12,13 @@ import android.view.View;
 import java.util.List;
 
 public class MainMenu extends AppCompatActivity {
-
+    DBHelper myDB;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        // calls the constructor class
+        myDB = new DBHelper(this);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);

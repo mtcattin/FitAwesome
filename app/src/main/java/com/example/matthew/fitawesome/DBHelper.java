@@ -21,7 +21,7 @@ public class DBHelper extends SQLiteOpenHelper {
     // Constructor for DBHelper
     public DBHelper(Context context) {
         super(context, DATABASE_NAME, null, 1);
-
+        SQLiteDatabase db = this.getWritableDatabase();
     }
 
     @Override
@@ -31,6 +31,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
-        db.execSQL("DROP TABLE IF EXISTS" + TABLE_NAME);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
+        onCreate(db);
     }
 }
