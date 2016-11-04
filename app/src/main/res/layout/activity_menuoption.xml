@@ -14,27 +14,27 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:id="@+id/button"
-        tools:text="Workout Log "
+        android:id="@+id/progress_log_btn"
+        tools:text="Progress Log"
+        android:layout_below="@+id/workoutLog_btn"
+        android:layout_alignEnd="@+id/workoutLog_btn"
+        android:layout_marginTop="22dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/exercise_prg_btn"
+        tools:text="Exercise Program"
+        android:layout_marginTop="56dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:id="@+id/button2"
-        tools:text="Exercise Program"
-        android:layout_below="@+id/button"
+        android:layout_marginTop="22dp"
+        android:id="@+id/workoutLog_btn"
+        tools:text="Workout Log "
+        android:layout_below="@+id/exercise_prg_btn"
         android:layout_centerHorizontal="true"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
-        android:id="@+id/button3"
-        tools:text="Progress Log"
-        android:layout_below="@+id/button2"
-        android:layout_alignEnd="@+id/button"/>
 </RelativeLayout>
