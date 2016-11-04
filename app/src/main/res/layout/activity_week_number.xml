@@ -10,4 +10,59 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.matthew.fitawesome.WeekNumber">
 
+    <Button
+        android:text="Thursday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/week_day_thurs_btn" />
+
+    <Button
+        android:text="Wednesday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/week_day_thurs_btn"
+        android:layout_alignStart="@+id/week_day_thurs_btn"
+        android:id="@+id/week_day_wedn_btn" />
+
+    <Button
+        android:text="Monday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/week_day_tues_btn"
+        android:layout_alignEnd="@+id/week_day_tues_btn"
+        android:id="@+id/week_day_mon_btn" />
+
+    <Button
+        android:text="Tuesday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/week_day_tues_btn"
+        android:layout_above="@+id/week_day_wedn_btn"
+        android:layout_alignStart="@+id/week_day_wedn_btn" />
+
+    <Button
+        android:text="Friday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/week_day_thurs_btn"
+        android:layout_alignStart="@+id/week_day_thurs_btn"
+        android:id="@+id/week_day_frid_btn" />
+
+    <Button
+        android:text="Saturday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/week_day_satur_btn"
+        android:layout_below="@+id/week_day_frid_btn"
+        android:layout_alignEnd="@+id/week_day_thurs_btn" />
+
+    <Button
+        android:text="Sunday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/week_day_sund_btn"
+        android:layout_below="@+id/week_day_satur_btn"
+        android:layout_alignStart="@+id/week_day_satur_btn" />
 </RelativeLayout>
