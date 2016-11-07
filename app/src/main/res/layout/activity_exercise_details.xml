@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_exercise_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.matthew.fitawesome.exerciseDetails">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView"
+        tools:text="Details "
+        android:textSize="30sp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_marginTop="33dp"
+        android:id="@+id/editText2"
+        tools:text="# of Sets "
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/editText3"
+        android:layout_alignParentStart="true"
+        android:id="@+id/editText4"
+        tools:text="Weight per set(lbs)"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editText3"
+        tools:text="Reps/Set "
+        android:layout_below="@+id/editText2"
+        android:layout_alignParentStart="true"/>
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_alignTop="@+id/editText2"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/input_sets"
+        android:hint="num sets"
+        android:layout_width="100dp"
+        android:layout_above="@+id/input_reps"/>
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_below="@+id/editText2"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/input_reps"
+        android:hint="num reps"/>
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/input_lb"
+        android:hint="lb"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/input_reps"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="75dp"
+        android:id="@+id/addEx_btn"
+        tools:text="Add Exercise"
+        android:layout_below="@+id/editText4"
+        android:layout_alignParentStart="true"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:id="@+id/view_wout_btn"
+        tools:text="View Workout"
+        android:layout_alignBaseline="@+id/addEx_btn"
+        android:layout_alignBottom="@+id/addEx_btn"
+        android:layout_alignEnd="@+id/textView"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:id="@+id/save_ex_btn"
+        tools:text="Save Exercise"
+        android:layout_height="75dp"
+        android:layout_alignBaseline="@+id/addEx_btn"
+        android:layout_alignBottom="@+id/addEx_btn"
+        android:layout_alignParentEnd="true"/>
+</RelativeLayout>

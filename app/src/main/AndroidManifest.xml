@@ -19,9 +19,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".ExerciseLog" />
-        <activity android:name=".WeekNumber" />
-        <activity android:name=".Day" />
-        <activity android:name=".CreateAnAccount"></activity>
+        <activity android:name=".CreateAnAccount" />
+        <activity android:name=".exerciseDetails"></activity>
+        <activity android:name=".workoutView"></activity>
+        <activity android:name=".programOptions"></activity>
+        <activity android:name=".enterWorkout"></activity>
+        <activity android:name=".WeekDay"></activity>
     </application>
 
 </manifest>
