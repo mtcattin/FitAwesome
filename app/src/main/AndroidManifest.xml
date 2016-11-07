@@ -20,7 +20,6 @@
         </activity>
         <activity android:name=".ExerciseLog"/>
         <activity android:name=".WeekNumber"/>
-        <activity android:name=".Day"/>
         <activity android:name=".CreateAnAccount"/>
         <activity android:name=".exerciseDetails">
         </activity>

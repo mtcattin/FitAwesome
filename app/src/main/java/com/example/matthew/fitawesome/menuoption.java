@@ -15,7 +15,7 @@ public class menuoption extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menuoption);
 
-        // link the variables to the buttons in the XML 
+        // link the variables to the buttons in the XML
         exProgram = (Button) findViewById(R.id.exercise_prg_btn);
         woLog = (Button) findViewById(R.id.workoutLog_btn);
         progLog = (Button) findViewById(R.id.progress_log_btn);
