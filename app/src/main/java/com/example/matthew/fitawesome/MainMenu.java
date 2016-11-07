@@ -16,7 +16,7 @@ public class MainMenu extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        // calls the constructor class
+        // calls the constructor class (creates an instance and the database)
         myDB = new DBHelper(this);
 
         super.onCreate(savedInstanceState);

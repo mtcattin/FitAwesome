@@ -10,6 +10,11 @@
     tools:context="com.example.matthew.fitawesome.CreateAnAccount"
     android:layout_width="wrap_content">
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></LinearLayout>
+
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -19,7 +24,7 @@
         android:id="@+id/editText"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="57dp" />
+        android:layout_alignParentEnd="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -27,12 +32,13 @@
         android:inputType="textPersonName"
         android:ems="10"
         android:layout_below="@+id/editText"
-        android:layout_alignParentStart="false"
         android:layout_marginTop="14dp"
         android:id="@+id/First_Name"
         android:hint="First Name"
         android:singleLine="true"
-        android:clickable="false" />
+        android:clickable="false"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -45,7 +51,8 @@
         android:layout_below="@+id/Last_Name"
         android:layout_alignParentStart="true"
         android:singleLine="true"
-        android:clickable="false" />
+        android:clickable="false"
+        android:layout_alignParentEnd="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -58,7 +65,8 @@
         android:layout_alignParentStart="true"
         android:hint="Last Name"
         android:singleLine="true"
-        android:clickable="false" />
+        android:clickable="false"
+        android:layout_alignParentEnd="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -69,16 +77,8 @@
         android:layout_alignEnd="@+id/email"
         android:layout_marginTop="21dp"
         android:id="@+id/password"
-        android:hint="Password" />
-
-    <Button
-        android:text="Create Account"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button4"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/editText"
-        android:layout_marginBottom="36dp" />
+        android:hint="Password"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -89,6 +89,17 @@
         android:layout_alignEnd="@+id/password"
         android:layout_marginTop="25dp"
         android:id="@+id/Verify_password"
-        android:hint="Verify Password" />
+        android:hint="Verify Password"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Create Account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_Create_Acc"
+        android:layout_marginBottom="36dp"
+        android:gravity="center_vertical|center_horizontal|center"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
