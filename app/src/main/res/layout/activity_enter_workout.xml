@@ -11,4 +11,41 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.matthew.fitawesome.enterWorkout">
 
+    <SearchView
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_height="50dp"
+        android:layout_width="250dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/createNewEx_btn"
+        android:layout_marginTop="52dp"
+        android:layout_below="@+id/searchView"
+        android:layout_centerHorizontal="true"
+        tools:text="Create New Exercise"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="59dp"
+        android:id="@+id/viewWout_btn"
+        tools:text="View Workout"/>
+
+    <ScrollView
+        android:layout_width="300dp"
+        android:visibility="visible"
+        android:layout_height="250dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+    </ScrollView>
+
 </RelativeLayout>

@@ -27,14 +27,6 @@
         android:id="@+id/week_day_wedn_btn" />
 
     <Button
-        android:text="Monday"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/week_day_tues_btn"
-        android:layout_alignEnd="@+id/week_day_tues_btn"
-        android:id="@+id/week_day_mon_btn" />
-
-    <Button
         android:text="Tuesday"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -65,4 +57,12 @@
         android:id="@+id/week_day_sund_btn"
         android:layout_below="@+id/week_day_satur_btn"
         android:layout_alignStart="@+id/week_day_satur_btn" />
+
+    <Button
+        android:text="Monday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/weekday_mon_btn"
+        android:layout_above="@+id/week_day_tues_btn"
+        android:layout_alignStart="@+id/week_day_tues_btn"/>
 </RelativeLayout>

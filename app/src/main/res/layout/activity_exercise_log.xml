@@ -32,14 +32,14 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/button1"
         android:layout_alignEnd="@+id/button6"
-        android:id="@+id/button2" />
+        android:id="@+id/viewWout_btn" />
 
     <Button
         android:text="Week 3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/button2"
-        android:layout_toEndOf="@+id/button2"
+        android:layout_alignTop="@+id/viewWout_btn"
+        android:layout_toEndOf="@+id/viewWout_btn"
         android:id="@+id/button3" />
 
     <Button
