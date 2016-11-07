@@ -27,6 +27,8 @@
         </activity>
         <activity android:name=".programOptions">
         </activity>
+        <activity android:name=".enterWorkout">
+        </activity>
     </application>
 
 </manifest>
