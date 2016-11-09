@@ -14,53 +14,10 @@
     <Button
         android:layout_width="95dp"
         android:layout_height="40dp"
-        android:id="@+id/button22"
+        android:id="@+id/LF_P2_btn"
         tools:text="Phase 2"
-        android:layout_below="@+id/button21"
-        android:layout_alignStart="@+id/button21"/>
-
-    <Button
-        android:layout_width="95dp"
-        android:layout_height="40dp"
-        android:id="@+id/button18"
-        tools:text="Phase 1"
-        android:layout_below="@+id/textView4"
-        android:layout_alignStart="@+id/textView4"/>
-
-    <Button
-        android:layout_width="95dp"
-        android:layout_height="40dp"
-        android:id="@+id/SC2Sz_P3_btn"
-        tools:text="Phase 3"
-        android:layout_below="@+id/SC2Sz_P2_btn"
-        android:layout_alignStart="@+id/SC2Sz_P2_btn"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView2"
-        tools:text="Short cut to shred"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="15dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:id="@+id/textView4"
-        tools:text="Short cut to size"
-        android:layout_below="@+id/SC2S_P3_btn"
-        android:layout_alignParentStart="true"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/SC2Sz_P3_btn"
-        android:layout_alignStart="@+id/SC2S_P3_btn"
-        android:layout_marginTop="12dp"
-        android:id="@+id/textView5"
-        tools:text="Live Fit "/>
+        android:layout_below="@+id/LF_P1_btn"
+        android:layout_alignStart="@+id/LF_P1_btn"/>
 
     <Button
         android:id="@+id/SC2S_P3_btn"
@@ -69,15 +26,6 @@
         android:layout_width="95dp"
         android:layout_below="@+id/SC2S_P2_btn"
         android:layout_alignStart="@+id/SC2S_P2_btn"/>
-
-    <Button
-        android:id="@+id/SC2S_P1_btn"
-        tools:text="Phase 1"
-        android:layout_height="40dp"
-        android:layout_width="95dp"
-        android:layout_marginTop="12dp"
-        android:layout_below="@+id/textView2"
-        android:layout_alignEnd="@+id/textView2"/>
 
     <Button
         android:id="@+id/SC2S_P2_btn"
@@ -90,25 +38,72 @@
     <Button
         android:layout_width="95dp"
         android:layout_height="40dp"
-        android:id="@+id/button21"
+        android:id="@+id/LF_P3_btn"
+        tools:text="Phase 3"
+        android:layout_below="@+id/LF_P2_btn"
+        android:layout_alignStart="@+id/LF_P2_btn"/>
+
+    <Button
+        android:id="@+id/SC2S_btn"
+        android:layout_alignParentTop="true"
+        android:layout_height="40dp"
+        tools:text="Shortcut to Shred"
+        android:layout_width="500dp"/>
+
+    <Button
+        android:layout_width="600dp"
+        android:layout_height="40dp"
+        android:id="@+id/livfit_btn"
+        tools:text="Live Fit"
+        android:layout_below="@+id/SC2Sz_P3_btn"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:layout_width="600dp"
+        android:layout_height="40dp"
+        android:id="@+id/SC2SZ_btn"
+        tools:text="Shortcut to Size"
+        android:layout_below="@+id/SC2S_P3_btn"
+        android:layout_toEndOf="@+id/textView5"/>
+
+    <Button
+        android:layout_width="95dp"
+        android:layout_height="40dp"
+        android:id="@+id/LF_P1_btn"
         tools:text="Phase 1"
-        android:layout_below="@+id/textView5"
-        android:layout_alignStart="@+id/textView5"/>
+        android:layout_below="@+id/livfit_btn"
+        android:layout_alignStart="@+id/SC2Sz_P3_btn"/>
+
+    <Button
+        android:layout_width="95dp"
+        android:layout_height="40dp"
+        android:id="@+id/SC2Sz_P3_btn"
+        tools:text="Phase 3"
+        android:layout_below="@+id/SC2Sz_P2_btn"
+        android:layout_alignStart="@+id/SC2Sz_P2_btn"/>
 
     <Button
         android:layout_width="95dp"
         android:layout_height="40dp"
         android:id="@+id/SC2Sz_P2_btn"
         tools:text="Phase 2"
-        android:layout_below="@+id/button18"
-        android:layout_alignEnd="@+id/textView4"/>
+        android:layout_below="@+id/SC2Sz_P1_btn"
+        android:layout_alignStart="@+id/SC2Sz_P1_btn"/>
+
+    <Button
+        android:id="@+id/SC2S_P1_btn"
+        tools:text="Phase 1"
+        android:layout_height="40dp"
+        android:layout_width="95dp"
+        android:layout_below="@+id/SC2S_btn"
+        android:layout_centerHorizontal="true"/>
 
     <Button
         android:layout_width="95dp"
         android:layout_height="40dp"
-        android:id="@+id/LF_P3_btn"
-        tools:text="Phase 3"
-        android:layout_below="@+id/button22"
-        android:layout_alignStart="@+id/button22"/>
+        android:id="@+id/SC2Sz_P1_btn"
+        tools:text="Phase 1"
+        android:layout_below="@+id/SC2SZ_btn"
+        android:layout_alignStart="@+id/SC2S_P3_btn"/>
 
 </RelativeLayout>
