@@ -29,14 +29,6 @@
         tools:text="Exercise                                    Sets      Reps   lb     "
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 
-    <Button
-        android:id="@+id/completeWout_btn"
-        tools:text="complete Workout"
-        android:layout_width="100dp"
-        android:layout_height="75dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"/>
-
     <ExpandableListView
         android:layout_height="300dp"
         android:id="@+id/list_woutContents"
@@ -46,12 +38,20 @@
         />
 
     <Button
+        android:id="@+id/completeWout_btn"
+        tools:text="complete Workout"
         android:layout_width="100dp"
         android:layout_height="75dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="75dp"
         android:layout_marginEnd="25dp"
         android:id="@+id/clrWout_btn"
-        tools:text="Clear Workout"/>
+        tools:text="Clear Workout"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"/>
 
 </RelativeLayout>
