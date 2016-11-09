@@ -17,7 +17,7 @@ public class enterWorkout extends AppCompatActivity {
         setContentView(R.layout.activity_enter_workout);
 
         createNewEx = (Button) findViewById(R.id.createNewEx_btn);
-        viewWorkout = (Button) findViewById(R.id.viewWout_btn);
+        viewWorkout = (Button) findViewById(R.id.btn_week2);
         exerciseDatabase = (SearchView) findViewById(R.id.srchExData);
     }
 }

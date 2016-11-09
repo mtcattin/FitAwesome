@@ -33,7 +33,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="59dp"
-        android:id="@+id/viewWout_btn"
+        android:id="@+id/btn_week2"
         tools:text="View Workout"/>
 
     <ScrollView
