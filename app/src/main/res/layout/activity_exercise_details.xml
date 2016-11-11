@@ -85,11 +85,20 @@
     <Button
         android:layout_width="100dp"
         android:layout_height="75dp"
-        android:layout_marginTop="75dp"
         android:id="@+id/addEx_btn"
         tools:text="Add Exercise"
-        android:layout_below="@+id/editText4"
+        android:layout_marginBottom="68dp"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:id="@+id/save_ex_btn"
+        tools:text="Save Exercise"
+        android:layout_height="75dp"
+        android:layout_alignBaseline="@+id/addEx_btn"
+        android:layout_alignBottom="@+id/addEx_btn"
+        android:layout_alignParentEnd="true"/>
 
     <Button
         android:layout_width="100dp"
@@ -98,14 +107,5 @@
         tools:text="View Workout"
         android:layout_alignBaseline="@+id/addEx_btn"
         android:layout_alignBottom="@+id/addEx_btn"
-        android:layout_alignEnd="@+id/textView"/>
-
-    <Button
-        android:layout_width="100dp"
-        android:id="@+id/save_ex_btn"
-        tools:text="Save Exercise"
-        android:layout_height="75dp"
-        android:layout_alignBaseline="@+id/view_wout_btn"
-        android:layout_alignBottom="@+id/view_wout_btn"
-        android:layout_alignParentEnd="true"/>
+        android:layout_alignStart="@+id/textView"/>
 </RelativeLayout>
