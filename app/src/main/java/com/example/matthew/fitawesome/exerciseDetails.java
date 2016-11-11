@@ -15,6 +15,9 @@ public class exerciseDetails extends AppCompatActivity implements OnClickListene
     private Button addExercise;
     private Button viewWorkout;
     private Button saveExercise;
+    // create the DB
+    DBHelper ExerciseDB;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,20 +38,23 @@ public class exerciseDetails extends AppCompatActivity implements OnClickListene
         viewWorkout.setOnClickListener(this);
         saveExercise.setOnClickListener(this);
 
-
+        //create instance of the DB
+        ExerciseDB = new DBHelper(this);
     }
 
     // these functions will send data to the database
+
     @Override
     public void onClick(View view) {
         if(view == addExercise) {
-            // do stuff
+            // add another new exercise to the day workout --> back to previous activity
         }
         if(view == viewWorkout) {
-            //do stuff
+            //takes to another activity that will display the workout
         }
         if(view == saveExercise) {
-            //do stuff
+            //update & insert the database
+            // display if it saved
         }
     }
 }
