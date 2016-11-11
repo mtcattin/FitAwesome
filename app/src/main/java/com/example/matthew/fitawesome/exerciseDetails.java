@@ -2,10 +2,12 @@ package com.example.matthew.fitawesome;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class exerciseDetails extends AppCompatActivity {
+public class exerciseDetails extends AppCompatActivity implements OnClickListener {
     // variables
     private EditText sets;
     private EditText reps;
@@ -28,7 +30,25 @@ public class exerciseDetails extends AppCompatActivity {
         viewWorkout = (Button) findViewById(R.id.view_wout_btn);
         saveExercise = (Button) findViewById(R.id.save_ex_btn);
 
+        //set up for buttons
+        addExercise.setOnClickListener(this);
+        viewWorkout.setOnClickListener(this);
+        saveExercise.setOnClickListener(this);
 
 
+    }
+
+    // these functions will send data to the database
+    @Override
+    public void onClick(View view) {
+        if(view == addExercise) {
+            // do stuff
+        }
+        if(view == viewWorkout) {
+            //do stuff
+        }
+        if(view == saveExercise) {
+            //do stuff
+        }
     }
 }

@@ -11,100 +11,105 @@
     tools:context="com.example.matthew.fitawesome.ExerciseLog">
 
     <Button
-        android:text="Week 5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/button5" />
+        android:layout_alignTop="@+id/btn_week2"
+        android:layout_toEndOf="@+id/btn_week2"
+        android:id="@+id/btn_week3"
+        tools:text="Week 3"/>
 
     <Button
-        android:text="Week 6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_week1"
-        android:layout_toEndOf="@+id/button5"
-        android:id="@+id/button6" />
+        android:layout_alignTop="@+id/btn_week9"
+        android:layout_toEndOf="@+id/btn_week9"
+        android:id="@+id/btn_week10"
+        tools:text="Week 10"/>
 
     <Button
-        android:text="Week 2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/btn_week1"
-        android:layout_alignEnd="@+id/button6"
-        android:id="@+id/viewWout_btn" />
+        android:layout_alignTop="@+id/btn_week10"
+        android:layout_toEndOf="@+id/btn_week10"
+        android:id="@+id/btn_week11"
+        tools:text="Week 11"/>
 
     <Button
-        android:text="Week 3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/viewWout_btn"
-        android:layout_toEndOf="@+id/viewWout_btn"
-        android:id="@+id/button3" />
+        android:layout_alignTop="@+id/btn_week11"
+        android:layout_toEndOf="@+id/btn_week11"
+        android:id="@+id/btn_week12"
+        tools:text="Week 12"/>
 
     <Button
-        android:text="Week 4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/button3"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/btn_Create_Acc" />
-
-    <Button
-        android:text="Week 7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/button6"
-        android:layout_toStartOf="@+id/btn_Create_Acc"
-        android:id="@+id/button7" />
-
-    <Button
-        android:text="Week 8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/button7"
-        android:layout_toEndOf="@+id/button7"
-        android:id="@+id/button8" />
-
-    <Button
-        android:text="Week 9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button5"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="18dp"
-        android:id="@+id/button9" />
-
-    <Button
-        android:text="Week 10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/button9"
-        android:layout_toEndOf="@+id/button9"
-        android:id="@+id/button10" />
-
-    <Button
-        android:text="Week 11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/button10"
-        android:layout_toEndOf="@+id/button10"
-        android:id="@+id/button11" />
-
-    <Button
-        android:text="Week 12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/button11"
-        android:layout_toEndOf="@+id/button11"
-        android:id="@+id/button12" />
-
-    <Button
-        android:text="Week 1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="17dp"
+        android:layout_marginBottom="19dp"
         android:id="@+id/btn_week1"
-        android:layout_above="@+id/button5"
-        android:layout_alignParentStart="true" />
+        android:layout_above="@+id/btn_week5"
+        android:layout_alignParentStart="true"
+        tools:text="Week 1"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_week2"
+        tools:text="Week 2"
+        android:layout_alignBaseline="@+id/btn_week1"
+        android:layout_alignBottom="@+id/btn_week1"
+        android:layout_toEndOf="@+id/btn_week1"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_week5"
+        tools:text="Week 5"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:id="@+id/btn_week9"
+        tools:text="Week 9"
+        android:layout_below="@+id/btn_week6"
+        android:layout_alignParentStart="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_week4"
+        tools:text="Week 4"
+        android:layout_alignBaseline="@+id/btn_week3"
+        android:layout_alignBottom="@+id/btn_week3"
+        android:layout_alignParentEnd="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_week6"
+        tools:text="Week 6"
+        android:layout_alignBaseline="@+id/btn_week7"
+        android:layout_alignBottom="@+id/btn_week7"
+        android:layout_toEndOf="@+id/btn_week5"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_week7"
+        tools:text="Week 7"
+        android:layout_alignBaseline="@+id/btn_week5"
+        android:layout_alignBottom="@+id/btn_week5"
+        android:layout_toEndOf="@+id/btn_week6"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_week8"
+        tools:text="Week 8"
+        android:layout_alignBaseline="@+id/btn_week6"
+        android:layout_alignBottom="@+id/btn_week6"
+        android:layout_alignParentEnd="true"/>
 </RelativeLayout>
