@@ -11,58 +11,68 @@
     tools:context="com.example.matthew.fitawesome.WeekDay">
 
     <Button
-        android:text="Wednesday"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/wed_btn" />
-
-    <Button
-        android:text="Tuesday"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/wed_btn"
-        android:layout_alignStart="@+id/wed_btn"
-        android:id="@+id/tues_btn" />
-
-    <Button
-        android:text="Monday"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/tues_btn"
-        android:layout_alignStart="@+id/tues_btn"
-        android:id="@+id/mon_btn" />
-
-    <Button
-        android:text="Friday"
-        android:layout_width="wrap_content"
+        android:layout_width="110dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/thurs_btn"
         android:layout_alignStart="@+id/thurs_btn"
-        android:id="@+id/fri_btn" />
+        android:id="@+id/fri_btn"
+        tools:text="Friday"/>
 
     <Button
-        android:text="Thursday"
-        android:layout_width="wrap_content"
+        android:layout_width="110dp"
         android:layout_height="wrap_content"
         android:id="@+id/thurs_btn"
         android:layout_below="@+id/wed_btn"
-        android:layout_alignStart="@+id/wed_btn" />
+        android:layout_alignStart="@+id/wed_btn"
+        tools:text="Thursday"/>
 
-    <Button
-        android:text="Sunday"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/sun_btn"
-        android:layout_above="@+id/mon_btn"
-        android:layout_alignStart="@+id/mon_btn" />
+        android:id="@+id/textView3"
+        tools:text="Week Day"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="91dp"/>
 
     <Button
-        android:text="Saturday"
-        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tues_btn"
+        android:layout_above="@+id/wed_btn"
+        android:layout_alignStart="@+id/wed_btn"
+        android:layout_width="110dp"
+        tools:text="Tuesday"/>
+
+    <Button
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/mon_btn"
+        android:layout_above="@+id/tues_btn"
+        android:layout_alignStart="@+id/tues_btn"
+        tools:text="Monday"/>
+
+    <Button
+        android:layout_height="wrap_content"
+        android:id="@+id/wed_btn"
+        android:layout_width="110dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        tools:text="Wednesday"/>
+
+    <Button
+        android:layout_width="110dp"
         android:layout_height="wrap_content"
         android:id="@+id/sat_btn"
         android:layout_below="@+id/fri_btn"
-        android:layout_alignStart="@+id/fri_btn" />
+        android:layout_alignStart="@+id/fri_btn"
+        tools:text="Saturday"/>
+
+    <Button
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/sun_btn"
+        tools:text="Sunday"
+        android:layout_above="@+id/mon_btn"
+        android:layout_alignStart="@+id/mon_btn"/>
 </RelativeLayout>
