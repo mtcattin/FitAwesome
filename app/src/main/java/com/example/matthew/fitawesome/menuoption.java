@@ -1,5 +1,6 @@
 package com.example.matthew.fitawesome;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -32,9 +33,13 @@ public class menuoption extends AppCompatActivity implements OnClickListener {
     public void onClick(View view) {
         if(view == exProgram) {
             // link to programOptions activity
+            startActivity(new Intent(menuoption.this, programOptions.class));
+
         }
         if(view == woLog) {
             // send to exerciseLog activity
+            startActivity(new Intent(menuoption.this, ExerciseLog.class));
+
         }
         // NOT SETTING UP THE PROGLOG YET...
     }

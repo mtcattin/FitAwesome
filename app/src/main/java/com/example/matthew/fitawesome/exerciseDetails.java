@@ -1,5 +1,6 @@
 package com.example.matthew.fitawesome;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -48,13 +49,15 @@ public class exerciseDetails extends AppCompatActivity implements OnClickListene
     public void onClick(View view) {
         if(view == addExercise) {
             // add another new exercise to the day workout --> back to previous activity
+            startActivity(new Intent(exerciseDetails.this, enterWorkout.class));
         }
         if(view == viewWorkout) {
             //takes to another activity that will display the workout
+            startActivity(new Intent(exerciseDetails.this, workoutView.class));
         }
         if(view == saveExercise) {
             //update & insert the database
-            // display if it saved
+            // display  pop up if it saved
         }
     }
 }
