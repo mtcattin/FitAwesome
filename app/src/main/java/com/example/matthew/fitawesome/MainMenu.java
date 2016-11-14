@@ -1,13 +1,10 @@
 package com.example.matthew.fitawesome;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
 import java.util.List;
 
@@ -74,19 +71,19 @@ class Phase {
 
 };
 
-class Weekday {
-    private String weekDay;
+class day {
+    private String wkDay;
     private List<Exercise> exerciseList;
 
-    public Weekday(String day, List <Exercise> newList){
-        setWeekDay(day);
+    public day(String day, List <Exercise> newList){
+        setDay(day);
         setExerciseList(newList);
     }
-    public String getWeekDay(){
-        return weekDay;
+    public String getDay(){
+        return wkDay;
     }
-    public void setWeekDay(String day){
-        weekDay = day;
+    public void setDay(String day){
+        wkDay = day;
     }
     public void setExerciseList(List<Exercise> exerciseList1){
         exerciseList = exerciseList1;

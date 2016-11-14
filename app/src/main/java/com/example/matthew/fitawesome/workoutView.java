@@ -31,7 +31,7 @@ public class workoutView extends AppCompatActivity implements OnClickListener {
     @Override
     public void onClick(View view) {
         if(view == completeWorkout) {
-            // save workout to database open 
+            // save workout to database open
         }
         if(view == clearWorkout) {
             // delete currect days workout from the database
