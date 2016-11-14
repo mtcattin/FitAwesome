@@ -1,5 +1,6 @@
 package com.example.matthew.fitawesome;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
@@ -31,9 +32,11 @@ public class enterWorkout extends AppCompatActivity implements OnClickListener {
     public void onClick(View view) {
         if(view == createNewEx) {
             // take to the exerciseDetails activity
+            startActivity(new Intent(enterWorkout.this, exerciseDetails.class));
         }
         if(view == viewWorkout) {
-            // taje to the workout view Activity
+            // take to the workout view Activity
+            startActivity(new Intent(enterWorkout.this, workoutView.class));
         }
     }
 }

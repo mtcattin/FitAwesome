@@ -1,5 +1,6 @@
 package com.example.matthew.fitawesome;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -40,16 +41,17 @@ public class WeekDay extends AppCompatActivity implements OnClickListener {
         saturday.setOnClickListener(this);
     }
 
-    @Override
-    public void onClick(View view) {
-        if((view == sunday) || (view == monday) || (view == tuesday) || (view == wednesday)
-                || (view == thursday) || (view == friday) || (view == saturday)) {
-            // open up to enter workout page
-            // specify where the data will be stored??
+        @Override
+        public void onClick (View view){
+            if ((view == sunday) || (view == monday) || (view == tuesday) || (view == wednesday)
+                    || (view == thursday) || (view == friday) || (view == saturday)) {
+                // open up to enter workout page
+                    startActivity(new Intent(WeekDay.this, enterWorkout.class));
+                // specify where the data will be stored??
             /*should all the days be listed in this single if statement? since they
              all go to the same page? Or should they each have thier own set up?
              see wk 10 agenda for more Q's and details...
              */
+            }
         }
     }
-}

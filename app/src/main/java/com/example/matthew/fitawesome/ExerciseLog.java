@@ -1,7 +1,8 @@
 package com.example.matthew.fitawesome;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -56,12 +57,17 @@ public class ExerciseLog extends AppCompatActivity implements OnClickListener {
         week12.setOnClickListener(this);
     }
 
+    //submit the selection into the database
+
+
+    // open the activity
     @Override
     public void onClick(View view) {
         if((view == week1) || (view == week2) || (view == week3) || (view == week4)
                 || (view == week5) || (view == week6) || (view == week7) || (view ==week8)
                 || (view == week9) || (view == week10) || (view == week11) || (view == week12)) {
             // link to the weekDay activity
+            startActivity(new Intent(ExerciseLog.this, WeekDay.class));
         }
     }
 }
