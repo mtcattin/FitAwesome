@@ -22,7 +22,7 @@ public class CreateAnAccount extends AppCompatActivity {
         editEmail = (EditText) findViewById(R.id.email);
         editPWD = (EditText) findViewById(R.id.password);
         verifyPWD = (EditText) findViewById(R.id.Verify_password);
-        btn_CreateAccount = (Button) findViewById(R.id.btn_Create_Acc);
+        btn_CreateAccount = (Button) findViewById(R.id.btn_week4);
         AddData();
     }
 

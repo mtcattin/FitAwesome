@@ -96,7 +96,7 @@
         android:text="Create Account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_Create_Acc"
+        android:id="@+id/btn_week4"
         android:layout_marginBottom="36dp"
         android:gravity="center_vertical|center_horizontal|center"
         android:layout_alignParentBottom="true"
