@@ -31,20 +31,6 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:layout_below="@+id/editText"
-        android:layout_marginTop="14dp"
-        android:id="@+id/First_Name"
-        android:hint="First Name"
-        android:singleLine="true"
-        android:clickable="false"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
         android:layout_marginTop="14dp"
         android:id="@+id/email"
         android:hint="Email"
@@ -101,5 +87,18 @@
         android:gravity="center_vertical|center_horizontal|center"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_marginTop="12dp"
+        android:id="@+id/First_Name"
+        android:hint="First Name"
+        android:singleLine="true"
+        android:clickable="false"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentStart="true"/>
 
 </RelativeLayout>

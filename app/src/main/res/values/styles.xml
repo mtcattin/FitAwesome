@@ -6,6 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorBackground">@color/background_material_dark</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -14,9 +15,20 @@
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-
     <style name="fitness" parent="AppTheme"/>
-
+ <!-- Attempt 2 -->
+    <style name="ourTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/primary_material_dark</item>
+        <item name="colorPrimaryDark">@color/primary_dark_material_dark</item>
+        <item name="colorAccent">@color/accent_material_dark</item>
+        <item name="colorForeground">?android:color/foreground_material_dark</item>
+        <item name="navigationBarColor">@android:color/black</item>
+        <item name="statusBarColor">@android:attr/colorPrimaryDark</item>
+        <item name="textColorPrimary">@android:color/primary_text_material_dark</item>
+        <item name="textColorPrimaryInverse">@android:color/primary_text_material_light</item>
+        <item name="textColorSecondary">@color/secondary_text_material_dark</item>
+        <item name="textColorSecondaryInverse">@android:color/secondary_text_material_light</item>
+        <item name="colorBackground">#969696</item>
+    </style>
 </resources>
