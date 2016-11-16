@@ -1,7 +1,7 @@
 package com.example.matthew.fitawesome;
 
 import org.junit.Test;
-import com.example.matthew.fitawesome.Weekday;
+import com.example.matthew.fitawesome.WeekDay;
 
 import junit.framework.TestCase;
 

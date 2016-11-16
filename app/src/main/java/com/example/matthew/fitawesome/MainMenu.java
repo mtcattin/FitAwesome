@@ -3,6 +3,7 @@ package com.example.matthew.fitawesome;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -13,6 +14,7 @@ import java.util.List;
 
 
 public class MainMenu extends AppCompatActivity {
+    private static final String TAG = MainMenu.class.getSimpleName();
     DBHelper myDB;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +26,12 @@ public class MainMenu extends AppCompatActivity {
         setContentView(R.layout.activity_main_menu);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        Log.i(TAG," Log Info Works!" ) ;
+        Log.e(TAG," Log Error Works!" ) ;
+
     }
+
 
 
 
@@ -49,6 +56,7 @@ public class MainMenu extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 }
 
 class Phase {
