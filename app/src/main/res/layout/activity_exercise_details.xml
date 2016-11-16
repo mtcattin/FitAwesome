@@ -83,28 +83,32 @@
         android:layout_below="@+id/input_reps"/>
 
     <Button
-        android:text="Add Exercise"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
         android:id="@+id/addEx_btn"
-        android:layout_marginTop="43dp"
-        android:layout_below="@+id/editText4"
-        android:layout_alignStart="@+id/textView" />
+        tools:text="Add Exercise"
+        android:layout_marginBottom="68dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/black"/>
 
     <Button
-        android:text="View Workout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/view_wout_btn"
-        android:layout_below="@+id/addEx_btn"
-        android:layout_alignStart="@+id/addEx_btn" />
-
-    <Button
-        android:text="Save Exercise"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
         android:id="@+id/save_ex_btn"
-        android:layout_below="@+id/view_wout_btn"
-        android:layout_alignStart="@+id/view_wout_btn" />
+        tools:text="Save Exercise"
+        android:layout_height="75dp"
+        android:layout_alignBaseline="@+id/addEx_btn"
+        android:layout_alignBottom="@+id/addEx_btn"
+        android:layout_alignParentEnd="true"
+        android:textColor="@android:color/black"/>
 
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:id="@+id/view_wout_btn"
+        tools:text="View Workout"
+        android:layout_alignBaseline="@+id/addEx_btn"
+        android:layout_alignBottom="@+id/addEx_btn"
+        android:layout_alignStart="@+id/textView"
+        android:textColor="@android:color/black"/>
 </RelativeLayout>

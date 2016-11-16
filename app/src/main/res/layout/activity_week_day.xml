@@ -16,7 +16,8 @@
         android:layout_below="@+id/thurs_btn"
         android:layout_alignStart="@+id/thurs_btn"
         android:id="@+id/fri_btn"
-        tools:text="Friday"/>
+        tools:text="Friday"
+        android:textColor="@android:color/black"/>
 
     <Button
         android:layout_width="110dp"
@@ -24,7 +25,8 @@
         android:id="@+id/thurs_btn"
         android:layout_below="@+id/wed_btn"
         android:layout_alignStart="@+id/wed_btn"
-        tools:text="Thursday"/>
+        tools:text="Thursday"
+        android:textColor="@android:color/black"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -42,7 +44,8 @@
         android:layout_above="@+id/wed_btn"
         android:layout_alignStart="@+id/wed_btn"
         android:layout_width="110dp"
-        tools:text="Tuesday"/>
+        tools:text="Tuesday"
+        android:textColor="@android:color/black"/>
 
     <Button
         android:layout_width="110dp"
@@ -50,7 +53,8 @@
         android:id="@+id/mon_btn"
         android:layout_above="@+id/tues_btn"
         android:layout_alignStart="@+id/tues_btn"
-        tools:text="Monday"/>
+        tools:text="Monday"
+        android:textColor="@android:color/black"/>
 
     <Button
         android:layout_height="wrap_content"
@@ -58,7 +62,8 @@
         android:layout_width="110dp"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        tools:text="Wednesday"/>
+        tools:text="Wednesday"
+        android:textColor="@android:color/black"/>
 
     <Button
         android:layout_width="110dp"
@@ -66,7 +71,8 @@
         android:id="@+id/sat_btn"
         android:layout_below="@+id/fri_btn"
         android:layout_alignStart="@+id/fri_btn"
-        tools:text="Saturday"/>
+        tools:text="Saturday"
+        android:textColor="@android:color/black"/>
 
     <Button
         android:layout_width="110dp"
@@ -74,5 +80,6 @@
         android:id="@+id/sun_btn"
         tools:text="Sunday"
         android:layout_above="@+id/mon_btn"
-        android:layout_alignStart="@+id/mon_btn"/>
+        android:layout_alignStart="@+id/mon_btn"
+        android:textColor="@android:color/black"/>
 </RelativeLayout>

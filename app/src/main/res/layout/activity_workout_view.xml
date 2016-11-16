@@ -20,22 +20,13 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"/>
 
-    <TextView
-        android:layout_width="500dp"
-        android:layout_height="25dp"
-        android:id="@+id/textView7"
-        android:layout_below="@+id/textView2"
-        android:layout_alignParentStart="true"
-        tools:text="Exercise                                    Sets      Reps   lb     "
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
-
     <ExpandableListView
         android:layout_height="300dp"
         android:id="@+id/list_woutContents"
         android:layout_width="600dp"
         android:layout_centerVertical="true"
         android:layout_alignParentStart="true"
-        />
+        android:background="?attr/colorBackgroundFloating"/>
 
     <Button
         android:id="@+id/completeWout_btn"
@@ -43,7 +34,8 @@
         android:layout_width="100dp"
         android:layout_height="75dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"/>
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/black"/>
 
     <Button
         android:layout_width="100dp"
@@ -52,6 +44,17 @@
         android:id="@+id/clrWout_btn"
         tools:text="Clear Workout"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"/>
+        android:layout_alignParentEnd="true"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:layout_width="500dp"
+        android:layout_height="25dp"
+        android:id="@+id/textView7"
+        tools:text="Exercise                                    Sets      Reps   lb     "
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:layout_above="@+id/list_woutContents"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="12dp"/>
 
 </RelativeLayout>
