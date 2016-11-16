@@ -27,8 +27,11 @@
         <item name="statusBarColor">@android:attr/colorPrimaryDark</item>
         <item name="textColorPrimary">@android:color/primary_text_material_dark</item>
         <item name="textColorPrimaryInverse">@android:color/primary_text_material_light</item>
-        <item name="textColorSecondary">@color/secondary_text_material_dark</item>
+        <item name="textColorSecondary">@android:color/secondary_text_material_dark</item>
         <item name="textColorSecondaryInverse">@android:color/secondary_text_material_light</item>
         <item name="colorBackground">#969696</item>
+        <item name="colorButtonNormal">@color/accent_material_dark</item>
+
+
     </style>
 </resources>

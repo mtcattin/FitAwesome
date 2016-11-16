@@ -9,7 +9,6 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#616161"
     tools:context="com.example.matthew.fitawesome.menuoption">
 
     <Button
@@ -19,7 +18,8 @@
         tools:text="Progress Log"
         android:layout_below="@+id/workoutLog_btn"
         android:layout_alignEnd="@+id/workoutLog_btn"
-        android:layout_marginTop="22dp"/>
+        android:layout_marginTop="22dp"
+        android:textColor="@android:color/black"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -28,7 +28,8 @@
         android:id="@+id/workoutLog_btn"
         tools:text="Workout Log "
         android:layout_below="@+id/exercise_prg_btn"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/black"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -38,5 +39,7 @@
         android:layout_marginTop="24dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textAppearance="@style/TextAppearance.AppCompat.Button"/>
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:background="?attr/colorButtonNormal"
+        android:textColor="@android:color/black"/>
 </RelativeLayout>

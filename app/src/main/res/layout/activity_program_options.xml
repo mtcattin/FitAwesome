@@ -17,7 +17,8 @@
         android:id="@+id/LF_P2_btn"
         tools:text="Phase 2"
         android:layout_below="@+id/LF_P1_btn"
-        android:layout_alignStart="@+id/LF_P1_btn"/>
+        android:layout_alignStart="@+id/LF_P1_btn"
+        android:textColor="@android:color/black"/>
 
     <Button
         android:id="@+id/SC2S_P3_btn"
@@ -25,7 +26,8 @@
         android:layout_height="40dp"
         android:layout_width="95dp"
         android:layout_below="@+id/SC2S_P2_btn"
-        android:layout_alignStart="@+id/SC2S_P2_btn"/>
+        android:layout_alignStart="@+id/SC2S_P2_btn"
+        android:textColor="@android:color/black"/>
 
     <Button
         android:id="@+id/SC2S_P2_btn"
@@ -33,7 +35,8 @@
         android:layout_height="40dp"
         android:layout_width="95dp"
         android:layout_below="@+id/SC2S_P1_btn"
-        android:layout_alignStart="@+id/SC2S_P1_btn"/>
+        android:layout_alignStart="@+id/SC2S_P1_btn"
+        android:textColor="@android:color/black"/>
 
     <Button
         android:layout_width="95dp"
@@ -41,14 +44,16 @@
         android:id="@+id/LF_P3_btn"
         tools:text="Phase 3"
         android:layout_below="@+id/LF_P2_btn"
-        android:layout_alignStart="@+id/LF_P2_btn"/>
+        android:layout_alignStart="@+id/LF_P2_btn"
+        android:textColor="@android:color/black"/>
 
     <Button
         android:id="@+id/SC2S_btn"
         android:layout_alignParentTop="true"
         android:layout_height="40dp"
         tools:text="Shortcut to Shred"
-        android:layout_width="500dp"/>
+        android:layout_width="500dp"
+        android:textColor="@android:color/black"/>
 
     <Button
         android:layout_width="600dp"
@@ -56,7 +61,8 @@
         android:id="@+id/livfit_btn"
         tools:text="Live Fit"
         android:layout_below="@+id/SC2Sz_P3_btn"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/black"/>
 
     <Button
         android:layout_width="600dp"
@@ -64,7 +70,8 @@
         android:id="@+id/SC2SZ_btn"
         tools:text="Shortcut to Size"
         android:layout_below="@+id/SC2S_P3_btn"
-        android:layout_toEndOf="@+id/textView5"/>
+        android:layout_toEndOf="@+id/textView5"
+        android:textColor="@android:color/black"/>
 
     <Button
         android:layout_width="95dp"
@@ -72,7 +79,8 @@
         android:id="@+id/LF_P1_btn"
         tools:text="Phase 1"
         android:layout_below="@+id/livfit_btn"
-        android:layout_alignStart="@+id/SC2Sz_P3_btn"/>
+        android:layout_alignStart="@+id/SC2Sz_P3_btn"
+        android:textColor="@android:color/black"/>
 
     <Button
         android:layout_width="95dp"
@@ -80,15 +88,8 @@
         android:id="@+id/SC2Sz_P3_btn"
         tools:text="Phase 3"
         android:layout_below="@+id/SC2Sz_P2_btn"
-        android:layout_alignStart="@+id/SC2Sz_P2_btn"/>
-
-    <Button
-        android:layout_width="95dp"
-        android:layout_height="40dp"
-        android:id="@+id/SC2Sz_P2_btn"
-        tools:text="Phase 2"
-        android:layout_below="@+id/SC2Sz_P1_btn"
-        android:layout_alignStart="@+id/SC2Sz_P1_btn"/>
+        android:layout_alignStart="@+id/SC2Sz_P2_btn"
+        android:textColor="@android:color/black"/>
 
     <Button
         android:id="@+id/SC2S_P1_btn"
@@ -96,7 +97,8 @@
         android:layout_height="40dp"
         android:layout_width="95dp"
         android:layout_below="@+id/SC2S_btn"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/black"/>
 
     <Button
         android:layout_width="95dp"
@@ -104,6 +106,16 @@
         android:id="@+id/SC2Sz_P1_btn"
         tools:text="Phase 1"
         android:layout_below="@+id/SC2SZ_btn"
-        android:layout_alignStart="@+id/SC2S_P3_btn"/>
+        android:layout_alignStart="@+id/SC2S_P3_btn"
+        android:textColor="@android:color/black"/>
+
+    <Button
+        android:layout_width="95dp"
+        android:layout_height="40dp"
+        android:id="@+id/SC2Sz_P2_btn"
+        tools:text="Phase 2"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/SC2Sz_P1_btn"
+        android:layout_alignStart="@+id/SC2Sz_P1_btn"/>
 
 </RelativeLayout>
