@@ -43,7 +43,7 @@ public class CreateAnAccount extends AppCompatActivity {
     * Name: AddData
     *
     * This function attempts to input the data into the DB and will display an error if
-    * it succeeds or fails to do so. 
+    * it succeeds or fails to do so.
     */
     public void AddData(){
         btn_CreateAccount.setOnClickListener(new View.OnClickListener() {
