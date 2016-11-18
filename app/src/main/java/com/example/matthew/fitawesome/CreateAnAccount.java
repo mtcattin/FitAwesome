@@ -6,13 +6,26 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
+/*
+*   CreateAnAccount
+*
+*   This class sets up the data that will be stored for each user on the database
+*
+*/
 public class CreateAnAccount extends AppCompatActivity {
     DBHelper mydb;
     private EditText editFirst, editLast, editEmail, editPWD, verifyPWD;
     private Button btn_CreateAccount;
 
     @Override
+    /*
+    * Name: onCreate
+    *
+    * This function links the UI for the account creation to the interactive elements
+    *  instaniating the variables in the createAnAccount class.
+    *
+    *  @param savedInstanceState
+    */
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_an_account);
@@ -26,6 +39,12 @@ public class CreateAnAccount extends AppCompatActivity {
         AddData();
     }
 
+    /*
+    * Name: AddData
+    *
+    * This function attempts to input the data into the DB and will display an error if
+    * it succeeds or fails to do so. 
+    */
     public void AddData(){
         btn_CreateAccount.setOnClickListener(new View.OnClickListener() {
             @Override
