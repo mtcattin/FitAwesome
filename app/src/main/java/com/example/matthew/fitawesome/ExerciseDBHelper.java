@@ -71,7 +71,6 @@ public class ExerciseDBHelper extends SQLiteOpenHelper {
         exdb.update(TABLE_NAME, contentValues4x, "ID = ?", new String[] { identity });
         return true;
     }
-}
 
     public Cursor getAllExData() {
         SQLiteDatabase exdb = this.getWritableDatabase();
@@ -83,6 +82,7 @@ public class ExerciseDBHelper extends SQLiteOpenHelper {
         SQLiteDatabase exdb = this.getWritableDatabase();
         return exdb.delete(TABLE_NAME, "ID = ?",new String[] {id});
     }
+} // end of the class
 
-}
+
 
