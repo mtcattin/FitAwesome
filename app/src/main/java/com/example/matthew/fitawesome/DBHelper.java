@@ -6,7 +6,11 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 /**
- * Created by nix on 11/2/2016.
+ * DBHelper Class
+ *
+ * This class sets up the initial database that deals with the login information
+ * This also stores the users information and sets it up so that each user
+ * has a unique login.
  */
 
 public class DBHelper extends SQLiteOpenHelper {
@@ -27,6 +31,12 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     @Override
+    /**
+     * onCreate
+     *      This creates the database.
+     * @param db
+     *
+     */
     public void onCreate(SQLiteDatabase db) {
         // creates the database. the below is the commandline, this will run in the database itself.
         // Autocrement adds 1 row as you add records
@@ -35,6 +45,13 @@ public class DBHelper extends SQLiteOpenHelper {
 
     // onUpgrade helps with the version control of Database
     @Override
+    /**
+    * onUpgrade
+    *    This is used if we wanted to upgrade the database, this will be used everytime
+     *    there is a new user on the same device, but NOT on different phones since this is
+     *    not stored on the server.
+     *
+    */
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
         // if the previous table exists & want to create new delete it
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
@@ -42,9 +59,18 @@ public class DBHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-
+    /**
+     * Name:  InsertData
+     *      This function passes in all the variables for the table of the database. It opens the database,
+     *      creates a container to store data and then creates values to store inside the container to
+     *      be stored in the DB.
+     * @param fName
+     * @param lName
+     * @param emailID
+     * @param newPassword
+     * @return
+     */
     // Functions we can do with Databases : insert to add data, deleteData, updateData
-    // pass all the variables for the table (See above)
     public boolean insertData(String fName, String lName, String emailID, String newPassword ){
         // 1st open the database & then specify what you are going to do with the database
         // can getRead (use when you want to display) OR getWrite
