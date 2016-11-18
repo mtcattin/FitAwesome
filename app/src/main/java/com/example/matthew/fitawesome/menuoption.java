@@ -3,6 +3,7 @@ package com.example.matthew.fitawesome;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -39,8 +40,9 @@ public class menuoption extends AppCompatActivity implements OnClickListener {
         if(view == woLog) {
             // send to exerciseLog activity
             startActivity(new Intent(menuoption.this, ExerciseLog.class));
-
         }
+
+
         // NOT SETTING UP THE PROGLOG YET...
     }
 }
