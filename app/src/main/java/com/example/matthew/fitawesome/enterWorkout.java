@@ -49,7 +49,7 @@ public class enterWorkout extends AppCompatActivity implements OnClickListener {
     * This function takes uses the variables from above and sets up the actions
     * involved with the various interactive elements.
     *
-    * specifically this one sets up either option to the activities they are linked to. 
+    * specifically this one sets up either option to the activities they are linked to.
     * @param view
     */
     public void onClick(View view) {
