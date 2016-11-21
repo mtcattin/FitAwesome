@@ -2,7 +2,6 @@ package com.example.matthew.fitawesome;
 
 import android.content.ContentValues;
 import android.content.Context;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -72,12 +71,13 @@ public class ExerciseDBHelper extends SQLiteOpenHelper {
         return true;
     }
 
-    public Cursor getAllExData() {
+
+/*    public Cursor getAllExData() {
         SQLiteDatabase exdb = this.getWritableDatabase();
         Cursor res = exdb.rawQuery("select * from "+TABLE_NAME,null);
         return res;
     }
-
+*/
     public Integer deleteExData (String id) {
         SQLiteDatabase exdb = this.getWritableDatabase();
         return exdb.delete(TABLE_NAME, "ID = ?",new String[] {id});

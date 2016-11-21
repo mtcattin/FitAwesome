@@ -74,5 +74,25 @@
         android:id="@+id/BtnCreateAccount"
         android:layout_below="@+id/BtnLog_In"
         android:layout_centerHorizontal="true"
-        android:onClick="ClickCreateAccount" />
+        android:onClick="onButtonClick" />
+
+    <Button
+        android:text="Sign In"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:layout_marginTop="58dp"
+        android:layout_below="@+id/Password"
+        android:layout_centerHorizontal="true"
+        android:onClick="onButtonClick" />
+
+    <Button
+        android:text="Sign In"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/SignInbutton"
+        android:layout_marginTop="58dp"
+        android:layout_below="@+id/Password"
+        android:layout_centerHorizontal="true"
+        android:onClick="onButtonClick" />
 </RelativeLayout>

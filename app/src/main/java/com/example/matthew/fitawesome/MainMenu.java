@@ -1,11 +1,14 @@
 package com.example.matthew.fitawesome;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 import java.util.List;
 
@@ -16,19 +19,25 @@ import java.util.List;
 public class MainMenu extends AppCompatActivity {
     private static final String TAG = MainMenu.class.getSimpleName();
     DBHelper myDB;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         // calls the constructor class (creates an instance and the database)
         myDB = new DBHelper(this);
 
+
+        EditText userName = (EditText) findViewById(R.id.UserName);
+        EditText password = (EditText) findViewById(R.id.Password);
+        Button signInBtn = (Button) findViewById(R.id.SignInbutton);
+        Button CreateAccountBtn = (Button) findViewById(R.id.BtnCreateAccount);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
         Log.i(TAG," Log Info Works!" ) ;
         Log.e(TAG," Log Error Works!" ) ;
+
 
     }
 
@@ -56,7 +65,20 @@ public class MainMenu extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+    public void onButtonClick(View view){
 
+        Intent nextActivity;
+
+        if (view.getId()== R.id.BtnLog_In){
+            nextActivity = new Intent(MainMenu.this, ExerciseLog.class);
+            startActivity(nextActivity);
+        }
+        if (view.getId()== R.id.BtnCreateAccount) {
+
+            nextActivity = new Intent(MainMenu.this, CreateAnAccount.class);
+            startActivity(nextActivity);
+        }
+    }
 }
 
 class Phase {
