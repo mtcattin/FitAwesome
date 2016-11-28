@@ -71,13 +71,21 @@ public class ExerciseDBHelper extends SQLiteOpenHelper {
         return true;
     }
 
-
+// displays everything in the DB
 /*    public Cursor getAllExData() {
         SQLiteDatabase exdb = this.getWritableDatabase();
         Cursor res = exdb.rawQuery("select * from "+TABLE_NAME,null);
         return res;
     }
 */
+
+    // Create one to get just the list of exercise names (independent of the week)
+
+    // Create one to get just the weekNum
+
+    // create one to get the day WITHIN the current weekNum
+
+    // deletes an exercise
     public Integer deleteExData (String id) {
         SQLiteDatabase exdb = this.getWritableDatabase();
         return exdb.delete(TABLE_NAME, "ID = ?",new String[] {id});

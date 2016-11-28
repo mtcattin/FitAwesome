@@ -37,7 +37,7 @@ public class enterWorkout extends AppCompatActivity implements OnClickListener {
         viewWorkout = (Button) findViewById(R.id.btn_week2);
         //exerciseDatabase = (SearchView) findViewById(R.id.srchExData);
 
-        // need to figure out how to set up the search still
+        //
         createNewEx.setOnClickListener(this);
         viewWorkout.setOnClickListener(this);
     }
@@ -60,6 +60,9 @@ public class enterWorkout extends AppCompatActivity implements OnClickListener {
         if(view == viewWorkout) {
             // take to the workout view Activity
             startActivity(new Intent(enterWorkout.this, workoutView.class));
+        // IF select one of the scrollView items then open the exerciseDetails page
+            // also set the exerciseName of that exercise to be the DB value of the "name"
+            
         }
     }
 }
