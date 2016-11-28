@@ -99,16 +99,6 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_week4"
-        tools:text="Week 4"
-        android:layout_alignBaseline="@+id/btn_week3"
-        android:layout_alignBottom="@+id/btn_week3"
-        android:layout_alignParentEnd="true"
-        android:textColor="@android:color/black"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
         android:id="@+id/btn_week9"
         tools:text="Week 9"
@@ -125,4 +115,14 @@
         android:layout_alignBottom="@+id/btn_week9"
         android:layout_toEndOf="@+id/btn_week9"
         android:textColor="@android:color/black"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_week4"
+        tools:text="Week 4"
+        android:textColor="@android:color/black"
+        android:layout_alignBaseline="@+id/btn_week3"
+        android:layout_alignBottom="@+id/btn_week3"
+        android:layout_alignParentEnd="true"/>
 </RelativeLayout>

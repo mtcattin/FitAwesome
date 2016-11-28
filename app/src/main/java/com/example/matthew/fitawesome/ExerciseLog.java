@@ -59,10 +59,13 @@ public class ExerciseLog extends AppCompatActivity implements OnClickListener {
 
     //submit the selection into the database
 
-
     // open the activity
     @Override
     public void onClick(View view) {
+
+        // depending on the week selected open that week's content in the database
+
+        // then go to the weekday Activity
         if((view == week1) || (view == week2) || (view == week3) || (view == week4)
                 || (view == week5) || (view == week6) || (view == week7) || (view ==week8)
                 || (view == week9) || (view == week10) || (view == week11) || (view == week12)) {
@@ -71,4 +74,3 @@ public class ExerciseLog extends AppCompatActivity implements OnClickListener {
         }
     }
 }
-

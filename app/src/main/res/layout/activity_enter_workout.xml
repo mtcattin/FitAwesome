@@ -10,50 +10,44 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.matthew.fitawesome.enterWorkout">
+<!-- -->
 
-    <SearchView
-        android:layout_height="50dp"
-        android:layout_width="250dp"
-        android:id="@+id/srchExData"
-        android:background="?attr/colorBackgroundFloating"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="34dp"
+        android:id="@+id/btn_week2"
+        tools:text="View Workout"
+        android:drawableTop="@android:color/holo_blue_dark"
+        android:textColor="@android:color/black"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="13dp"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/createNewEx_btn"
         tools:text="Create New Exercise"
-        android:layout_below="@+id/srchExData"
-        android:layout_centerHorizontal="true"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/black"
+        android:layout_alignBaseline="@+id/btn_week2"
+        android:layout_alignBottom="@+id/btn_week2"
+        android:layout_alignStart="@+id/listPreviousExercises"/>
 
     <ScrollView
         android:layout_width="300dp"
         android:visibility="visible"
         android:layout_height="250dp"
         android:background="?attr/colorBackgroundFloating"
-        android:layout_below="@+id/createNewEx_btn"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="13dp"
+        android:layout_marginTop="15dp"
         android:id="@+id/listPreviousExercises"
-        >
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"/>
     </ScrollView>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
-        android:id="@+id/btn_week2"
-        tools:text="View Workout"
-        android:drawableTop="@android:color/holo_blue_dark"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:textColor="@android:color/black"/>
 
 </RelativeLayout>

@@ -13,6 +13,7 @@ public class exerciseDetails extends AppCompatActivity implements OnClickListene
     private EditText sets;
     private EditText reps;
     private EditText lb;
+    private EditText nameExercise;
     private Button addExercise;
     private Button viewWorkout;
     private Button saveExercise;
@@ -26,6 +27,7 @@ public class exerciseDetails extends AppCompatActivity implements OnClickListene
         setContentView(R.layout.activity_exercise_details);
 
         // link the variables to the buttons in the XML
+        nameExercise =(EditText) findViewById(R.id.input_exName);
         sets = (EditText) findViewById(R.id.input_sets);
         reps = (EditText) findViewById(R.id.input_reps);
         lb = (EditText) findViewById(R.id.input_lb);

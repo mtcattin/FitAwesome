@@ -35,7 +35,7 @@ public class enterWorkout extends AppCompatActivity implements OnClickListener {
 
         createNewEx = (Button) findViewById(R.id.createNewEx_btn);
         viewWorkout = (Button) findViewById(R.id.btn_week2);
-        exerciseDatabase = (SearchView) findViewById(R.id.srchExData);
+        //exerciseDatabase = (SearchView) findViewById(R.id.srchExData);
 
         // need to figure out how to set up the search still
         createNewEx.setOnClickListener(this);
