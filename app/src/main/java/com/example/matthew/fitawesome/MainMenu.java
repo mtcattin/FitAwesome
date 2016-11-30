@@ -29,15 +29,13 @@ public class MainMenu extends AppCompatActivity {
 
         EditText userName = (EditText) findViewById(R.id.UserName);
         EditText password = (EditText) findViewById(R.id.Password);
-        Button signInBtn = (Button) findViewById(R.id.SignInbutton);
+        Button signInBtn = (Button) findViewById(R.id.BtnSignIn);
         Button CreateAccountBtn = (Button) findViewById(R.id.BtnCreateAccount);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
         Log.i(TAG," Log Info Works!" ) ;
         Log.e(TAG," Log Error Works!" ) ;
-
-
     }
 
     @Override
@@ -64,15 +62,13 @@ public class MainMenu extends AppCompatActivity {
     public void onButtonClick(View view){
 
         Intent nextActivity;
-        if (view.getId()== R.id.SignInbutton){
+        if (view.getId()== R.id.BtnSignIn){
             // when login button is clicked go to the menu Option activity
             nextActivity = new Intent(MainMenu.this, menuoption.class);
             //startActivity(new Intent(MainMenu.this, menuoption.class));
-
             startActivity(nextActivity);
         }
         if (view.getId()== R.id.BtnCreateAccount) {
-
             nextActivity = new Intent(MainMenu.this, CreateAnAccount.class);
             startActivity(nextActivity);
         }

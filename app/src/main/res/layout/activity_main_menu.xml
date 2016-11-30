@@ -8,8 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.matthew.fitawesome.LoginActivity">
-
+    tools:context="com.example.matthew.fitawesome.MainMenu">
 
     <TextView
         android:layout_width="wrap_content"
@@ -29,7 +28,7 @@
         android:layout_marginTop="18dp"
         android:id="@+id/textView3" />
 
-    <Button
+  <!--  <Button
         android:text="Sign In"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -47,28 +46,17 @@
         android:layout_marginTop="58dp"
         android:layout_below="@+id/Password"
         android:layout_centerHorizontal="true"
-        android:onClick="onButtonClick" />
+        android:onClick="onButtonClick" />-->
 
     <Button
         android:text="Sign In"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/SignInbutton"
+        android:id="@+id/BtnSignIn"
         android:layout_marginTop="58dp"
         android:layout_below="@+id/Password"
         android:layout_centerHorizontal="true"
         android:onClick="onButtonClick"
-        android:textColor="@color/black"/>
-
-    <Button
-        android:text="@string/create_an_account"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="73dp"
-        android:id="@+id/BtnCreateAccount"
-        android:onClick="onButtonClick"
-        android:layout_below="@+id/BtnLog_In"
-        android:layout_centerHorizontal="true"
         android:textColor="@color/black"/>
 
     <EditText
@@ -92,4 +80,15 @@
         android:layout_alignBottom="@+id/textView3"
         android:layout_alignParentStart="true"
         android:hint="Password"/>
+
+    <Button
+        android:text="@string/create_an_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:id="@+id/BtnCreateAccount"
+        android:onClick="onButtonClick"
+        android:textColor="@color/black"
+        android:layout_below="@+id/BtnSignIn"
+        android:layout_centerHorizontal="true"/>
 </RelativeLayout>
