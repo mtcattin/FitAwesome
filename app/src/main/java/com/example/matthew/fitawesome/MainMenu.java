@@ -27,7 +27,6 @@ public class MainMenu extends AppCompatActivity {
         // calls the constructor class (creates an instance and the database)
         myDB = new DBHelper(this);
 
-
         EditText userName = (EditText) findViewById(R.id.UserName);
         EditText password = (EditText) findViewById(R.id.Password);
         Button signInBtn = (Button) findViewById(R.id.SignInbutton);
@@ -68,9 +67,9 @@ public class MainMenu extends AppCompatActivity {
     public void onButtonClick(View view){
 
         Intent nextActivity;
-
         if (view.getId()== R.id.BtnLog_In){
-            nextActivity = new Intent(MainMenu.this, ExerciseLog.class);
+            // when login button is clicked go to the menu Option activity
+            nextActivity = new Intent(MainMenu.this, menuoption.class);
             startActivity(nextActivity);
         }
         if (view.getId()== R.id.BtnCreateAccount) {

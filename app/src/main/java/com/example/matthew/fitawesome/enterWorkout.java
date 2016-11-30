@@ -62,7 +62,7 @@ public class enterWorkout extends AppCompatActivity implements OnClickListener {
             startActivity(new Intent(enterWorkout.this, workoutView.class));
         // IF select one of the scrollView items then open the exerciseDetails page
             // also set the exerciseName of that exercise to be the DB value of the "name"
-            
+
         }
     }
 }

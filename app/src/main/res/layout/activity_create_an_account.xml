@@ -20,20 +20,6 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:layout_marginTop="14dp"
-        android:id="@+id/email"
-        android:hint="Email"
-        android:layout_below="@+id/Last_Name"
-        android:layout_alignParentStart="true"
-        android:singleLine="true"
-        android:clickable="false"
-        android:layout_alignParentEnd="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
         android:layout_marginTop="19dp"
         android:id="@+id/Last_Name"
         android:layout_below="@+id/First_Name"
@@ -42,18 +28,6 @@
         android:singleLine="true"
         android:clickable="false"
         android:layout_alignParentEnd="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:layout_below="@+id/email"
-        android:layout_alignEnd="@+id/email"
-        android:layout_marginTop="21dp"
-        android:id="@+id/password"
-        android:hint="Password"
-        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -100,6 +74,29 @@
         android:ems="10"
         android:id="@+id/editText"
         android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_marginTop="16dp"
+        android:id="@+id/email"
+        android:hint="Email"
+        android:singleLine="true"
+        android:clickable="false"
+        android:layout_below="@+id/Last_Name"
+        android:layout_alignParentStart="true"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/password"
+        android:hint="Password"
+        android:layout_centerVertical="true"
         android:layout_alignParentStart="true"/>
 
 </RelativeLayout>
