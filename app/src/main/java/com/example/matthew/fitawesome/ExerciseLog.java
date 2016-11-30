@@ -7,6 +7,11 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
+/* This class sets up the Exercise log that allows the user to be able to access weeks
+1-12 in the exercise. Once a button is implemented it then accesses the WeekDay Activity
+
+ */
+
 public class ExerciseLog extends AppCompatActivity implements OnClickListener {
 
     private Button week1;

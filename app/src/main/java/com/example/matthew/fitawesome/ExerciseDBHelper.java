@@ -9,6 +9,8 @@ import android.database.sqlite.SQLiteOpenHelper;
  * Created by nix on 11/14/2016.
  */
 
+ /* In this class it sets up the SQLite database for the application
+ */
 public class ExerciseDBHelper extends SQLiteOpenHelper {
 
     public static final String DATABASE_NAME = "UserExercise_log.db";

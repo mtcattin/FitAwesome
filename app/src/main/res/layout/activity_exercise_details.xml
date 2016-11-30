@@ -22,16 +22,6 @@
 
     <Button
         android:layout_width="100dp"
-        android:id="@+id/save_ex_btn"
-        tools:text="Save Exercise"
-        android:layout_height="75dp"
-        android:layout_alignBaseline="@+id/addEx_btn"
-        android:layout_alignBottom="@+id/addEx_btn"
-        android:layout_alignParentEnd="true"
-        android:textColor="@android:color/black"/>
-
-    <Button
-        android:layout_width="100dp"
         android:layout_height="75dp"
         android:id="@+id/view_wout_btn"
         tools:text="View Workout"
@@ -124,5 +114,14 @@
         android:layout_below="@+id/textView"
         android:layout_marginTop="13dp"
         android:layout_width="300dp"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:id="@+id/save_ex_btn"
+        tools:text="Save Exercise"
+        android:layout_height="75dp"
+        android:textColor="@android:color/black"
+        android:layout_alignTop="@+id/addEx_btn"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

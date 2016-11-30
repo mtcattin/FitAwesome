@@ -7,6 +7,10 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
+/* WeekDay class sets up the Week days and allows the user to choose which day of the week
+they want to access. Once a day button is implemented it then accesses the enterWorkout Activity
+ */
+
 public class WeekDay extends AppCompatActivity implements OnClickListener {
 
     private Button sunday;
