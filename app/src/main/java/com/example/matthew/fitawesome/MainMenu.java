@@ -40,9 +40,6 @@ public class MainMenu extends AppCompatActivity {
 
     }
 
-
-
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -67,9 +64,11 @@ public class MainMenu extends AppCompatActivity {
     public void onButtonClick(View view){
 
         Intent nextActivity;
-        if (view.getId()== R.id.BtnLog_In){
+        if (view.getId()== R.id.SignInbutton){
             // when login button is clicked go to the menu Option activity
             nextActivity = new Intent(MainMenu.this, menuoption.class);
+            //startActivity(new Intent(MainMenu.this, menuoption.class));
+
             startActivity(nextActivity);
         }
         if (view.getId()== R.id.BtnCreateAccount) {
