@@ -36,10 +36,33 @@
         android:layout_height="wrap_content"
         android:id="@+id/exercise_prg_btn"
         tools:text="Exercise Program"
-        android:layout_marginTop="24dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
+        android:layout_marginTop="133dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Button"
         android:background="?attr/colorButtonNormal"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/black"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/workoutLog_btn" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/exercise_prg_btn"
+        android:layout_marginTop="29dp"
+        android:id="@+id/MOuserNameET" />
+
+    <TextView
+        android:text="Welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:layout_alignBottom="@+id/MOuserNameET"
+        android:layout_alignTop="@+id/MOuserNameET"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/MOuserNameET"
+        android:autoText="false"
+        android:gravity="right|center_vertical|center_horizontal" />
 </RelativeLayout>

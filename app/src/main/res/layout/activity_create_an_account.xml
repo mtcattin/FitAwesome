@@ -13,7 +13,9 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></LinearLayout>
+        android:layout_height="match_parent">
+
+    </LinearLayout>
 
     <EditText
         android:layout_width="wrap_content"
@@ -28,29 +30,6 @@
         android:singleLine="true"
         android:clickable="false"
         android:layout_alignParentEnd="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:layout_below="@+id/password"
-        android:layout_alignEnd="@+id/password"
-        android:layout_marginTop="25dp"
-        android:id="@+id/Verify_password"
-        android:hint="Verify Password"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:text="Create Account"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_week4"
-        android:layout_marginBottom="36dp"
-        android:gravity="center_vertical|center_horizontal|center"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:textColor="@android:color/black"/>
 
     <EditText
         android:layout_width="fill_parent"
@@ -70,7 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Enter Account Details"
+        android:text="@string/enter_account_detailsCAA"
         android:ems="10"
         android:id="@+id/editText"
         android:layout_alignParentTop="true"
@@ -79,24 +58,58 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
         android:ems="10"
-        android:layout_marginTop="16dp"
-        android:id="@+id/email"
-        android:hint="Email"
-        android:singleLine="true"
-        android:clickable="false"
-        android:layout_below="@+id/Last_Name"
-        android:layout_alignParentStart="true"/>
+        android:id="@+id/UserNameIDET"
+        android:hint="@string/usernameCAA"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:layout_marginTop="27dp"
+        android:id="@+id/password1ET"
+        android:hint="@string/passwordCAA"
+        android:layout_below="@+id/UserNameIDET"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/password2ET"
+        android:hint="@string/verify_passwordCAA"
+        android:inputType="textPassword"
+        android:layout_below="@+id/password1ET"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/password1ET"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:text="@string/create_accountCAA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_CAA"
+        android:gravity="center_vertical|center_horizontal|center"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/password2ET"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="28dp" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/password"
-        android:hint="Password"
-        android:layout_centerVertical="true"
-        android:layout_alignParentStart="true"/>
+        android:layout_marginTop="18dp"
+        android:id="@+id/email"
+        android:hint="@string/emailCAA"
+        android:singleLine="true"
+        android:clickable="false"
+        android:layout_below="@+id/Last_Name"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

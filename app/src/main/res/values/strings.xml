@@ -6,8 +6,6 @@
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
     <string name="error_invalid_email">This email address is invalid</string>
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_incorrect_password">This password is incorrect</string>
@@ -16,4 +14,13 @@
         completions."
     </string>
     <string name="create_an_account">Create An Account</string>
+    <string name="log_inMM">Log In</string>
+    <string name="usernameCAA">Username</string>
+    <string name="passwordCAA">Password</string>
+    <string name="verify_passwordCAA">Verify Password</string>
+    <string name="create_accountCAA">Create Account</string>
+    <string name="enter_account_detailsCAA">Enter Account Details</string>
+    <string name="emailCAA">Email</string>
+    <string name="usernameMM">Username</string>
+    <string name="passwordMM">Password</string>
 </resources>

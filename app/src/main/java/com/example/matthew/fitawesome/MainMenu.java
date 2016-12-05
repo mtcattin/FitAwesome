@@ -7,33 +7,31 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
-
-import java.util.List;
+import android.widget.Toast;
 
 
 //
 
 
 public class MainMenu extends AppCompatActivity {
+
     private static final String TAG = MainMenu.class.getSimpleName();
-    DBHelper myDB;
+    private EditText userName;
+    private EditText password;
+    private DBHelper myDB;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+       super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main_menu);
 
         // calls the constructor class (creates an instance and the database)
         myDB = new DBHelper(this);
 
-        EditText userName = (EditText) findViewById(R.id.UserName);
-        EditText password = (EditText) findViewById(R.id.Password);
-        Button signInBtn = (Button) findViewById(R.id.BtnSignIn);
-        Button CreateAccountBtn = (Button) findViewById(R.id.BtnCreateAccount);
-
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_menu);
+        userName = (EditText) findViewById(R.id.userNameMM);
+        password = (EditText) findViewById(R.id.passwordMM);
         Log.i(TAG," Log Info Works!" ) ;
         Log.e(TAG," Log Error Works!" ) ;
     }
@@ -63,19 +61,34 @@ public class MainMenu extends AppCompatActivity {
 
         Intent nextActivity;
         if (view.getId()== R.id.BtnSignIn){
+
+            String userLogin = userName.getText().toString();
+            String userPassword = password.getText().toString();
+
+            // get the password for the user
+            String passwordReturned = myDB.searchPassword(userLogin);
+
             // when login button is clicked go to the menu Option activity
-            nextActivity = new Intent(MainMenu.this, menuoption.class);
-            //startActivity(new Intent(MainMenu.this, menuoption.class));
-            startActivity(nextActivity);
+            if(userPassword.equals(passwordReturned)) {
+
+                nextActivity = new Intent(MainMenu.this, menuoption.class);
+                nextActivity.putExtra("username", userLogin);
+                startActivity(nextActivity);
+            }
+            else{
+                Toast.makeText(MainMenu.this, "username or password does not match", Toast.LENGTH_LONG).show();
+            }
         }
         if (view.getId()== R.id.BtnCreateAccount) {
             nextActivity = new Intent(MainMenu.this, CreateAnAccount.class);
             startActivity(nextActivity);
         }
     }
+
 }
 
-class Phase {
+
+/*class Phase {
     private int numWeeksInProgram;
     private String[] weekDayList;
     private int phaseNumber;
@@ -170,3 +183,5 @@ class Sets{
         return weight;
     }
 }
+
+*/

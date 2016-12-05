@@ -10,25 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.matthew.fitawesome.MainMenu">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="19dp"
-        android:id="@+id/textView2" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/UserName"
-        android:layout_alignRight="@+id/textView2"
-        android:layout_alignEnd="@+id/textView2"
-        android:layout_marginTop="18dp"
-        android:id="@+id/textView3" />
-
-  <!--  <Button
+    <!--  <Button
         android:text="Sign In"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -49,46 +31,45 @@
         android:onClick="onButtonClick" />-->
 
     <Button
-        android:text="Sign In"
+        android:text="@string/log_inMM"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/BtnSignIn"
         android:layout_marginTop="58dp"
-        android:layout_below="@+id/Password"
-        android:layout_centerHorizontal="true"
         android:onClick="onButtonClick"
-        android:textColor="@color/black"/>
+        android:textColor="@color/black"
+        android:layout_below="@+id/passwordMM"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="@string/create_an_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:id="@+id/BtnCreateAccount"
+        android:onClick="onButtonClick"
+        android:textColor="@color/black"
+        android:layout_below="@+id/BtnSignIn"
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
+        android:inputType="text"
         android:ems="10"
-        android:id="@+id/UserName"
-        android:layout_alignBaseline="@+id/textView2"
-        android:layout_alignBottom="@+id/textView2"
-        android:layout_alignStart="@+id/textView3"
-        android:hint="Username"/>
+        android:id="@+id/userNameMM"
+        android:hint="@string/usernameMM"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/Password"
-        android:layout_alignBaseline="@+id/textView3"
-        android:layout_alignBottom="@+id/textView3"
-        android:layout_alignParentStart="true"
-        android:hint="Password"/>
-
-    <Button
-        android:text="@string/create_an_account"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
-        android:id="@+id/BtnCreateAccount"
-        android:onClick="onButtonClick"
-        android:textColor="@color/black"
-        android:layout_below="@+id/BtnSignIn"
-        android:layout_centerHorizontal="true"/>
+        android:id="@+id/passwordMM"
+        android:hint="@string/passwordMM"
+        android:layout_marginTop="29dp"
+        android:layout_below="@+id/userNameMM"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>

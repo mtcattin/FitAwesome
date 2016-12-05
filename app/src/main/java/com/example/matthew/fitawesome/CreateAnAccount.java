@@ -1,11 +1,13 @@
 package com.example.matthew.fitawesome;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
 /*
 *   CreateAnAccount
 *
@@ -14,7 +16,7 @@ import android.widget.Toast;
 */
 public class CreateAnAccount extends AppCompatActivity {
     DBHelper mydb;
-    private EditText editFirst, editLast, editEmail, editPWD, verifyPWD;
+    private EditText editFirst, editLast, editEmail, PWD1, PWD2, usernameET;
     private Button btn_CreateAccount;
 
     @Override
@@ -33,9 +35,12 @@ public class CreateAnAccount extends AppCompatActivity {
         editFirst = (EditText) findViewById(R.id.First_Name);
         editLast = (EditText) findViewById(R.id.Last_Name);
         editEmail = (EditText) findViewById(R.id.email);
-        editPWD = (EditText) findViewById(R.id.password);
-        verifyPWD = (EditText) findViewById(R.id.Verify_password);
-        btn_CreateAccount = (Button) findViewById(R.id.btn_week4);
+        PWD1 = (EditText) findViewById(R.id.password1ET);
+        PWD2 = (EditText) findViewById(R.id.password2ET);
+        usernameET = (EditText) findViewById(R.id.UserNameIDET);
+        btn_CreateAccount = (Button) findViewById(R.id.btn_CAA);
+
+        // insert the details into database
         AddData();
     }
 
@@ -50,14 +55,34 @@ public class CreateAnAccount extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                boolean isInserted = mydb.insertData(editFirst.getText().toString(), editLast.getText().toString(), editEmail.getText().toString(), editPWD.getText().toString());
-            if(isInserted == true){
+                // check password match
+                if(!PWD1.getText().toString().equals(PWD2.getText().toString())){
+                    Toast.makeText(CreateAnAccount.this, "passwords do not match!", Toast.LENGTH_LONG).show();
+                    clearPasswords();
+                }
+
+                mydb.getWritableDatabase();
+
+                boolean isInserted = mydb.insertData(editFirst.getText().toString(),
+                        editLast.getText().toString(), editEmail.getText().toString(),
+                        usernameET.getText().toString(), PWD1.getText().toString());
+            if(isInserted){
                 Toast.makeText(CreateAnAccount.this, "Data inserted", Toast.LENGTH_LONG).show();
+
             } else {
                 Toast.makeText(CreateAnAccount.this, "Data not inserted", Toast.LENGTH_LONG).show();
             }
+                mydb.close();
+
+                // Go back to main menu
+                startActivity(new Intent(CreateAnAccount.this, MainMenu.class));
             }
         });
     }
 
+    // clear mismatched passwords
+    private void clearPasswords(){
+        PWD1.setText("");
+        PWD2.setText("");
+    }
 }
