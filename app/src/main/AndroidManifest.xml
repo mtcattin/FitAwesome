@@ -20,6 +20,7 @@
         </activity>
         <activity android:name=".ExerciseLog" />
         <activity android:name=".CreateAnAccount" />
+        <activity android:name=".menuoption"></activity>
         <activity android:name=".exerciseDetails"></activity>
         <activity android:name=".workoutView"></activity>
         <activity android:name=".programOptions"></activity>

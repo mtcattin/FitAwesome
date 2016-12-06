@@ -32,7 +32,8 @@ public class MainMenu extends AppCompatActivity {
 
         userName = (EditText) findViewById(R.id.userNameMM);
         password = (EditText) findViewById(R.id.passwordMM);
-        Log.i(TAG," Log Info Works!" ) ;
+
+        Log.i(TAG,"OnCreate username " + userName.getText().toString() ) ;
         Log.e(TAG," Log Error Works!" ) ;
     }
 
@@ -59,28 +60,28 @@ public class MainMenu extends AppCompatActivity {
     }
     public void onButtonClick(View view){
 
-        Intent nextActivity;
         if (view.getId()== R.id.BtnSignIn){
 
             String userLogin = userName.getText().toString();
+            Log.i(TAG," MM Username = " + userName ) ;
             String userPassword = password.getText().toString();
-
+            Log.i(TAG," MM User Password = " + userPassword ) ;
             // get the password for the user
             String passwordReturned = myDB.searchPassword(userLogin);
-
+            Log.i(TAG," MM Received Password = " + passwordReturned ) ;
             // when login button is clicked go to the menu Option activity
             if(userPassword.equals(passwordReturned)) {
-
-                nextActivity = new Intent(MainMenu.this, menuoption.class);
-                nextActivity.putExtra("username", userLogin);
-                startActivity(nextActivity);
+                Log.i(TAG," When passwords equal in loop") ;
+                Intent nextActivity1 = new Intent(MainMenu.this, menuoption.class);
+                nextActivity1.putExtra("usernamefromMM", userLogin);
+                startActivity(nextActivity1);
             }
             else{
                 Toast.makeText(MainMenu.this, "username or password does not match", Toast.LENGTH_LONG).show();
             }
         }
         if (view.getId()== R.id.BtnCreateAccount) {
-            nextActivity = new Intent(MainMenu.this, CreateAnAccount.class);
+            Intent nextActivity = new Intent(MainMenu.this, CreateAnAccount.class);
             startActivity(nextActivity);
         }
     }
