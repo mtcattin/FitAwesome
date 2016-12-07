@@ -6,12 +6,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
 
 /* WeekDay class sets up the Week days and allows the user to choose which day of the week
 they want to access. Once a day button is implemented it then accesses the enterWorkout Activity
  */
 
 public class WeekDay extends AppCompatActivity implements OnClickListener {
+
 
     private Button sunday;
     private Button monday;
@@ -20,11 +22,19 @@ public class WeekDay extends AppCompatActivity implements OnClickListener {
     private Button thursday;
     private Button friday;
     private Button saturday;
+    private EditText weekNum;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_week_day);
+
+        String weekNumSTR = getIntent().getStringExtra("exerciseLogWeek#");
+
+
+        weekNum = (EditText) findViewById(R.id.weekNumber);
+
+        weekNum.setText(weekNumSTR);
 
         // link the buttons to the variables
         sunday = (Button) findViewById(R.id.sun_btn);
@@ -34,6 +44,7 @@ public class WeekDay extends AppCompatActivity implements OnClickListener {
         thursday = (Button) findViewById(R.id.thurs_btn);
         friday = (Button) findViewById(R.id.fri_btn);
         saturday = (Button) findViewById(R.id.sat_btn);
+
 
         // set up the buttons for activity
         sunday.setOnClickListener(this);
@@ -52,10 +63,10 @@ public class WeekDay extends AppCompatActivity implements OnClickListener {
                 // open up to enter workout page
                     startActivity(new Intent(WeekDay.this, enterWorkout.class));
                 // specify where the data will be stored??
-            /*should all the days be listed in this single if statement? since they
-             all go to the same page? Or should they each have thier own set up?
-             see wk 10 agenda for more Q's and details...
-             */
+
             }
         }
-    }
+
+    //This time need to send BOTH values, the day and the week to the next page...
+
+}

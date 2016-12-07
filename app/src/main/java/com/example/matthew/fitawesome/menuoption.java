@@ -20,6 +20,7 @@ public class menuoption extends AppCompatActivity implements OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menuoption);
+        //degbug
         Log.i(moTAG,"OnCreate in MO" );
         //6.37 time on video
         String mmUserNameSTR = getIntent().getStringExtra("usernamefromMM");

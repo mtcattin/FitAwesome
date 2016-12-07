@@ -16,20 +16,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/createNewEx_btn"
-        tools:text="Create New Exercise"
         android:textColor="@android:color/black"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/listPreviousExercises"/>
+        android:layout_alignStart="@+id/listPreviousExercises"
+        android:text="Create New Exercise"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn_week2"
-        tools:text="View Workout"
         android:drawableTop="@android:color/holo_blue_dark"
         android:textColor="@android:color/black"
         android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/createNewEx_btn"/>
+        android:layout_toEndOf="@+id/createNewEx_btn"
+        android:text="View Workout"/>
 
     <TextView
         android:text="Previous Exercises"

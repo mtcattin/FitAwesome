@@ -68,14 +68,24 @@ public class ExerciseLog extends AppCompatActivity implements OnClickListener {
     @Override
     public void onClick(View view) {
 
-        // depending on the week selected open that week's content in the database
+        String selectedWeek ="";
 
+        // depending on the week selected open that week's content in the database
         // then go to the weekday Activity
         if((view == week1) || (view == week2) || (view == week3) || (view == week4)
                 || (view == week5) || (view == week6) || (view == week7) || (view ==week8)
                 || (view == week9) || (view == week10) || (view == week11) || (view == week12)) {
+            // get the week that has been selected
+            selectedWeek = view.toString();
+            //week1.getText().toString();
+
+            // pass the value to the next screen
+            Intent nextActivityDays = new Intent(ExerciseLog.this, WeekDay.class);
+            // to handoff the variable to the next activity, need to pass a unique string value
+            nextActivityDays.putExtra("exerciseLogWeek#",selectedWeek);
+            startActivity(nextActivityDays);
             // link to the weekDay activity
-            startActivity(new Intent(ExerciseLog.this, WeekDay.class));
         }
+
     }
 }

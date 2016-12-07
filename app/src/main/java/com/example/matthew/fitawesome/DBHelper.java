@@ -128,20 +128,21 @@ public class DBHelper extends SQLiteOpenHelper {
 
         SQLiteDatabase db = this.getReadableDatabase();
         //String query = "select USERNAME, PASSWORD from " + TABLE_NAME;
+        // cursor goes by rows and will search only the specified colums (green)
         Cursor cursor = db.rawQuery(("select USERNAME, PASSWORD from " + TABLE_NAME), null);
         String searchUname, returnPWD;
 
         returnPWD = "not found";
-
+// if the row exists it goes to the first one
         if(cursor.moveToFirst()){
-            do{
+            do{ // checking to see if the value in the 1st column
                 searchUname = cursor.getString(0);
-
+// if the column matches the entered login in name
                 if(searchUname.equals(checkUser)){
                     returnPWD = cursor.getString(1);
                     break;
                 }
-
+// if there is an option to continue, go to the next row
             }while(cursor.moveToNext());
         }
 
