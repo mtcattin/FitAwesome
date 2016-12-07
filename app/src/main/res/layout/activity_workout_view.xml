@@ -20,14 +20,6 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"/>
 
-    <ExpandableListView
-        android:layout_height="300dp"
-        android:id="@+id/list_woutContents"
-        android:layout_width="600dp"
-        android:layout_centerVertical="true"
-        android:layout_alignParentStart="true"
-        android:background="?attr/colorBackgroundFloating"/>
-
     <Button
         android:id="@+id/completeWout_btn"
         tools:text="complete Workout"
@@ -35,16 +27,6 @@
         android:layout_height="75dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:textColor="@android:color/black"/>
-
-    <Button
-        android:layout_width="100dp"
-        android:layout_height="75dp"
-        android:layout_marginEnd="25dp"
-        android:id="@+id/clrWout_btn"
-        tools:text="Clear Workout"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
         android:textColor="@android:color/black"/>
 
     <TextView
@@ -56,5 +38,31 @@
         android:layout_above="@+id/list_woutContents"
         android:layout_alignParentStart="true"
         android:layout_marginStart="12dp"/>
+
+    <ExpandableListView
+        android:layout_height="300dp"
+        android:id="@+id/list_woutContents"
+        android:layout_width="600dp"
+        android:background="?attr/colorBackgroundFloating"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Return to Home Page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/menu_option_btn2"
+        android:layout_below="@+id/list_woutContents"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="27dp"
+        android:id="@+id/clrWout_btn"
+        tools:text="Clear Workout"
+        android:textColor="@android:color/black"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

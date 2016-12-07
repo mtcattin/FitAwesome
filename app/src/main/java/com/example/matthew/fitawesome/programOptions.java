@@ -27,10 +27,16 @@ public class programOptions extends AppCompatActivity implements OnClickListener
     private Button livfitprgm_p2;
     private Button livfitprgm_p3;
 
+    // Menu Options button
+    private Button menuhomepageview;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_program_options);
+
+        // Link to Home Page View (Menu Option Activity)
+        menuhomepageview = (Button) findViewById(R.id.menu_option_btn);
 
         // link the variables to the buttons in the XML (shortcut to shred)
         SC2Sprgm = (Button) findViewById(R.id.SC2S_btn);
@@ -65,6 +71,7 @@ public class programOptions extends AppCompatActivity implements OnClickListener
         livfitprgm_p1.setOnClickListener(this);
         livfitprgm_p2.setOnClickListener(this);
         livfitprgm_p3.setOnClickListener(this);
+
     }
 
     @Override
@@ -148,6 +155,22 @@ public class programOptions extends AppCompatActivity implements OnClickListener
 
             //http://www.bodybuilding.com/fun/jamie-easons-livefit-phase-3.html
 
+        }//If selected Return To Home Page button then go to menuoption activity
+        if(view == menuhomepageview) {
+            // send to exerciseLog activity
+            startActivity(new Intent(programOptions.this, menuoption.class));
         }
     }
 }
+
+//    // Menu Options button
+//    private Button menuhomepageview;
+
+//// Link to Home Page View (Menu Option Activity)
+//menuhomepageview = (Button) findViewById(R.id.menu_option_btn);
+//
+//        //If selected Return To Home Page button then go to menuoption activity
+//        if(view == menuhomepageview) {
+//        // send to exerciseLog activity
+//        startActivity(new Intent(programOptions.this, menuoption.class));
+//        }

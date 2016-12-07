@@ -50,4 +50,12 @@
             android:orientation="vertical"/>
     </ScrollView>
 
+    <Button
+        android:text="Return to Home Page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/menu_option_btn5" />
+
 </RelativeLayout>

@@ -20,6 +20,8 @@ public class WeekDay extends AppCompatActivity implements OnClickListener {
     private Button thursday;
     private Button friday;
     private Button saturday;
+        // Menu Options button
+    private Button menuhomepageview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,8 @@ public class WeekDay extends AppCompatActivity implements OnClickListener {
         thursday = (Button) findViewById(R.id.thurs_btn);
         friday = (Button) findViewById(R.id.fri_btn);
         saturday = (Button) findViewById(R.id.sat_btn);
+        // Link to Home Page View (Menu Option Activity)
+        menuhomepageview = (Button) findViewById(R.id.menu_option_btn1);
 
         // set up the buttons for activity
         sunday.setOnClickListener(this);
@@ -56,6 +60,16 @@ public class WeekDay extends AppCompatActivity implements OnClickListener {
              all go to the same page? Or should they each have thier own set up?
              see wk 10 agenda for more Q's and details...
              */
+        //If selected Return To Home Page button then go to menuoption activity
+        if(view == menuhomepageview) {
+        // send to exerciseLog activity
+        startActivity(new Intent(WeekDay.this, menuoption.class));
+        }
+
+
+
+
+
             }
         }
     }

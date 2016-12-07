@@ -19,6 +19,8 @@ public class exerciseDetails extends AppCompatActivity implements OnClickListene
     private Button saveExercise;
     // create the DB
     DBHelper ExerciseDB;
+        // Menu Options button
+    private Button menuhomepageview;
 
 
     @Override
@@ -35,6 +37,9 @@ public class exerciseDetails extends AppCompatActivity implements OnClickListene
         addExercise = (Button) findViewById(R.id.addEx_btn);
         viewWorkout = (Button) findViewById(R.id.view_wout_btn);
         saveExercise = (Button) findViewById(R.id.save_ex_btn);
+
+        // Link to Home Page View (Menu Option Activity)
+        menuhomepageview = (Button) findViewById(R.id.menu_option_btn4);
 
         //set up for buttons
         addExercise.setOnClickListener(this);
@@ -61,5 +66,14 @@ public class exerciseDetails extends AppCompatActivity implements OnClickListene
             //update & insert the database
             // display  pop up if it saved
         }
+        //If selected Return To Home Page button then go to menuoption activity
+        if(view == menuhomepageview) {
+        // send to exerciseLog activity
+        startActivity(new Intent(exerciseDetails.this, menuoption.class));
+        }
+
+
+
+
     }
 }

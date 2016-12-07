@@ -26,6 +26,8 @@ public class ExerciseLog extends AppCompatActivity implements OnClickListener {
     private Button week10;
     private Button week11;
     private Button week12;
+        // Menu Options button
+    private Button menuhomepageview;
 
 
     @Override
@@ -46,6 +48,9 @@ public class ExerciseLog extends AppCompatActivity implements OnClickListener {
         week10 = (Button) findViewById(R.id.btn_week10);
         week11 = (Button) findViewById(R.id.btn_week11);
         week12 = (Button) findViewById(R.id.btn_week12);
+
+        // Link to Home Page View (Menu Option Activity)
+        menuhomepageview = (Button) findViewById(R.id.menu_option_btn3);
 
         // set up the buttons  - same Q's for this class as there were for the days...
         week1.setOnClickListener(this);
@@ -77,5 +82,14 @@ public class ExerciseLog extends AppCompatActivity implements OnClickListener {
             // link to the weekDay activity
             startActivity(new Intent(ExerciseLog.this, WeekDay.class));
         }
+        //If selected Return To Home Page button then go to menuoption activity
+        if(view == menuhomepageview) {
+        // send to exerciseLog activity
+        startActivity(new Intent(ExerciseLog.this, menuoption.class));
+        }
+
+
+
+
     }
 }
