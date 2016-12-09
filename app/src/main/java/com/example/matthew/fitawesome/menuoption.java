@@ -9,6 +9,12 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 
+/**
+ * Class Menu Option
+ *
+ * This activity has a set of buttons that allows the user to select either to go to the
+ * program activity or to go to their own workout activity.
+ */
 public class menuoption extends AppCompatActivity implements OnClickListener {
     private static final String moTAG = menuoption.class.getSimpleName();
     private Button exProgram;
@@ -44,12 +50,17 @@ public class menuoption extends AppCompatActivity implements OnClickListener {
         woLog.setOnClickListener(this);
     }
 
+    /**
+     * name: onClick
+     *    Set up the various buttons to link to the next pages. Exercise Program activity &
+     *    the other which will let the user enter thier workout.
+     * @param view
+     */
     @Override
     public void onClick(View view) {
         if(view == exProgram) {
             // link to programOptions activity
             startActivity(new Intent(menuoption.this, programOptions.class));
-
         }
         if(view == woLog) {
             // send to exerciseLog activity

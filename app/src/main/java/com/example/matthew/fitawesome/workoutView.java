@@ -7,6 +7,13 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ExpandableListView;
 
+/**
+ * Class WorkoutView
+ *
+ * This class displays the workout that is currently stored for the selected day to the user.
+ * It also allows the user to delete the workout that is currently entered, or to say they are done
+ *  editing the workout.
+ */
 public class workoutView extends AppCompatActivity implements OnClickListener {
 
     private Button completeWorkout;

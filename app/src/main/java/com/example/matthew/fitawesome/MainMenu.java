@@ -12,7 +12,9 @@ import android.widget.Toast;
 
 
 /**
- *  This is the main page. This class handles mostly the login in but also directs the user
+ * Class Main Menu
+ *
+ * This is the main page. This class handles mostly the login in but also directs the user
  *  to be able to create an account as well.
  */
 
