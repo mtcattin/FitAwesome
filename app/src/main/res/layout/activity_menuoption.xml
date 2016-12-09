@@ -14,16 +14,6 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/progress_log_btn"
-        android:layout_below="@+id/workoutLog_btn"
-        android:layout_alignEnd="@+id/workoutLog_btn"
-        android:layout_marginTop="22dp"
-        android:textColor="@android:color/black"
-        android:text="Progress Log"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_marginTop="22dp"
         android:id="@+id/workoutLog_btn"
         android:layout_below="@+id/exercise_prg_btn"

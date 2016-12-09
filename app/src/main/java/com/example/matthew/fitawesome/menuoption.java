@@ -16,6 +16,12 @@ public class menuoption extends AppCompatActivity implements OnClickListener {
     private Button progLog;
     private EditText mmUserName;
 
+    /**
+     * name:  onCreate
+     *
+     *     This sets up the basic options for people to choose from to get to the next activities.
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +34,6 @@ public class menuoption extends AppCompatActivity implements OnClickListener {
         // link the variables to the buttons in the XML
         exProgram = (Button) findViewById(R.id.exercise_prg_btn);
         woLog = (Button) findViewById(R.id.workoutLog_btn);
-        progLog = (Button) findViewById(R.id.progress_log_btn);
         mmUserName = (EditText) findViewById(R.id.MOuserNameET);
         mmUserNameSTR = mmUserNameSTR + "!";
         Log.i(moTAG,"MO mmUserNameSTR is " + mmUserNameSTR );
@@ -37,7 +42,6 @@ public class menuoption extends AppCompatActivity implements OnClickListener {
         // set up the buttons
         exProgram.setOnClickListener(this);
         woLog.setOnClickListener(this);
-        progLog.setOnClickListener(this);
     }
 
     @Override

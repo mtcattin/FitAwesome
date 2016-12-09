@@ -27,7 +27,11 @@ public class ExerciseLog extends AppCompatActivity implements OnClickListener {
     private Button week11;
     private Button week12;
 
-
+    /**
+     *  Name: onCreate
+     *    This is the initial set up of all the variables and thier buttons. 
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,12 +68,19 @@ public class ExerciseLog extends AppCompatActivity implements OnClickListener {
 
     //submit the selection into the database
 
-    // open the activity
+    /**
+     * Name: onClick
+     *
+     * Depending on the week selected than this will take the selected week and save that for the
+     * next activity to pass on until it can be stored in the database. It will also direct the
+     * user to the next activity.
+     *
+     * @param view
+     */
     @Override
     public void onClick(View view) {
 
         String selectedWeek ="";
-
         // depending on the week selected open that week's content in the database
         // then go to the weekday Activity
         if((view == week1) || (view == week2) || (view == week3) || (view == week4)

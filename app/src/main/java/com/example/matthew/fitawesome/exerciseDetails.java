@@ -20,7 +20,14 @@ public class exerciseDetails extends AppCompatActivity implements OnClickListene
     // create the DB
     DBHelper ExerciseDB;
 
-
+    /**
+     * Name: onCreate
+     *
+     * This sets it up so that the variables are linked to the XML, and the various buttons,
+     * editTexts, etc. are all linked up as well. We also create an instance of the Database here.
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,8 +52,13 @@ public class exerciseDetails extends AppCompatActivity implements OnClickListene
         ExerciseDB = new DBHelper(this);
     }
 
-    // these functions will send data to the database
-
+    /**
+     * Name:  onClick
+     *
+     * Set up the buttons to do what we wanted them to do, most of these will send data
+     * to the database.
+     * @param view
+     */
     @Override
     public void onClick(View view) {
         if(view == addExercise) {
@@ -60,6 +72,7 @@ public class exerciseDetails extends AppCompatActivity implements OnClickListene
         if(view == saveExercise) {
             //update & insert the database
             // display  pop up if it saved
+                // toast statement
         }
     }
 }
