@@ -2,6 +2,7 @@ package com.example.matthew.fitawesome;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -12,6 +13,8 @@ import android.database.sqlite.SQLiteOpenHelper;
  /* In this class it sets up the SQLite database for the application
  */
 public class ExerciseDBHelper extends SQLiteOpenHelper {
+
+    private static final String helperExerciseTAG = ExerciseDBHelper.class.getSimpleName();
 
     public static final String DATABASE_NAME = "UserExercise_log.db";
     public static final String TABLE_NAME = "UserExercise_table";
@@ -27,7 +30,7 @@ public class ExerciseDBHelper extends SQLiteOpenHelper {
     public static final String COL_10 = "RepsPerSet3";
     public static final String COL_11 = "Weight1";
     public static final String COL_12 = "Weight2";
-    public static final String COL_13 = "Wegiht3";
+    public static final String COL_13 = "Weight3";
 
     // Constructor for DBHelper
     public ExerciseDBHelper(Context context) {
@@ -91,6 +94,16 @@ public class ExerciseDBHelper extends SQLiteOpenHelper {
     public Integer deleteExData (String id) {
         SQLiteDatabase exdb = this.getWritableDatabase();
         return exdb.delete(TABLE_NAME, "ID = ?",new String[] {id});
+    }
+
+    // get the count of rows in the DB
+    public int countRowsInDB(){
+        SQLiteDatabase exdb = this.getReadableDatabase();
+
+        Cursor cursor = exdb.rawQuery(("select * from " + TABLE_NAME), null);
+        int countRows = cursor.getCount();
+        cursor.close();
+        return countRows;
     }
 } // end of the class
 

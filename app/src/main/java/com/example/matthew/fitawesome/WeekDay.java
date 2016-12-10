@@ -3,6 +3,7 @@ package com.example.matthew.fitawesome;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -14,6 +15,7 @@ they want to access. Once a day button is implemented it then accesses the enter
 
 public class WeekDay extends AppCompatActivity implements OnClickListener {
 
+    private static final String tagWD = MainMenu.class.getSimpleName();
 
     private Button sunday;
     private Button monday;
@@ -29,10 +31,12 @@ public class WeekDay extends AppCompatActivity implements OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_week_day);
 
-        String weekNumSTR = getIntent().getStringExtra("exerciseLogWeek#");
-
+        String weekNumSTR = getIntent().getStringExtra("exerciseLogWeek");
+        Log.i(tagWD,"OnCreate weekNumSTR " + weekNumSTR) ;
 
         weekNum = (EditText) findViewById(R.id.weekNumber);
+
+        Log.i(tagWD,"OnCreate weekNum " + weekNum.getText().toString()) ;
 
         weekNum.setText(weekNumSTR);
 
