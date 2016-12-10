@@ -75,16 +75,13 @@ public class exerciseDetails extends AppCompatActivity implements OnClickListene
         }
         if(view == saveExercise) {
             //update & insert the database
-
             // display  pop up if it saved to database
             /*if(isInserted == true){
                 Toast.makeText(CreateAnAccount.this, "Exercise saved", Toast.LENGTH_LONG).show();
-
             } else {
                 Toast.makeText(CreateAnAccount.this, "Exercise not saved", Toast.LENGTH_LONG).show();
             }*/
         }
     }
 
-    // STILL NEED TO SET UP THE EDIT TEXTS AS WELL TO ACCEPT INPUT
 }

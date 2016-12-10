@@ -96,7 +96,6 @@ public class ExerciseLog extends AppCompatActivity implements OnClickListener {
             // to handoff the variable to the next activity, need to pass a unique string value
             nextActivityDays.putExtra("exerciseLogWeek#",selectedWeek);
             startActivity(nextActivityDays);
-            // link to the weekDay activity
         }
 
     }

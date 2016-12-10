@@ -1,5 +1,6 @@
 package com.example.matthew.fitawesome;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -43,7 +44,8 @@ public class workoutView extends AppCompatActivity implements OnClickListener {
     @Override
     public void onClick(View view) {
         if(view == completeWorkout) {
-            // save workout to database & Have a toast appear when it has successfully done so
+            // Go back to the menu Options page
+            startActivity(new Intent(workoutView.this, menuoption.class));
         }
         if(view == clearWorkout) {
             // delete currect days workout from the database
