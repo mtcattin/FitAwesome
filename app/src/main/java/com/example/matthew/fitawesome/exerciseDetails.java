@@ -79,7 +79,7 @@ public class exerciseDetails extends AppCompatActivity implements OnClickListene
             /*if(isInserted == true){
                 Toast.makeText(CreateAnAccount.this, "Exercise saved", Toast.LENGTH_LONG).show();
             } else {
-                Toast.makeText(CreateAnAccount.this, "Exercise not saved", Toast.LENGTH_LONG).show();
+                Toast.makeText(CreateAnAccount.this, "Error saving exercise", Toast.LENGTH_LONG).show();
             }*/
         }
     }
