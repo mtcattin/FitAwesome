@@ -35,6 +35,9 @@ public class exerciseDetails extends AppCompatActivity implements OnClickListene
 
         // link the variables to the buttons in the XML
         nameExercise =(EditText) findViewById(R.id.input_exName);
+        // set up text fill in link similar to the weeks/days set up finish when Nikhit is done!!
+
+
         sets = (EditText) findViewById(R.id.input_sets);
         reps = (EditText) findViewById(R.id.input_reps);
         lb = (EditText) findViewById(R.id.input_lb);
@@ -72,8 +75,14 @@ public class exerciseDetails extends AppCompatActivity implements OnClickListene
         }
         if(view == saveExercise) {
             //update & insert the database
-            // display  pop up if it saved
-                // toast statement
+
+            // display  pop up if it saved to database
+            /*if(isInserted == true){
+                Toast.makeText(CreateAnAccount.this, "Exercise saved", Toast.LENGTH_LONG).show();
+
+            } else {
+                Toast.makeText(CreateAnAccount.this, "Exercise not saved", Toast.LENGTH_LONG).show();
+            }*/
         }
     }
 
