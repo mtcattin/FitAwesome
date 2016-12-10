@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_program_options"
     android:layout_width="match_parent"
@@ -10,6 +11,15 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.matthew.fitawesome.programOptions">
+
+    <ImageButton
+        app:srcCompat="@drawable/homewhite2"
+        android:id="@+id/go_to_menu_option1"
+        android:scaleType="fitXY"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="95dp"
@@ -36,32 +46,6 @@
         android:layout_width="95dp"
         android:layout_below="@+id/SC2S_P1_btn"
         android:layout_alignStart="@+id/SC2S_P1_btn"
-        android:textColor="@android:color/black"/>
-
-    <Button
-        android:layout_width="95dp"
-        android:layout_height="40dp"
-        android:id="@+id/LF_P3_btn"
-        tools:text="Phase 3"
-        android:layout_below="@+id/LF_P2_btn"
-        android:layout_alignStart="@+id/LF_P2_btn"
-        android:textColor="@android:color/black"/>
-
-    <Button
-        android:id="@+id/SC2S_btn"
-        android:layout_alignParentTop="true"
-        android:layout_height="40dp"
-        tools:text="Shortcut to Shred"
-        android:layout_width="500dp"
-        android:textColor="@android:color/black"/>
-
-    <Button
-        android:layout_width="600dp"
-        android:layout_height="40dp"
-        android:id="@+id/livfit_btn"
-        tools:text="Live Fit"
-        android:layout_below="@+id/SC2Sz_P3_btn"
-        android:layout_centerHorizontal="true"
         android:textColor="@android:color/black"/>
 
     <Button
@@ -119,11 +103,30 @@
         android:layout_alignStart="@+id/SC2Sz_P1_btn"/>
 
     <Button
-        android:text="Return to Home Page"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/menu_option_btn" />
+        android:layout_width="600dp"
+        android:layout_height="40dp"
+        android:id="@+id/livfit_btn"
+        tools:text="Live Fit"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/SC2Sz_P3_btn"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="95dp"
+        android:layout_height="40dp"
+        android:id="@+id/LF_P3_btn"
+        tools:text="Phase 3"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/LF_P2_btn"
+        android:layout_alignStart="@+id/LF_P2_btn" />
+
+    <Button
+        android:id="@+id/SC2S_btn"
+        android:layout_height="40dp"
+        tools:text="Shortcut to Shred"
+        android:layout_width="500dp"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/go_to_menu_option1"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

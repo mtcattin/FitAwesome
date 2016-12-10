@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class programOptions extends AppCompatActivity implements OnClickListener {
 // short cut to shred buttons
@@ -27,8 +28,8 @@ public class programOptions extends AppCompatActivity implements OnClickListener
     private Button livfitprgm_p2;
     private Button livfitprgm_p3;
 
-    // Menu Options button
-    private Button menuhomepageview;
+    // Go to menuoptions activity icon
+    private ImageButton menuhomepageview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +37,7 @@ public class programOptions extends AppCompatActivity implements OnClickListener
         setContentView(R.layout.activity_program_options);
 
         // Link to Home Page View (Menu Option Activity)
-        menuhomepageview = (Button) findViewById(R.id.menu_option_btn);
+        menuhomepageview = (ImageButton) findViewById(R.id.go_to_menu_option1);
 
         // link the variables to the buttons in the XML (shortcut to shred)
         SC2Sprgm = (Button) findViewById(R.id.SC2S_btn);
@@ -156,12 +157,26 @@ public class programOptions extends AppCompatActivity implements OnClickListener
             //http://www.bodybuilding.com/fun/jamie-easons-livefit-phase-3.html
 
         }//If selected Return To Home Page button then go to menuoption activity
+
+        //If selected Return To Home Page button then go to menuoption activity
         if(view == menuhomepageview) {
-            // send to exerciseLog activity
-            startActivity(new Intent(programOptions.this, menuoption.class));
+        // Send to menuoption activity
+        startActivity(new Intent(programOptions.this, menuoption.class));
         }
     }
 }
+
+//    // Go to menuoptions activity icon
+//       private ImageButton menuhomepageview;
+
+////       Link to Home Page View (Menu Option Activity)
+//         menuhomepageview = (ImageButton) findViewById(R.id.go_to_menu_option6);
+//
+//        //If selected Return To Home Page button then go to menuoption activity
+//        if(view == menuhomepageview) {
+//        // Send to menuoption activity
+//        startActivity(new Intent(exerciseDetails.this, menuoption.class));
+//        }
 
 //    // Menu Options button
 //    private Button menuhomepageview;

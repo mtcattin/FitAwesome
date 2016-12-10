@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 /* WeekDay class sets up the Week days and allows the user to choose which day of the week
 they want to access. Once a day button is implemented it then accesses the enterWorkout Activity
@@ -20,8 +21,8 @@ public class WeekDay extends AppCompatActivity implements OnClickListener {
     private Button thursday;
     private Button friday;
     private Button saturday;
-        // Menu Options button
-    private Button menuhomepageview;
+    // Go to menuoptions activity icon
+    private ImageButton menuhomepageview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +37,9 @@ public class WeekDay extends AppCompatActivity implements OnClickListener {
         thursday = (Button) findViewById(R.id.thurs_btn);
         friday = (Button) findViewById(R.id.fri_btn);
         saturday = (Button) findViewById(R.id.sat_btn);
-        // Link to Home Page View (Menu Option Activity)
-        menuhomepageview = (Button) findViewById(R.id.menu_option_btn1);
+
+        //Link to Home Page View (Menu Option Activity)
+        menuhomepageview = (ImageButton) findViewById(R.id.go_to_menu_option6);
 
         // set up the buttons for activity
         sunday.setOnClickListener(this);
@@ -60,16 +62,23 @@ public class WeekDay extends AppCompatActivity implements OnClickListener {
              all go to the same page? Or should they each have thier own set up?
              see wk 10 agenda for more Q's and details...
              */
-        //If selected Return To Home Page button then go to menuoption activity
-        if(view == menuhomepageview) {
-        // send to exerciseLog activity
-        startActivity(new Intent(WeekDay.this, menuoption.class));
-        }
 
-
-
-
-
+            }
+            //If selected Return To Home Page button then go to menuoption activity
+            if(view == menuhomepageview) {
+            // Send to menuoption activity
+            startActivity(new Intent(WeekDay.this, menuoption.class));
             }
         }
     }
+//    // Go to menuoptions activity icon
+//       private ImageButton menuhomepageview;
+
+////       Link to Home Page View (Menu Option Activity)
+//         menuhomepageview = (ImageButton) findViewById(R.id.go_to_menu_option6);
+//
+//        //If selected Return To Home Page button then go to menuoption activity
+//        if(view == menuhomepageview) {
+//        // Send to menuoption activity
+//        startActivity(new Intent(exerciseDetails.this, menuoption.class));
+//        }

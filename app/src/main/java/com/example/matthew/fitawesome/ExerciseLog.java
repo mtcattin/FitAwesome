@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 /* This class sets up the Exercise log that allows the user to be able to access weeks
 1-12 in the exercise. Once a button is implemented it then accesses the WeekDay Activity
@@ -26,8 +27,8 @@ public class ExerciseLog extends AppCompatActivity implements OnClickListener {
     private Button week10;
     private Button week11;
     private Button week12;
-        // Menu Options button
-    private Button menuhomepageview;
+    // Go to menuoptions activity icon
+    private ImageButton menuhomepageview;
 
 
     @Override
@@ -49,8 +50,8 @@ public class ExerciseLog extends AppCompatActivity implements OnClickListener {
         week11 = (Button) findViewById(R.id.btn_week11);
         week12 = (Button) findViewById(R.id.btn_week12);
 
-        // Link to Home Page View (Menu Option Activity)
-        menuhomepageview = (Button) findViewById(R.id.menu_option_btn3);
+        //Link to Home Page View (Menu Option Activity)
+         menuhomepageview = (ImageButton) findViewById(R.id.go_to_menu_option5);
 
         // set up the buttons  - same Q's for this class as there were for the days...
         week1.setOnClickListener(this);
@@ -84,7 +85,7 @@ public class ExerciseLog extends AppCompatActivity implements OnClickListener {
         }
         //If selected Return To Home Page button then go to menuoption activity
         if(view == menuhomepageview) {
-        // send to exerciseLog activity
+        // Send to menuoption activity
         startActivity(new Intent(ExerciseLog.this, menuoption.class));
         }
 
@@ -93,3 +94,14 @@ public class ExerciseLog extends AppCompatActivity implements OnClickListener {
 
     }
 }
+//    // Go to menuoptions activity icon
+//       private ImageButton menuhomepageview;
+
+////       Link to Home Page View (Menu Option Activity)
+//         menuhomepageview = (ImageButton) findViewById(R.id.go_to_menu_option5);
+//
+//        //If selected Return To Home Page button then go to menuoption activity
+//        if(view == menuhomepageview) {
+//        // Send to menuoption activity
+//        startActivity(new Intent(ExerciseLog.this, menuoption.class));
+//        }

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_enter_workout"
     android:layout_width="match_parent"
@@ -34,14 +35,23 @@
         android:layout_alignBottom="@+id/btn_week2"
         android:layout_alignStart="@+id/listPreviousExercises"/>
 
+    <ImageButton
+        app:srcCompat="@drawable/homewhite2"
+        android:id="@+id/go_to_menu_option2"
+        android:scaleType="fitXY"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:elevation="0dp" />
+
     <ScrollView
         android:layout_width="300dp"
         android:visibility="visible"
         android:layout_height="250dp"
         android:background="?attr/colorBackgroundFloating"
-        android:layout_marginTop="15dp"
         android:id="@+id/listPreviousExercises"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/go_to_menu_option2"
         android:layout_centerHorizontal="true">
 
         <LinearLayout
@@ -49,13 +59,5 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"/>
     </ScrollView>
-
-    <Button
-        android:text="Return to Home Page"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/menu_option_btn5" />
 
 </RelativeLayout>

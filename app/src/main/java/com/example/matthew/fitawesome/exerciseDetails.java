@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 public class exerciseDetails extends AppCompatActivity implements OnClickListener {
     // variables
@@ -19,8 +20,9 @@ public class exerciseDetails extends AppCompatActivity implements OnClickListene
     private Button saveExercise;
     // create the DB
     DBHelper ExerciseDB;
-        // Menu Options button
-    private Button menuhomepageview;
+
+        // Go to menuoptions activity icon
+       private ImageButton menuhomepageview;
 
 
     @Override
@@ -39,7 +41,7 @@ public class exerciseDetails extends AppCompatActivity implements OnClickListene
         saveExercise = (Button) findViewById(R.id.save_ex_btn);
 
         // Link to Home Page View (Menu Option Activity)
-        menuhomepageview = (Button) findViewById(R.id.menu_option_btn4);
+         menuhomepageview = (ImageButton) findViewById(R.id.go_to_menu_option3);
 
         //set up for buttons
         addExercise.setOnClickListener(this);
@@ -66,9 +68,10 @@ public class exerciseDetails extends AppCompatActivity implements OnClickListene
             //update & insert the database
             // display  pop up if it saved
         }
+
         //If selected Return To Home Page button then go to menuoption activity
         if(view == menuhomepageview) {
-        // send to exerciseLog activity
+        // Send to menuoption activity
         startActivity(new Intent(exerciseDetails.this, menuoption.class));
         }
 
@@ -77,3 +80,14 @@ public class exerciseDetails extends AppCompatActivity implements OnClickListene
 
     }
 }
+//    // Go to menuoptions activity icon
+//       private ImageButton menuhomepageview;
+
+//// Link to Home Page View (Menu Option Activity)
+//         menuhomepageview = (ImageButton) findViewById(R.id.go_to_menu_option3);
+//
+//        //If selected Return To Home Page button then go to menuoption activity
+//        if(view == menuhomepageview) {
+//        // Send to menuoption activity
+//        startActivity(new Intent(exerciseDetails.this, menuoption.class));
+//        }
