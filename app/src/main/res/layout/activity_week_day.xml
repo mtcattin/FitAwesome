@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_week_day"
     android:layout_width="match_parent"
@@ -17,27 +16,8 @@
         android:layout_below="@+id/thurs_btn"
         android:layout_alignStart="@+id/thurs_btn"
         android:id="@+id/fri_btn"
-        tools:text="Friday"
-        android:textColor="@android:color/black"/>
-
-    <Button
-        android:layout_width="110dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/thurs_btn"
-        android:layout_below="@+id/wed_btn"
-        android:layout_alignStart="@+id/wed_btn"
-        tools:text="Thursday"
-        android:textColor="@android:color/black"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView3"
-        tools:text="Week Day"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="91dp"/>
+        android:textColor="@android:color/black"
+        android:text="Friday"/>
 
     <Button
         android:layout_height="wrap_content"
@@ -45,8 +25,8 @@
         android:layout_above="@+id/wed_btn"
         android:layout_alignStart="@+id/wed_btn"
         android:layout_width="110dp"
-        tools:text="Tuesday"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/black"
+        android:text="Tuesday"/>
 
     <Button
         android:layout_width="110dp"
@@ -54,8 +34,8 @@
         android:id="@+id/mon_btn"
         android:layout_above="@+id/tues_btn"
         android:layout_alignStart="@+id/tues_btn"
-        tools:text="Monday"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/black"
+        android:text="Monday"/>
 
     <Button
         android:layout_height="wrap_content"
@@ -63,33 +43,45 @@
         android:layout_width="110dp"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        tools:text="Wednesday"
-        android:textColor="@android:color/black"/>
-
-    <Button
-        android:layout_width="110dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/sat_btn"
-        android:layout_below="@+id/fri_btn"
-        android:layout_alignStart="@+id/fri_btn"
-        tools:text="Saturday"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/black"
+        android:text="Wednesday"/>
 
     <Button
         android:layout_width="110dp"
         android:layout_height="wrap_content"
         android:id="@+id/sun_btn"
-        tools:text="Sunday"
+        android:textColor="@android:color/black"
         android:layout_above="@+id/mon_btn"
         android:layout_alignStart="@+id/mon_btn"
-        android:textColor="@android:color/black"/>
+        android:text="Sunday"/>
 
-    <ImageButton
-        app:srcCompat="@drawable/homewhite2"
-        android:id="@+id/go_to_menu_option6"
-        android:scaleType="fitXY"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Days "
+        android:ems="10"
+        android:id="@+id/weekNumber"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:layout_marginTop="13dp"/>
+
+    <Button
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/sat_btn"
+        android:textColor="@android:color/black"
+        android:text="Saturday"
+        android:layout_below="@+id/fri_btn"
+        android:layout_alignStart="@+id/fri_btn"/>
+
+    <Button
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/thurs_btn"
+        android:textColor="@android:color/black"
+        android:text="Thursday"
+        android:layout_below="@+id/wed_btn"
+        android:layout_alignStart="@+id/wed_btn"/>
+
 </RelativeLayout>

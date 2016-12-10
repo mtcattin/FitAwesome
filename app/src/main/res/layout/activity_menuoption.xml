@@ -14,34 +14,34 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/progress_log_btn"
-        tools:text="Progress Log"
-        android:layout_below="@+id/workoutLog_btn"
-        android:layout_alignEnd="@+id/workoutLog_btn"
-        android:layout_marginTop="22dp"
-        android:textColor="@android:color/black"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_marginTop="22dp"
         android:id="@+id/workoutLog_btn"
-        tools:text="Workout Log "
         android:layout_below="@+id/exercise_prg_btn"
         android:layout_centerHorizontal="true"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/black"
+        android:text="Workout Log "/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/exercise_prg_btn"
-        tools:text="Exercise Program"
         android:layout_marginTop="133dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Button"
         android:background="?attr/colorButtonNormal"
         android:textColor="@android:color/black"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/workoutLog_btn" />
+        android:text="Exercise Program"
+        android:layout_alignStart="@+id/workoutLog_btn"/>
+
+    <TextView
+        android:text="Welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:layout_alignBaseline="@+id/MOuserNameET"
+        android:layout_alignBottom="@+id/MOuserNameET"
+        android:layout_alignParentStart="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
 
     <EditText
         android:layout_width="wrap_content"
@@ -49,20 +49,9 @@
         android:inputType="textPersonName"
         android:text="Name"
         android:ems="10"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/exercise_prg_btn"
         android:layout_marginTop="29dp"
-        android:id="@+id/MOuserNameET" />
+        android:id="@+id/MOuserNameET"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/exercise_prg_btn"/>
 
-    <TextView
-        android:text="Welcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView4"
-        android:layout_alignBottom="@+id/MOuserNameET"
-        android:layout_alignTop="@+id/MOuserNameET"
-        android:layout_alignParentStart="true"
-        android:layout_toStartOf="@+id/MOuserNameET"
-        android:autoText="false"
-        android:gravity="right|center_vertical|center_horizontal" />
 </RelativeLayout>

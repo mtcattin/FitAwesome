@@ -6,14 +6,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.ImageButton;
+import android.widget.EditText;
 
-/* WeekDay class sets up the Week days and allows the user to choose which day of the week
-they want to access. Once a day button is implemented it then accesses the enterWorkout Activity
+/**
+ * Class Week Day
+ *
+ * Sets up the Week days and allows the user to choose which day of the week
+ * they want to access. Once a day button is implemented it then accesses the enterWorkout Activity
  */
 
 public class WeekDay extends AppCompatActivity implements OnClickListener {
 
+    private String weekNumSTR;
     private Button sunday;
     private Button monday;
     private Button tuesday;
@@ -21,13 +25,23 @@ public class WeekDay extends AppCompatActivity implements OnClickListener {
     private Button thursday;
     private Button friday;
     private Button saturday;
-    // Go to menuoptions activity icon
-    private ImageButton menuhomepageview;
+    private EditText weekNum;
 
+    /**
+     * name: onCreate
+     *    This sets up the various links as well as accepts the weekNum that will be eventually
+     *    passed into the database, at this point though it has not been.
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_week_day);
+        //
+        weekNumSTR = getIntent().getStringExtra("exerciseLogWeek#");
+        weekNum = (EditText) findViewById(R.id.weekNumber);
+        weekNum.setText(weekNumSTR);
 
         // link the buttons to the variables
         sunday = (Button) findViewById(R.id.sun_btn);
@@ -37,9 +51,6 @@ public class WeekDay extends AppCompatActivity implements OnClickListener {
         thursday = (Button) findViewById(R.id.thurs_btn);
         friday = (Button) findViewById(R.id.fri_btn);
         saturday = (Button) findViewById(R.id.sat_btn);
-
-        //Link to Home Page View (Menu Option Activity)
-        menuhomepageview = (ImageButton) findViewById(R.id.go_to_menu_option6);
 
         // set up the buttons for activity
         sunday.setOnClickListener(this);
@@ -51,34 +62,29 @@ public class WeekDay extends AppCompatActivity implements OnClickListener {
         saturday.setOnClickListener(this);
     }
 
+    /**
+     * name:  onClick
+     *
+     * This sets up the various days which the user will choose from and pass off both the week day
+     * they selected as well as the previously selected week number.
+     * @param view
+     */
         @Override
         public void onClick (View view){
+           String selectedDay ="";
+
             if ((view == sunday) || (view == monday) || (view == tuesday) || (view == wednesday)
                     || (view == thursday) || (view == friday) || (view == saturday)) {
-                // open up to enter workout page
-                    startActivity(new Intent(WeekDay.this, enterWorkout.class));
-                // specify where the data will be stored??
-            /*should all the days be listed in this single if statement? since they
-             all go to the same page? Or should they each have thier own set up?
-             see wk 10 agenda for more Q's and details...
-             */
+                // get the day that has been selected
+                selectedDay = view.toString();
+                // pass the value to the next screen
+                Intent nextActivityEnterWOUT = new Intent(WeekDay.this, enterWorkout.class);
+                // to handoff the variable to the next activity, need to pass a unique string value
+                nextActivityEnterWOUT.putExtra("weekDay#",selectedDay);
 
-            }
-            //If selected Return To Home Page button then go to menuoption activity
-            if(view == menuhomepageview) {
-            // Send to menuoption activity
-            startActivity(new Intent(WeekDay.this, menuoption.class));
+                // also need to handoff the weekNumber  they selected on the last activity
+                nextActivityEnterWOUT.putExtra("weekNUMMM",weekNumSTR);
+                startActivity(nextActivityEnterWOUT);
             }
         }
-    }
-//    // Go to menuoptions activity icon
-//       private ImageButton menuhomepageview;
-
-////       Link to Home Page View (Menu Option Activity)
-//         menuhomepageview = (ImageButton) findViewById(R.id.go_to_menu_option6);
-//
-//        //If selected Return To Home Page button then go to menuoption activity
-//        if(view == menuhomepageview) {
-//        // Send to menuoption activity
-//        startActivity(new Intent(exerciseDetails.this, menuoption.class));
-//        }
+}

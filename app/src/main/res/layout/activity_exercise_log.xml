@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_exercise_log"
     android:layout_width="match_parent"
@@ -17,17 +16,9 @@
         android:layout_alignTop="@+id/btn_week2"
         android:layout_toEndOf="@+id/btn_week2"
         android:id="@+id/btn_week3"
-        tools:text="Week 3"
-        android:textColor="@android:color/black"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/btn_week10"
-        android:layout_toEndOf="@+id/btn_week10"
-        android:id="@+id/btn_week11"
-        tools:text="Week 11"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/black"
+        android:text="Week 3"
+        android:onClick="onClick (ExerciseLog)"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -35,8 +26,8 @@
         android:layout_alignTop="@+id/btn_week11"
         android:layout_toEndOf="@+id/btn_week11"
         android:id="@+id/btn_week12"
-        tools:text="Week 12"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/black"
+        android:text="Week 12"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -45,94 +36,103 @@
         android:id="@+id/btn_week1"
         android:layout_above="@+id/btn_week5"
         android:layout_alignParentStart="true"
-        tools:text="Week 1"
-        android:textColor="@android:color/black"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_week2"
-        tools:text="Week 2"
-        android:layout_alignBaseline="@+id/btn_week1"
-        android:layout_alignBottom="@+id/btn_week1"
-        android:layout_toEndOf="@+id/btn_week1"
-        android:textColor="@android:color/black"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_week5"
-        tools:text="Week 5"
-        android:layout_centerVertical="true"
-        android:layout_alignParentStart="true"
-        android:textColor="@android:color/black"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_week6"
-        tools:text="Week 6"
-        android:layout_alignBaseline="@+id/btn_week7"
-        android:layout_alignBottom="@+id/btn_week7"
-        android:layout_toEndOf="@+id/btn_week5"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/black"
+        android:text="Week 1"
+        android:onClick="onClick (ExerciseLog)"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn_week7"
-        tools:text="Week 7"
         android:layout_alignBaseline="@+id/btn_week5"
         android:layout_alignBottom="@+id/btn_week5"
         android:textColor="@android:color/black"
-        android:layout_toStartOf="@+id/btn_week8"/>
+        android:layout_toStartOf="@+id/btn_week8"
+        android:text="Week 7"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn_week8"
-        tools:text="Week 8"
         android:layout_alignBaseline="@+id/btn_week6"
         android:layout_alignBottom="@+id/btn_week6"
         android:layout_alignParentEnd="true"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/black"
+        android:text="Week 8"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
         android:id="@+id/btn_week9"
-        tools:text="Week 9"
         android:layout_below="@+id/btn_week5"
         android:layout_alignParentStart="true"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/black"
+        android:text="Week 9"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn_week10"
-        tools:text="Week 10"
         android:layout_alignBaseline="@+id/btn_week9"
         android:layout_alignBottom="@+id/btn_week9"
         android:layout_toEndOf="@+id/btn_week9"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/black"
+        android:text="Week 10"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn_week4"
-        tools:text="Week 4"
         android:textColor="@android:color/black"
         android:layout_alignBaseline="@+id/btn_week3"
         android:layout_alignBottom="@+id/btn_week3"
-        android:layout_alignParentEnd="true"/>
+        android:layout_alignParentEnd="true"
+        android:text="Week 4"
+        android:onClick="onClick (ExerciseLog)"/>
 
-    <ImageButton
-        app:srcCompat="@drawable/homewhite2"
-        android:id="@+id/go_to_menu_option5"
-        android:scaleType="fitXY"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_week2"
+        android:textColor="@android:color/black"
+        android:text="Week 2"
+        android:layout_alignBaseline="@+id/btn_week1"
+        android:layout_alignBottom="@+id/btn_week1"
+        android:layout_toEndOf="@+id/btn_week1"
+        android:onClick="onClick (ExerciseLog)"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_week5"
+        android:textColor="@android:color/black"
+        android:text="Week 5"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:onClick="onClick (ExerciseLog)"
+        android:paddingBottom="5dp"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:paddingTop="5dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_week6"
+        android:textColor="@android:color/black"
+        android:text="Week 6"
+        android:layout_alignBaseline="@+id/btn_week7"
+        android:layout_alignBottom="@+id/btn_week7"
+        android:layout_toEndOf="@+id/btn_week5"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_week11"
+        android:textColor="@android:color/black"
+        android:text="Week 11"
+        android:layout_alignBaseline="@+id/btn_week10"
+        android:layout_alignBottom="@+id/btn_week10"
+        android:layout_toEndOf="@+id/btn_week10"/>
 </RelativeLayout>

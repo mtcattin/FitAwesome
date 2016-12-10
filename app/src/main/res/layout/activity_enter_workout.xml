@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_enter_workout"
     android:layout_width="match_parent"
@@ -16,42 +15,39 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="34dp"
-        android:id="@+id/btn_week2"
-        tools:text="View Workout"
-        android:drawableTop="@android:color/holo_blue_dark"
+        android:id="@+id/createNewEx_btn"
         android:textColor="@android:color/black"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="13dp"/>
+        android:layout_alignStart="@+id/listPreviousExercises"
+        android:text="Create New Exercise"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/createNewEx_btn"
-        tools:text="Create New Exercise"
+        android:id="@+id/btn_week2"
+        android:drawableTop="@android:color/holo_blue_dark"
         android:textColor="@android:color/black"
-        android:layout_alignBaseline="@+id/btn_week2"
-        android:layout_alignBottom="@+id/btn_week2"
-        android:layout_alignStart="@+id/listPreviousExercises"/>
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/createNewEx_btn"
+        android:text="View Workout"/>
 
-    <ImageButton
-        app:srcCompat="@drawable/homewhite2"
-        android:id="@+id/go_to_menu_option2"
-        android:scaleType="fitXY"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+    <TextView
+        android:text="Previous Exercises"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:elevation="0dp" />
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView6"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
 
     <ScrollView
         android:layout_width="300dp"
         android:visibility="visible"
-        android:layout_height="250dp"
         android:background="?attr/colorBackgroundFloating"
         android:id="@+id/listPreviousExercises"
-        android:layout_below="@+id/go_to_menu_option2"
+        android:layout_height="350dp"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/textView6"
         android:layout_centerHorizontal="true">
 
         <LinearLayout

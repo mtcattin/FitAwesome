@@ -1,8 +1,5 @@
 package com.example.matthew.fitawesome;
 
-/**
- * Created by nix on 11/21/2016.
- */
 
 public class Contact {
     private int id, contactNumber;

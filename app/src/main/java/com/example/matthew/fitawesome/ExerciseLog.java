@@ -6,13 +6,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.ImageButton;
 
-/* This class sets up the Exercise log that allows the user to be able to access weeks
-1-12 in the exercise. Once a button is implemented it then accesses the WeekDay Activity
-
+/**
+ * ExerciseLog
+ *
+ * This shows the user a set of buttons each cooresponding to different weeks (1-12). Once
+ * selected it will direct them to the Week Day activity.
  */
-
 public class ExerciseLog extends AppCompatActivity implements OnClickListener {
 
     private Button week1;
@@ -27,10 +27,12 @@ public class ExerciseLog extends AppCompatActivity implements OnClickListener {
     private Button week10;
     private Button week11;
     private Button week12;
-    // Go to menuoptions activity icon
-    private ImageButton menuhomepageview;
 
-
+    /**
+     *  Name: onCreate
+     *    This is the initial set up of all the variables and thier buttons.
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,9 +52,6 @@ public class ExerciseLog extends AppCompatActivity implements OnClickListener {
         week11 = (Button) findViewById(R.id.btn_week11);
         week12 = (Button) findViewById(R.id.btn_week12);
 
-        //Link to Home Page View (Menu Option Activity)
-         menuhomepageview = (ImageButton) findViewById(R.id.go_to_menu_option5);
-
         // set up the buttons  - same Q's for this class as there were for the days...
         week1.setOnClickListener(this);
         week2.setOnClickListener(this);
@@ -70,38 +69,34 @@ public class ExerciseLog extends AppCompatActivity implements OnClickListener {
 
     //submit the selection into the database
 
-    // open the activity
+    /**
+     * Name: onClick
+     *
+     * Depending on the week selected than this will take the selected week and save that for the
+     * next activity to pass on until it can be stored in the database. It will also direct the
+     * user to the next activity.
+     *
+     * @param view
+     */
     @Override
     public void onClick(View view) {
 
+        String selectedWeek ="";
         // depending on the week selected open that week's content in the database
-
         // then go to the weekday Activity
         if((view == week1) || (view == week2) || (view == week3) || (view == week4)
                 || (view == week5) || (view == week6) || (view == week7) || (view ==week8)
                 || (view == week9) || (view == week10) || (view == week11) || (view == week12)) {
-            // link to the weekDay activity
-            startActivity(new Intent(ExerciseLog.this, WeekDay.class));
+            // get the week that has been selected
+            selectedWeek = view.toString();
+            //week1.getText().toString();
+
+            // pass the value to the next screen
+            Intent nextActivityDays = new Intent(ExerciseLog.this, WeekDay.class);
+            // to handoff the variable to the next activity, need to pass a unique string value
+            nextActivityDays.putExtra("exerciseLogWeek#",selectedWeek);
+            startActivity(nextActivityDays);
         }
-        //If selected Return To Home Page button then go to menuoption activity
-        if(view == menuhomepageview) {
-        // Send to menuoption activity
-        startActivity(new Intent(ExerciseLog.this, menuoption.class));
-        }
-
-
-
 
     }
 }
-//    // Go to menuoptions activity icon
-//       private ImageButton menuhomepageview;
-
-////       Link to Home Page View (Menu Option Activity)
-//         menuhomepageview = (ImageButton) findViewById(R.id.go_to_menu_option5);
-//
-//        //If selected Return To Home Page button then go to menuoption activity
-//        if(view == menuhomepageview) {
-//        // Send to menuoption activity
-//        startActivity(new Intent(ExerciseLog.this, menuoption.class));
-//        }

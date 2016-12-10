@@ -11,17 +11,28 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 
-//
-
+/**
+ * Class Main Menu
+ *
+ * This is the main page. This class handles mostly the login in but also directs the user
+ *  to be able to create an account as well.
+ */
 
 public class MainMenu extends AppCompatActivity {
-
+// this is what the debugger string is looking for(see below)
     private static final String TAG = MainMenu.class.getSimpleName();
+
     private EditText userName;
     private EditText password;
     private DBHelper myDB;
 
-
+    /**
+     * Name: onCreate
+     *
+     *     This deals with creating an instance of the database and also sets up the
+     *     edit Text fields.
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
        super.onCreate(savedInstanceState);
@@ -32,18 +43,17 @@ public class MainMenu extends AppCompatActivity {
 
         userName = (EditText) findViewById(R.id.userNameMM);
         password = (EditText) findViewById(R.id.passwordMM);
-
+        // debug statement   i = information, look for all other Log.i statements
         Log.i(TAG,"OnCreate username " + userName.getText().toString() ) ;
-        Log.e(TAG," Log Error Works!" ) ;
     }
-
+    // predefined function by android studio
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main_menu, menu);
         return true;
     }
-
+    // predefined function by android studio
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -58,25 +68,37 @@ public class MainMenu extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    /**
+     * Name:  onButtonClick
+     *
+     *    This set ups the main screen buttons (login & create an account).
+     * It also deals with converting the username and password to a string so it can be matched in
+     * the DB. It also checks that an entered password matches the password that has been stored
+     * within the database.
+     * @param view
+     */
     public void onButtonClick(View view){
-
         if (view.getId()== R.id.BtnSignIn){
-
+            //converts the username into a string
             String userLogin = userName.getText().toString();
+            //error statement to see if user values are correct or wrong (all Log.i comments)
             Log.i(TAG," MM Username = " + userName ) ;
+            // convert password to string
             String userPassword = password.getText().toString();
             Log.i(TAG," MM User Password = " + userPassword ) ;
-            // get the password for the user
+            // searchPassword returns the correct username password from the DB
             String passwordReturned = myDB.searchPassword(userLogin);
             Log.i(TAG," MM Received Password = " + passwordReturned ) ;
-            // when login button is clicked go to the menu Option activity
+            // Checks if the entered password matches the DB password, otherwise it won't proceed
             if(userPassword.equals(passwordReturned)) {
                 Log.i(TAG," When passwords equal in loop") ;
+                // open the next activity
                 Intent nextActivity1 = new Intent(MainMenu.this, menuoption.class);
                 nextActivity1.putExtra("usernamefromMM", userLogin);
                 startActivity(nextActivity1);
             }
-            else{
+            else{ // display message
                 Toast.makeText(MainMenu.this, "username or password does not match", Toast.LENGTH_LONG).show();
             }
         }
@@ -87,102 +109,3 @@ public class MainMenu extends AppCompatActivity {
     }
 
 }
-
-
-/*class Phase {
-    private int numWeeksInProgram;
-    private String[] weekDayList;
-    private int phaseNumber;
-
-    public Phase() {
-        //check to see what phase you are in
-
-        setNumWeeksInProgram();
-        weekDayList = new String[] {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
-    }
-    public int getNumWeeksInProgram() {
-        return numWeeksInProgram;
-    }
-    public void setNumWeeksInProgram() {
-        numWeeksInProgram = 12;
-    }
-
-};
-
-class day {
-    private String wkDay;
-    private List<Exercise> exerciseList;
-
-    public day(String day, List <Exercise> newList){
-        setDay(day);
-        setExerciseList(newList);
-    }
-    public String getDay(){
-        return wkDay;
-    }
-    public void setDay(String day){
-        wkDay = day;
-    }
-    public void setExerciseList(List<Exercise> exerciseList1){
-        exerciseList = exerciseList1;
-    }
-    public List getExerciseList() {
-        return exerciseList;
-    }
-
-}
-
-class Exercise{
-
-    private String dayName;
-    private List <Sets> exerciseSet;
-
-    Exercise(String nameofDay, List <Sets> exerciseList1){
-
-        setExerciseName(nameofDay);
-        setExerciselist(exerciseList1);
-    }
-    public String getExerciseName(){
-        return dayName;
-    }
-
-    public void setExerciseName(String name){
-        dayName = name;
-    }
-
-    public List<Sets>  getExerciseList(){
-        return exerciseSet;
-    }
-
-    public void setExerciselist(List <Sets> newList){
-        exerciseSet = newList;
-    }
-}
-
-class Sets{
-    private int reps;
-    private float weight;
-
-    public Sets(int repetitions, float mass){
-        setReps(repetitions);
-        setWeight(mass);
-    }
-
-    public void setReps(int number){
-        reps = number;
-    }
-
-    public int getReps(){
-        return reps;
-    }
-
-    public void setWeight(float pounds){
-        weight = pounds;
-    }
-
-    public float getWeight(){
-        return weight;
-    }
-}
-
-*/
