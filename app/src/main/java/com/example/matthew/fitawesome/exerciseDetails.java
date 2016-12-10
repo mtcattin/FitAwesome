@@ -63,10 +63,11 @@ public class exerciseDetails extends AppCompatActivity implements OnClickListene
     public void onClick(View view) {
         if(view == addExercise) {
             // add another new exercise to the day workout --> back to previous activity
+            //save to the database
             startActivity(new Intent(exerciseDetails.this, enterWorkout.class));
         }
         if(view == viewWorkout) {
-            //takes to another activity that will display the workout
+            //takes to workoutView activity that will display the workout
             startActivity(new Intent(exerciseDetails.this, workoutView.class));
         }
         if(view == saveExercise) {
@@ -75,4 +76,6 @@ public class exerciseDetails extends AppCompatActivity implements OnClickListene
                 // toast statement
         }
     }
+
+    // STILL NEED TO SET UP THE EDIT TEXTS AS WELL TO ACCEPT INPUT
 }

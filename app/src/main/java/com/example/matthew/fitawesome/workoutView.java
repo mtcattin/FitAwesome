@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.ExpandableListView;
+import android.widget.ScrollView;
 
 /**
  * Class WorkoutView
@@ -16,9 +16,10 @@ import android.widget.ExpandableListView;
  */
 public class workoutView extends AppCompatActivity implements OnClickListener {
 
+    ExerciseDBHelper exDB;
     private Button completeWorkout;
     private Button clearWorkout;
-    private ExpandableListView workoutDisplay;
+    private ScrollView workoutDisplay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,22 +28,36 @@ public class workoutView extends AppCompatActivity implements OnClickListener {
 
         completeWorkout = (Button) findViewById(R.id.completeWout_btn);
         clearWorkout = (Button) findViewById(R.id.clrWout_btn);
-        workoutDisplay = (ExpandableListView) findViewById(R.id.list_woutContents);
+        workoutDisplay = (ScrollView) findViewById(R.id.list_woutContents);
 
         // set up the buttons
         completeWorkout.setOnClickListener(this);
         clearWorkout.setOnClickListener(this);
 
+        //Uses the database
+        exDB = new ExerciseDBHelper(this);
+
+        viewAllExercises();
     }
 
     @Override
     public void onClick(View view) {
         if(view == completeWorkout) {
-            // save workout to database open
+            // save workout to database & Have a toast appear when it has successfully done so
         }
         if(view == clearWorkout) {
             // delete currect days workout from the database
         }
 
     }
+
+    /**
+     * Name:  viewAllExercises
+     *
+     *
+     */
+    public void viewAllExercises(){
+
+    }
+
 }
