@@ -30,28 +30,27 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"/>
 
-    <ScrollView
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_marginTop="15dp"
-        android:layout_below="@+id/textView2"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/list_woutContents">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"/>
-    </ScrollView>
-
     <TextView
         android:layout_height="50dp"
-        android:id="@+id/textView2"
+        android:id="@+id/todayWorkout "
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:layout_width="250dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:text="Todays Workout"
         android:textColor="@android:color/white"/>
+
+    <ScrollView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:id="@+id/list_woutContents"
+        android:layout_below="@+id/todayWorkout "
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+    </ScrollView>
 
 </RelativeLayout>
