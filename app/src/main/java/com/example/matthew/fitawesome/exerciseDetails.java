@@ -20,7 +20,14 @@ public class exerciseDetails extends AppCompatActivity implements OnClickListene
     // create the DB
     DBHelper ExerciseDB;
 
-
+    /**
+     * Name: onCreate
+     *
+     * This sets it up so that the variables are linked to the XML, and the various buttons,
+     * editTexts, etc. are all linked up as well. We also create an instance of the Database here.
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +35,9 @@ public class exerciseDetails extends AppCompatActivity implements OnClickListene
 
         // link the variables to the buttons in the XML
         nameExercise =(EditText) findViewById(R.id.input_exName);
+        // set up text fill in link similar to the weeks/days set up finish when Nikhit is done!!
+
+
         sets = (EditText) findViewById(R.id.input_sets);
         reps = (EditText) findViewById(R.id.input_reps);
         lb = (EditText) findViewById(R.id.input_lb);
@@ -45,21 +55,36 @@ public class exerciseDetails extends AppCompatActivity implements OnClickListene
         ExerciseDB = new DBHelper(this);
     }
 
-    // these functions will send data to the database
-
+    /**
+     * Name:  onClick
+     *
+     * Set up the buttons to do what we wanted them to do, most of these will send data
+     * to the database.
+     * @param view
+     */
     @Override
     public void onClick(View view) {
         if(view == addExercise) {
             // add another new exercise to the day workout --> back to previous activity
+            //save to the database
             startActivity(new Intent(exerciseDetails.this, enterWorkout.class));
         }
         if(view == viewWorkout) {
-            //takes to another activity that will display the workout
+            //takes to workoutView activity that will display the workout
             startActivity(new Intent(exerciseDetails.this, workoutView.class));
         }
         if(view == saveExercise) {
             //update & insert the database
-            // display  pop up if it saved
+
+            // display  pop up if it saved to database
+            /*if(isInserted == true){
+                Toast.makeText(CreateAnAccount.this, "Exercise saved", Toast.LENGTH_LONG).show();
+
+            } else {
+                Toast.makeText(CreateAnAccount.this, "Exercise not saved", Toast.LENGTH_LONG).show();
+            }*/
         }
     }
+
+    // STILL NEED TO SET UP THE EDIT TEXTS AS WELL TO ACCEPT INPUT
 }

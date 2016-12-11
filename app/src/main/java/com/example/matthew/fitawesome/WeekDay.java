@@ -3,20 +3,21 @@ package com.example.matthew.fitawesome;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 
-/* WeekDay class sets up the Week days and allows the user to choose which day of the week
-they want to access. Once a day button is implemented it then accesses the enterWorkout Activity
+/**
+ * Class Week Day
+ *
+ * Sets up the Week days and allows the user to choose which day of the week
+ * they want to access. Once a day button is implemented it then accesses the enterWorkout Activity
  */
 
 public class WeekDay extends AppCompatActivity implements OnClickListener {
 
-    private static final String tagWD = MainMenu.class.getSimpleName();
-
+    private String weekNumSTR;
     private Button sunday;
     private Button monday;
     private Button tuesday;
@@ -26,18 +27,20 @@ public class WeekDay extends AppCompatActivity implements OnClickListener {
     private Button saturday;
     private EditText weekNum;
 
+    /**
+     * name: onCreate
+     *    This sets up the various links as well as accepts the weekNum that will be eventually
+     *    passed into the database, at this point though it has not been.
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_week_day);
-
-        String weekNumSTR = getIntent().getStringExtra("exerciseLogWeek");
-        Log.i(tagWD,"OnCreate weekNumSTR " + weekNumSTR) ;
-
+        //
+        weekNumSTR = getIntent().getStringExtra("exerciseLogWeek#");
         weekNum = (EditText) findViewById(R.id.weekNumber);
-
-        Log.i(tagWD,"OnCreate weekNum " + weekNum.getText().toString()) ;
-
         weekNum.setText(weekNumSTR);
 
         // link the buttons to the variables
@@ -49,7 +52,6 @@ public class WeekDay extends AppCompatActivity implements OnClickListener {
         friday = (Button) findViewById(R.id.fri_btn);
         saturday = (Button) findViewById(R.id.sat_btn);
 
-
         // set up the buttons for activity
         sunday.setOnClickListener(this);
         monday.setOnClickListener(this);
@@ -60,17 +62,29 @@ public class WeekDay extends AppCompatActivity implements OnClickListener {
         saturday.setOnClickListener(this);
     }
 
+    /**
+     * name:  onClick
+     *
+     * This sets up the various days which the user will choose from and pass off both the week day
+     * they selected as well as the previously selected week number.
+     * @param view
+     */
         @Override
         public void onClick (View view){
+           String selectedDay ="";
+
             if ((view == sunday) || (view == monday) || (view == tuesday) || (view == wednesday)
                     || (view == thursday) || (view == friday) || (view == saturday)) {
-                // open up to enter workout page
-                    startActivity(new Intent(WeekDay.this, enterWorkout.class));
-                // specify where the data will be stored??
+                // get the day that has been selected
+                selectedDay = view.toString();
+                // pass the value to the next screen
+                Intent nextActivityEnterWOUT = new Intent(WeekDay.this, enterWorkout.class);
+                // to handoff the variable to the next activity, need to pass a unique string value
+                nextActivityEnterWOUT.putExtra("weekDay#",selectedDay);
 
+                // also need to handoff the weekNumber  they selected on the last activity
+                nextActivityEnterWOUT.putExtra("weekNUMMM",weekNumSTR);
+                startActivity(nextActivityEnterWOUT);
             }
         }
-
-    //This time need to send BOTH values, the day and the week to the next page...
-
 }

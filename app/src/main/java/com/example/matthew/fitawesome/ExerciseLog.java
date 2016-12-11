@@ -7,11 +7,12 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-/* This class sets up the Exercise log that allows the user to be able to access weeks
-1-12 in the exercise. Once a button is implemented it then accesses the WeekDay Activity
-
+/**
+ * ExerciseLog
+ *
+ * This shows the user a set of buttons each cooresponding to different weeks (1-12). Once
+ * selected it will direct them to the Week Day activity.
  */
-
 public class ExerciseLog extends AppCompatActivity implements OnClickListener {
 
     private Button week1;
@@ -27,7 +28,11 @@ public class ExerciseLog extends AppCompatActivity implements OnClickListener {
     private Button week11;
     private Button week12;
 
-
+    /**
+     *  Name: onCreate
+     *    This is the initial set up of all the variables and thier buttons.
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,12 +69,19 @@ public class ExerciseLog extends AppCompatActivity implements OnClickListener {
 
     //submit the selection into the database
 
-    // open the activity
+    /**
+     * Name: onClick
+     *
+     * Depending on the week selected than this will take the selected week and save that for the
+     * next activity to pass on until it can be stored in the database. It will also direct the
+     * user to the next activity.
+     *
+     * @param view
+     */
     @Override
     public void onClick(View view) {
 
         String selectedWeek ="";
-
         // depending on the week selected open that week's content in the database
         // then go to the weekday Activity
         if((view == week1) || (view == week2) || (view == week3) || (view == week4)

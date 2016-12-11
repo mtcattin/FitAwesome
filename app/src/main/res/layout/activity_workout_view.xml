@@ -11,50 +11,46 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.matthew.fitawesome.workoutView">
 
-    <TextView
-        android:layout_height="50dp"
-        android:id="@+id/textView2"
-        tools:text="Workout View"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:layout_width="250dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"/>
-
-    <ExpandableListView
-        android:layout_height="300dp"
-        android:id="@+id/list_woutContents"
-        android:layout_width="600dp"
-        android:layout_centerVertical="true"
-        android:layout_alignParentStart="true"
-        android:background="?attr/colorBackgroundFloating"/>
-
     <Button
         android:id="@+id/completeWout_btn"
         android:layout_width="100dp"
         android:layout_height="75dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
         android:textColor="@android:color/black"
-        android:text="complete Workout"/>
+        android:text="complete Workout"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"/>
 
     <Button
         android:layout_width="100dp"
         android:layout_height="75dp"
         android:layout_marginEnd="25dp"
         android:id="@+id/clrWout_btn"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
         android:textColor="@android:color/black"
-        android:text="Clear Workout"/>
+        android:text="Clear Workout"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"/>
 
     <TextView
-        android:layout_width="500dp"
-        android:layout_height="25dp"
-        android:id="@+id/textView7"
-        tools:text="Exercise                                    Sets      Reps   lb     "
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:layout_above="@+id/list_woutContents"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="12dp"/>
+        android:layout_height="50dp"
+        android:id="@+id/todayWorkout "
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:layout_width="250dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Todays Workout"
+        android:textColor="@android:color/white"/>
+
+    <ScrollView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:id="@+id/list_woutContents"
+        android:layout_below="@+id/todayWorkout "
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+    </ScrollView>
 
 </RelativeLayout>

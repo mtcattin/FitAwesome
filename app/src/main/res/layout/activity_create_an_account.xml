@@ -10,13 +10,6 @@
     tools:context="com.example.matthew.fitawesome.CreateAnAccount"
     android:layout_width="wrap_content">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </LinearLayout>
-
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -94,7 +87,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/btn_CAA"
         android:gravity="center_vertical|center_horizontal|center"
-        android:textColor="@android:color/black"
         android:layout_below="@+id/password2ET"
         android:layout_alignParentStart="true"
         android:layout_marginTop="28dp" />
@@ -111,5 +103,14 @@
         android:clickable="false"
         android:layout_below="@+id/Last_Name"
         android:layout_alignParentStart="true" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+    </LinearLayout>
 
 </RelativeLayout>

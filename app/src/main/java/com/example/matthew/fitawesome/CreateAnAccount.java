@@ -47,8 +47,13 @@ public class CreateAnAccount extends AppCompatActivity {
     /*
     * Name: AddData
     *
-    * This function attempts to input the data into the DB and will display an error if
-    * it succeeds or fails to do so.
+    * This function attempts sets up the create an account. This function checks to make sure the
+    * user has entered a correct password. It checks to see if passwords are empty, if they
+    * don't match and also checks to make sure that the data is entered into the database if they
+    * do enter the data correctly. Once they have successfully set up an account it will also
+    * redirect the user back to the Login page.
+    *
+    * @param view
     */
     public void AddData(){
         btn_CreateAccount.setOnClickListener(new View.OnClickListener() {
@@ -61,8 +66,8 @@ public class CreateAnAccount extends AppCompatActivity {
                 // check password match
                 if((password1.equals(""))||(password2.equals(""))){
                     Toast.makeText(CreateAnAccount.this, "passwords are empty", Toast.LENGTH_LONG).show();
-                  //   clearPasswords();
-              //      startActivity(new Intent(CreateAnAccount.this, MainMenu.class));
+                  // clearPasswords();
+                  // startActivity(new Intent(CreateAnAccount.this, MainMenu.class));
                 }
                 else if (!password1.equals(password2)){
                     Toast.makeText(CreateAnAccount.this, "passwords do not match!", Toast.LENGTH_LONG).show();
@@ -85,7 +90,13 @@ public class CreateAnAccount extends AppCompatActivity {
         });
     }
 
-    // clear mismatched passwords
+    /*
+   * Name: clearPasswords
+   *
+   * This function Clears passwords that do not matched when entered
+   *
+   *  @param none
+   */
     private void clearPasswords(){
         PWD1.setText("");
         PWD2.setText("");
