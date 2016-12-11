@@ -7,12 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageButton;
 
-/**
- *  This class deals with letting the user select from a list of pre-established workout
- *  programs from Bodybuilding.Com. We selected 3 programs that are highly rated and used most
- *  frequently from the site. ShortcuttoShred, Shortcuttosize, Jamie Eason's LivFit.
- */
 public class programOptions extends AppCompatActivity implements OnClickListener {
 // short cut to shred buttons
     private Button SC2Sprgm;
@@ -32,16 +28,16 @@ public class programOptions extends AppCompatActivity implements OnClickListener
     private Button livfitprgm_p2;
     private Button livfitprgm_p3;
 
-    /**
-     * Name: onCreate
-     *
-     * This sets up all the variables to the various buttons from the XML.
-     * @param savedInstanceState
-     */
+    // Go to menuoptions activity icon
+    private ImageButton menuhomepageview;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_program_options);
+
+        // Link to Home Page View (Menu Option Activity)
+        menuhomepageview = (ImageButton) findViewById(R.id.go_to_menu_option1);
 
         // link the variables to the buttons in the XML (shortcut to shred)
         SC2Sprgm = (Button) findViewById(R.id.SC2S_btn);
@@ -76,15 +72,9 @@ public class programOptions extends AppCompatActivity implements OnClickListener
         livfitprgm_p1.setOnClickListener(this);
         livfitprgm_p2.setOnClickListener(this);
         livfitprgm_p3.setOnClickListener(this);
+
     }
 
-    /**
-     * name:  onClick
-     *    All the buttons are linked to thier cooresponding webpage. So all of the Phase buttons
-     *    link to that particular "phase" in the program, which the large program button will
-     *    link to the main page of the program.
-     * @param view
-     */
     @Override
     public void onClick(View view) {
         if(view == SC2Sprgm) {
@@ -95,48 +85,107 @@ public class programOptions extends AppCompatActivity implements OnClickListener
         if(view == SC2Sprgm_p1) {
             Intent SC2Sprgm_p1Intent = new Intent(Intent.ACTION_VIEW, Uri.parse("www.bodybuilding.com/fun/jim-stoppani-six-week-shortcut-to-shred-day-1-chest-triceps-abs.html"));
             startActivity(SC2Sprgm_p1Intent);
+
+            //http://www.bodybuilding.com/fun/jim-stoppani-six-week-shortcut-to-shred-day-1-chest-triceps-abs.html
+            // Link to phase 1
         }
         if(view == SC2Sprgm_p2) {
             Intent SC2Sprgm_p2Intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.bodybuilding.com/fun/jim-stoppani-six-week-shortcut-to-shred-day-8-chest-triceps-abs.html"));
             startActivity(SC2Sprgm_p2Intent);
+
+            //http://www.bodybuilding.com/fun/jim-stoppani-six-week-shortcut-to-shred-day-8-chest-triceps-abs.html
+
         }
         if(view == SC2Sprgm_p3) {
             Intent SC2Sprgm_p3Intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.bodybuilding.com/fun/jim-stoppani-six-week-shortcut-to-shred-day-15-chest-triceps.html"));
             startActivity(SC2Sprgm_p3Intent);
+            //http://www.bodybuilding.com/fun/jim-stoppani-six-week-shortcut-to-shred-day-15-chest-triceps.html
+
         }
         if(view == SC2Szprgm) {
             Intent SC2SzprgmIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.bodybuilding.com/fun/shortcut-to-size-training.html"));
             startActivity(SC2SzprgmIntent);
+
+            //http://www.bodybuilding.com/fun/shortcut-to-size-training.html
+
         }
         if(view == SC2Szprgm_p1) {
             Intent SC2Szprgm_p1Intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.bodybuilding.com/fun/shortcut-to-size-phase-1-week-1-day-1.html"));
             startActivity(SC2Szprgm_p1Intent);
+
+            //http://www.bodybuilding.com/fun/shortcut-to-size-phase-1-week-1-day-1.html
+
         }
         if(view == SC2Szprgm_p2) {
             Intent SC2Szprgm_p2Intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.bodybuilding.com/fun/shortcut-to-size-phase-2-week-5-day-29.html"));
             startActivity(SC2Szprgm_p2Intent);
+
+            //http://www.bodybuilding.com/fun/shortcut-to-size-phase-2-week-5-day-29.html
+
         }
         if(view == SC2Szprgm_p3) {
             Intent SC2Szprgm_p3Intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.bodybuilding.com/fun/shortcut-to-size-phase-3-week-9-day-57.html"));
             startActivity(SC2Szprgm_p3Intent);
+            //http://www.bodybuilding.com/fun/shortcut-to-size-phase-3-week-9-day-57.html
+
         }
         if (view == livfitprgm) {
             Intent livfitprgm = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.bodybuilding.com/fun/jamie-eason-livefit-trainer.html"));
             startActivity(livfitprgm);
+
+            //http://www.bodybuilding.com/fun/jamie-eason-livefit-trainer.html
 
         }
         if(view == livfitprgm_p1) {
             Intent livfitprgm_p1 = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.bodybuilding.com/fun/jamie-easons-livefit-phase-1.html"));
             startActivity(livfitprgm_p1);
 
+            //http://www.bodybuilding.com/fun/jamie-easons-livefit-phase-1.html
+
         }
         if(view == livfitprgm_p2) {
             Intent livfitprgm_p2 = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.bodybuilding.com/fun/jamie-easons-livefit-phase-2.html"));
             startActivity(livfitprgm_p2);
+
+            //http://www.bodybuilding.com/fun/jamie-easons-livefit-phase-2.html
+
         }
         if(view == livfitprgm_p3) {
             Intent livfitprgm_p3 = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.bodybuilding.com/fun/jamie-easons-livefit-phase-3.html"));
             startActivity(livfitprgm_p3);
+
+            //http://www.bodybuilding.com/fun/jamie-easons-livefit-phase-3.html
+
+        }//If selected Return To Home Page button then go to menuoption activity
+
+        //If selected Return To Home Page button then go to menuoption activity
+        if(view == menuhomepageview) {
+        // Send to menuoption activity
+        startActivity(new Intent(programOptions.this, menuoption.class));
         }
     }
 }
+//Use this code for the image buttons
+//    // Go to menuoptions activity icon
+//       private ImageButton menuhomepageview;
+
+//// Link to Home Page View (Menu Option Activity)
+//         menuhomepageview = (ImageButton) findViewById(R.id.go_to_menu_option1);
+//
+//        //If selected Return To Home Page button then go to menuoption activity
+//        if(view == menuhomepageview) {
+//        // Send to menuoption activity
+//        startActivity(new Intent(exerciseDetails.this, menuoption.class));
+//        }
+//***Dont use this code below***
+//    // Menu Options button
+//    private Button menuhomepageview;
+
+//// Link to Home Page View (Menu Option Activity)
+//menuhomepageview = (Button) findViewById(R.id.menu_option_btn);
+//
+//        //If selected Return To Home Page button then go to menuoption activity
+//        if(view == menuhomepageview) {
+//        // send to exerciseLog activity
+//        startActivity(new Intent(programOptions.this, menuoption.class));
+//        }
