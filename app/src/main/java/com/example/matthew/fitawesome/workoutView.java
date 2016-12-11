@@ -44,6 +44,13 @@ public class workoutView extends AppCompatActivity implements OnClickListener {
         viewAllExercises4day();
     }
 
+    /**
+     * OnClick
+     *     Gives the user the option to complete the workout and go back to the main menu page
+     *     or to clear the current days workout and start from scratch.
+     *     (Currently no ability to just select an exercise and delete it).
+     * @param view
+     */
     @Override
     public void onClick(View view) {
         if(view == completeWorkout) {
@@ -59,6 +66,7 @@ public class workoutView extends AppCompatActivity implements OnClickListener {
     /**
      * Name:  viewAllExercises
      *
+     *  This lists all the exercises that have been entered for that day.
      *
      */
     public void viewAllExercises4day(){
