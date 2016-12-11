@@ -7,6 +7,9 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ScrollView;
+import android.widget.TableLayout;
+import android.widget.TableRow;
+import android.widget.TextView;
 
 /**
  * Class WorkoutView
@@ -38,7 +41,7 @@ public class workoutView extends AppCompatActivity implements OnClickListener {
         //Uses the database
         exDB = new ExerciseDBHelper(this);
 
-        viewAllExercises();
+        viewAllExercises4day();
     }
 
     @Override
@@ -58,8 +61,31 @@ public class workoutView extends AppCompatActivity implements OnClickListener {
      *
      *
      */
-    public void viewAllExercises(){
+    public void viewAllExercises4day(){
+        TableLayout wvTableLayout = (TableLayout)findViewById(R.id.wv_tl_scrollview);
+        //int count = sameDB.countRowsInDB();
+        int count = 10;
+        String temp;
+        // display number of buttons based on the ros of data in the DB
+        for (int row = 0; row < count; row++){
+            TableRow wVtableRow = new TableRow(this);
+            // setting up properties
+            wVtableRow.setLayoutParams(new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT,
+                    TableLayout.LayoutParams.MATCH_PARENT, 1.0f));
+            // adds new row inside table
+            wvTableLayout.addView(wVtableRow);
 
+            // create a new TextView
+            TextView wVtextView = new TextView(this);
+
+            // set text parameters
+            wVtextView.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT,
+                    TableRow.LayoutParams.MATCH_PARENT, 3.0f));
+            //set text view display
+            temp = "text " + row;
+            wVtextView.setText(temp);
+            wVtableRow.addView(wVtextView);
+        }
     }
 
 }

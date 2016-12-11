@@ -40,7 +40,7 @@ public class ExerciseLog extends AppCompatActivity implements OnClickListener {
 
         // link the variables to the buttons
         week1 = (Button) findViewById(R.id.btn_week1);
-        week2 = (Button) findViewById(R.id.btn_week2);
+        week2 = (Button) findViewById(R.id.btn_vewWout);
         week3 = (Button) findViewById(R.id.btn_week3);
         week4 = (Button) findViewById(R.id.btn_week4);
         week5 = (Button) findViewById(R.id.btn_week5);
