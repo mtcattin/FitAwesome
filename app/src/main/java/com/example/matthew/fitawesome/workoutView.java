@@ -51,6 +51,7 @@ public class workoutView extends AppCompatActivity implements OnClickListener {
         }
         if(view.getId() == R.id.clrWout_btn) {
             // delete currect days workout from the database
+            // get the exercise name and the week number and delete that row.
         }
     }
 
