@@ -31,7 +31,6 @@
         <item name="colorButtonNormal">@color/accent_material_dark</item>
     </style>
 
-
     <style name="Divider">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1dp</item>

@@ -29,7 +29,8 @@
         android:textColor="@android:color/black"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:text="Add Exercise"/>
+        android:text="Add Exercise"
+        android:onClick="onClick (exerciseDetails)"/>
 
     <EditText
         android:layout_width="100dp"
@@ -81,7 +82,8 @@
         android:textColor="@android:color/black"
         android:layout_alignTop="@+id/addEx_btn"
         android:layout_alignParentEnd="true"
-        android:text="Save Exercise"/>
+        android:text="Save Exercise"
+        android:onClick="onClick (exerciseDetails)"/>
 
     <EditText
         android:layout_height="wrap_content"
@@ -123,6 +125,7 @@
         android:text="View Workout"
         android:layout_alignBaseline="@+id/addEx_btn"
         android:layout_alignBottom="@+id/addEx_btn"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:onClick="onClick (exerciseDetails)"/>
 
 </RelativeLayout>

@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.EditText;
 
 /**
@@ -14,7 +13,7 @@ import android.widget.EditText;
  * they want to access. Once a day button is implemented it then accesses the enterWorkout Activity
  */
 
-public class WeekDay extends AppCompatActivity implements OnClickListener {
+public class WeekDay extends AppCompatActivity {
 
     private String weekNumSTR;
 /*    private Button sunday;
@@ -70,7 +69,7 @@ public class WeekDay extends AppCompatActivity implements OnClickListener {
      * they selected as well as the previously selected week number.
      * @param view
      */
-        @Override
+        //@Override
         public void onClick (View view){
            String selectedDay ="";
 
