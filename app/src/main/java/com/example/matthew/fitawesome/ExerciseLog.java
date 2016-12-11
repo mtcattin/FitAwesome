@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 
 /**
@@ -12,7 +13,7 @@ import android.widget.Button;
  * This shows the user a set of buttons each cooresponding to different weeks (1-12). Once
  * selected it will direct them to the Week Day activity.
  */
-public class ExerciseLog extends AppCompatActivity {
+public class ExerciseLog extends AppCompatActivity implements OnClickListener {
 
     private Button week1;
     private Button week2;
@@ -38,7 +39,7 @@ public class ExerciseLog extends AppCompatActivity {
         setContentView(R.layout.activity_exercise_log);
 
         // link the variables to the buttons
- /*       week1 = (Button) findViewById(R.id.btn_week1);
+        week1 = (Button) findViewById(R.id.btn_week1);
         week2 = (Button) findViewById(R.id.btn_week2);
         week3 = (Button) findViewById(R.id.btn_week3);
         week4 = (Button) findViewById(R.id.btn_week4);
@@ -64,7 +65,6 @@ public class ExerciseLog extends AppCompatActivity {
         week10.setOnClickListener(this);
         week11.setOnClickListener(this);
         week12.setOnClickListener(this);
-*/
     }
 
     //submit the selection into the database
@@ -78,17 +78,15 @@ public class ExerciseLog extends AppCompatActivity {
      *
      * @param view
      */
-    //@Override
+    @Override
     public void onClick(View view) {
 
         String selectedWeek ="";
         // depending on the week selected open that week's content in the database
         // then go to the weekday Activity
-        if((view.getId() == R.id.btn_week1) || (view.getId() == R.id.btn_week2) || (view.getId() == R.id.btn_week3)
-                || (view.getId() == R.id.btn_week4) || (view.getId() == R.id.btn_week5) ||
-                (view.getId() == R.id.btn_week6) || (view.getId() == R.id.btn_week7) || (view.getId() == R.id.btn_week8)
-                || (view.getId() == R.id.btn_week9) || (view.getId() == R.id.btn_week10) || (view.getId() == R.id.btn_week11)
-                || (view.getId() == R.id.btn_week12)) {
+        if((view == week1) || (view == week2) || (view == week3) || (view == week4)
+                || (view == week5) || (view == week6) || (view == week7) || (view ==week8)
+                || (view == week9) || (view == week10) || (view == week11) || (view == week12)) {
             // get the week that has been selected
             selectedWeek = view.toString();
             //week1.getText().toString();
