@@ -20,15 +20,6 @@
         android:text="Friday"/>
 
     <Button
-        android:layout_width="110dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/thurs_btn"
-        android:layout_below="@+id/wed_btn"
-        android:layout_alignStart="@+id/wed_btn"
-        android:textColor="@android:color/black"
-        android:text="Thursday"/>
-
-    <Button
         android:layout_height="wrap_content"
         android:id="@+id/tues_btn"
         android:layout_above="@+id/wed_btn"
@@ -58,15 +49,6 @@
     <Button
         android:layout_width="110dp"
         android:layout_height="wrap_content"
-        android:id="@+id/sat_btn"
-        android:layout_below="@+id/fri_btn"
-        android:layout_alignStart="@+id/fri_btn"
-        android:textColor="@android:color/black"
-        android:text="Saturday"/>
-
-    <Button
-        android:layout_width="110dp"
-        android:layout_height="wrap_content"
         android:id="@+id/sun_btn"
         android:textColor="@android:color/black"
         android:layout_above="@+id/mon_btn"
@@ -83,5 +65,23 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:layout_alignParentTop="true"
         android:layout_marginTop="13dp"/>
+
+    <Button
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/sat_btn"
+        android:textColor="@android:color/black"
+        android:text="Saturday"
+        android:layout_below="@+id/fri_btn"
+        android:layout_alignStart="@+id/fri_btn"/>
+
+    <Button
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/thurs_btn"
+        android:textColor="@android:color/black"
+        android:text="Thursday"
+        android:layout_below="@+id/wed_btn"
+        android:layout_alignStart="@+id/wed_btn"/>
 
 </RelativeLayout>
