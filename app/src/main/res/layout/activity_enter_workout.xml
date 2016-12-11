@@ -19,7 +19,8 @@
         android:textColor="@android:color/black"
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/listPreviousExercises"
-        android:text="Create New Exercise"/>
+        android:text="Create New Exercise"
+        android:onClick="onClick (enterWorkout)"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -29,7 +30,8 @@
         android:textColor="@android:color/black"
         android:layout_alignParentBottom="true"
         android:layout_toEndOf="@+id/createNewEx_btn"
-        android:text="View Workout"/>
+        android:text="View Workout"
+        android:onClick="onClick (enterWorkout)"/>
 
     <TextView
         android:text="Previous Exercises"
