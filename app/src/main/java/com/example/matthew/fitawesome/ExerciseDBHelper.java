@@ -21,18 +21,13 @@ public class ExerciseDBHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "UserExercise_log.db";
     public static final String TABLE_NAME = "UserExercise_table";
     public static final String COL_1 = "ID";
-    public static final String COL_2 = "Week";
+    public static final String COL_2 = "WeekNumber";
     public static final String COL_3 = "WeekDay";
     public static final String COL_4 = "Exercise";
-    public static final String COL_5 = "Set1";
-    public static final String COL_6 = "Set2";
-    public static final String COL_7 = "Set3";
-    public static final String COL_8 = "RepsPerSet1";
-    public static final String COL_9 = "RepsPerSet2";
-    public static final String COL_10 = "RepsPerSet3";
-    public static final String COL_11 = "Weight1";
-    public static final String COL_12 = "Weight2";
-    public static final String COL_13 = "Weight3";
+    public static final String COL_5 = "SetNumber";
+    public static final String COL_6 = "RepsPerSet";
+    public static final String COL_7 = "WeightPerSet";
+
 
     // Constructor for DBHelper
     public ExerciseDBHelper(Context context) {
@@ -51,10 +46,8 @@ public class ExerciseDBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase exdb) {
         //see function description
-        exdb.execSQL("create table " + TABLE_NAME + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, Week INTEGER, " +
-                "WeekDay TEXT, Exercise TEXT, SET1 INTEGER, SET2 INTEGER, SET3 INTEGER, RepsPerSet1 " +
-                "INTEGER, RepsPerSet2 INTEGER, RepsPerSet3 INTEGER, Weight1 INTEGER, Weight2 " +
-                "INTEGER, Weight3 INTEGER");
+        exdb.execSQL("create table " + TABLE_NAME + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, WeekNumber INTEGER, " +
+                "WeekDay TEXT, Exercise TEXT, SetNumber INTEGER, RepsPerSet INTEGER, WeightPerSet INTEGER)");
     }
 
     /**
@@ -74,28 +67,19 @@ public class ExerciseDBHelper extends SQLiteOpenHelper {
      *    Name: updateExerciseData
      *
      *    This inserts data for every row of the database.
-     * @param identity
      * @param WeekNum
      * @param dayOfWeek
      * @param eX_Name
-     * @param newSet1
-     * @param newSet2
-     * @param newSet3
-     * @param newRepsPerSet1
-     * @param newRepsPerSet2
-     * @param newRepsPerSet3
-     * @param newWeight1
-     * @param newWeight2
-     * @param newWeight3
+     * @param newSet
+     * @param newRepsPerSet
+     * @param newWeightPerSet
      *
      * @return T or F, depending if it was able to insert the data or not
      */
-    public boolean updateExerciseData(String identity, String WeekNum, String dayOfWeek, String eX_Name, String newSet1,
-                              String newSet2, String newSet3, String newRepsPerSet1, String
-                              newRepsPerSet2, String newRepsPerSet3, String newWeight1,
-                              String newWeight2, String newWeight3){
-
-        // to create a db by default only (it is only for checking), make sure database is writable
+    public boolean updateExerciseData( String WeekNum, String dayOfWeek, String eX_Name,
+                                       String newSet, String newRepsPerSet,String newWeightPerSet){
+        String identity = "";
+        // to create a db by default only (it is only for checnewRepsPerSetking), make sure database is writable
         SQLiteDatabase exdb = this.getWritableDatabase();
         // Create a content value to insert data into each row.
         ContentValues contentValues4x = new ContentValues();
@@ -106,15 +90,9 @@ public class ExerciseDBHelper extends SQLiteOpenHelper {
         contentValues4x.put(COL_2, WeekNum);
         contentValues4x.put(COL_3, dayOfWeek);
         contentValues4x.put(COL_4, eX_Name);
-        contentValues4x.put(COL_5, newSet1);
-        contentValues4x.put(COL_6, newSet2);
-        contentValues4x.put(COL_7, newSet3);
-        contentValues4x.put(COL_8, newRepsPerSet1);
-        contentValues4x.put(COL_9, newRepsPerSet2);
-        contentValues4x.put(COL_10, newRepsPerSet3);
-        contentValues4x.put(COL_11, newWeight1);
-        contentValues4x.put(COL_12, newWeight2);
-        contentValues4x.put(COL_13, newWeight3);
+        contentValues4x.put(COL_5, newSet);
+        contentValues4x.put(COL_6, newRepsPerSet);
+        contentValues4x.put(COL_7, newWeightPerSet);
         // giving the row a specific ID
         exdb.update(TABLE_NAME, contentValues4x, "ID = ?", new String[] { identity });
         return true;
@@ -128,6 +106,12 @@ public class ExerciseDBHelper extends SQLiteOpenHelper {
     }
 */
 
+
+    public Cursor getFirstRow(){
+        SQLiteDatabase exdb = this.getWritableDatabase();
+        Cursor res = exdb.rawQuery("select Exercise from "+TABLE_NAME,null);
+        return res;
+    }
     // Create one to get just the list of exercise names (independent of the week)
 
     // Create one to get just the weekNum

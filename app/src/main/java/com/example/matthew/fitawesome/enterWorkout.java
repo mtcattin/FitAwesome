@@ -1,6 +1,7 @@
 package com.example.matthew.fitawesome;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -28,6 +29,7 @@ public class enterWorkout extends AppCompatActivity {
     private ScrollView displayExercisesInDB;
     private String weekDay_num;
     private String week_number;
+    String exercise_name ="";
 
     @Override
     /*
@@ -40,6 +42,8 @@ public class enterWorkout extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_enter_workout);
+
+
 
         weekDay_num = getIntent().getStringExtra("weekDayNum");
         week_number = getIntent().getStringExtra("weekNUMMM");
@@ -69,6 +73,8 @@ public class enterWorkout extends AppCompatActivity {
     * @param view
     */
     public void onEWClick(View view) {
+
+
         if(view.getId() == R.id.createNewEx_btn) {
             // take to the exerciseDetails activity
             startActivity(new Intent(enterWorkout.this, exerciseDetails.class));
@@ -85,10 +91,16 @@ public class enterWorkout extends AppCompatActivity {
 
     // displays all exercises in DB as buttons
     private void viewExercises(){
+       // sameDB = this.getWritableDatabase();
+
+        sameDB.getReadableDatabase();
 
         TableLayout ewTableLayout = (TableLayout)findViewById(R.id.ew_scrollTable);
-        //int count = sameDB.countRowsInDB();
-        int count = 10;
+        int count = sameDB.countRowsInDB();
+        Cursor cursor = sameDB.getFirstRow();
+        exercise_name = cursor.getString(0);
+        cursor.moveToFirst();
+        //int count = 10;
         // display number of buttons based on the ros of data in the DB
         for (int row = 0; row < count; row++){
             TableRow tableRow = new TableRow(this);
@@ -105,12 +117,17 @@ public class enterWorkout extends AppCompatActivity {
             button.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT,
                     TableRow.LayoutParams.MATCH_PARENT, 1.0f));
             //set button text display
-            button.setText("Button " + row);
+            button.setText(exercise_name);
             // set button to be clickable
             button.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     gotoExercise();
+                    Intent nextExerciseDetails = new Intent(enterWorkout.this, exerciseDetails.class);
+                    nextExerciseDetails.putExtra("ewExercise_Name",exercise_name);
+                    nextExerciseDetails.putExtra("ewWeekDay",weekDay_num);
+                    nextExerciseDetails.putExtra("ewWeekNumber",week_number);
+                    startActivity(nextExerciseDetails);
                 }
             });
             tableRow.addView(button);
