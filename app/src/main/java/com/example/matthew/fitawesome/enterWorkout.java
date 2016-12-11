@@ -19,7 +19,7 @@ import android.widget.Toast;
 *  It displays all the exercises as buttons
 *
 */
-public class enterWorkout extends AppCompatActivity {
+public class enterWorkout extends AppCompatActivity implements OnClickListener{
 
     ExerciseDBHelper sameDB;
     private Button createNewEx;
@@ -46,14 +46,14 @@ public class enterWorkout extends AppCompatActivity {
 
         sameDB = new ExerciseDBHelper(this);
 
-       //createNewEx = (Button) findViewById(R.id.createNewEx_btn);
-       // viewWorkout = (Button) findViewById(R.id.btn_week2);
+       createNewEx = (Button) findViewById(R.id.createNewEx_btn);
+       viewWorkout = (Button) findViewById(R.id.btn_week2);
 
         //exerciseDatabase = (SearchView) findViewById(R.id.srchExData);
         displayExercisesInDB = (ScrollView) findViewById(R.id.listPreviousExercises);
-        //
-        //createNewEx.setOnClickListener(this);
-        //viewWorkout.setOnClickListener(this);
+
+        createNewEx.setOnClickListener(this);
+        viewWorkout.setOnClickListener(this);
 
         viewExercises();
 
@@ -68,7 +68,7 @@ public class enterWorkout extends AppCompatActivity {
     * specifically this one sets up either option to the activities they are linked to.
     * @param view
     */
-    public void onEWClick(View view) {
+    public void onClick(View view) {
         if(view.getId() == R.id.createNewEx_btn) {
             // take to the exerciseDetails activity
             startActivity(new Intent(enterWorkout.this, exerciseDetails.class));
