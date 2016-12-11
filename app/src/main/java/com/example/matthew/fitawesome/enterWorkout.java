@@ -46,8 +46,8 @@ public class enterWorkout extends AppCompatActivity {
 
         sameDB = new ExerciseDBHelper(this);
 
-        createNewEx = (Button) findViewById(R.id.createNewEx_btn);
-        viewWorkout = (Button) findViewById(R.id.btn_week2);
+       //createNewEx = (Button) findViewById(R.id.createNewEx_btn);
+       // viewWorkout = (Button) findViewById(R.id.btn_week2);
 
         //exerciseDatabase = (SearchView) findViewById(R.id.srchExData);
         displayExercisesInDB = (ScrollView) findViewById(R.id.listPreviousExercises);
@@ -79,7 +79,6 @@ public class enterWorkout extends AppCompatActivity {
 
             // IF select one of the scrollView items then open the exerciseDetails page
             // also set the exerciseName of that exercise to be the DB value of the "name"
-
         }
     }
 

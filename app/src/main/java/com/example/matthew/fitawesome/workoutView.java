@@ -42,7 +42,7 @@ public class workoutView extends AppCompatActivity  {
         viewAllExercises4day();
     }
 
-   // @Override
+   //@Override
     public void on_WV_Click(View view) {
         if(view.getId() == R.id.completeWout_btn) {
             // Go back to the menu Options page

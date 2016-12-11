@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.EditText;
 
 /**
@@ -13,17 +15,17 @@ import android.widget.EditText;
  * they want to access. Once a day button is implemented it then accesses the enterWorkout Activity
  */
 
-public class WeekDay extends AppCompatActivity {
+public class WeekDay extends AppCompatActivity implements OnClickListener {
 
     private String weekNumSTR;
-/*    private Button sunday;
+    private Button sunday;
     private Button monday;
     private Button tuesday;
     private Button wednesday;
     private Button thursday;
     private Button friday;
     private Button saturday;
- */
+
     private EditText weekNum;
 
     /**
@@ -33,6 +35,7 @@ public class WeekDay extends AppCompatActivity {
      *
      * @param savedInstanceState
      */
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +46,7 @@ public class WeekDay extends AppCompatActivity {
         weekNum.setText(weekNumSTR);
 
         // link the buttons to the variables
- /*       sunday = (Button) findViewById(R.id.sun_btn);
+       sunday = (Button) findViewById(R.id.sun_btn);
         monday = (Button) findViewById(R.id.mon_btn);
         tuesday = (Button) findViewById(R.id.tues_btn);
         wednesday = (Button) findViewById(R.id.wed_btn);
@@ -59,7 +62,6 @@ public class WeekDay extends AppCompatActivity {
         thursday.setOnClickListener(this);
         friday.setOnClickListener(this);
         saturday.setOnClickListener(this);
-  */
     }
 
     /**
@@ -69,14 +71,13 @@ public class WeekDay extends AppCompatActivity {
      * they selected as well as the previously selected week number.
      * @param view
      */
-        //@Override
+        @Override
         public void onClick (View view){
            String selectedDay ="";
 
-            if ((view.getId() == R.id.sun_btn) || (view.getId() == R.id.mon_btn) ||
-                    (view.getId() == R.id.tues_btn) || (view.getId() == R.id.wed_btn)
-                    || (view.getId() == R.id.thurs_btn) || (view.getId() == R.id.fri_btn) ||
-                    (view.getId() == R.id.sat_btn)) {
+            if ((view == sunday) || (view == monday) || (view == tuesday) || (view == wednesday)
+                    || (view == thursday) || (view == friday) || (view == saturday))
+            {
                 // get the day that has been selected
                 selectedDay = view.toString();
                 // pass the value to the next screen
