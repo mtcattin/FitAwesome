@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -16,7 +17,7 @@ import android.widget.TextView;
  * It also allows the user to delete the workout that is currently entered, or to say they are done
  *  editing the workout.
  */
-public class workoutView extends AppCompatActivity  {
+public class workoutView extends AppCompatActivity implements OnClickListener {
 
     ExerciseDBHelper exDB;
     private Button completeWorkout;
@@ -33,8 +34,8 @@ public class workoutView extends AppCompatActivity  {
       //  workoutDisplay = (ScrollView) findViewById(R.id.list_woutContents);
 
         // set up the buttons
-     //   completeWorkout.setOnClickListener(this);
-     //   clearWorkout.setOnClickListener(this);
+        completeWorkout.setOnClickListener(this);
+        clearWorkout.setOnClickListener(this);
 
         //Uses the database
         exDB = new ExerciseDBHelper(this);
@@ -42,16 +43,16 @@ public class workoutView extends AppCompatActivity  {
         viewAllExercises4day();
     }
 
-   // @Override
-    public void on_WV_Click(View view) {
+   @Override
+    public void onClick(View view) {
         if(view.getId() == R.id.completeWout_btn) {
             // Go back to the menu Options page
             startActivity(new Intent(workoutView.this, menuoption.class));
         }
         if(view.getId() == R.id.clrWout_btn) {
             // delete currect days workout from the database
+            // get the exercise name and the week number and delete that row.
         }
-
     }
 
     /**

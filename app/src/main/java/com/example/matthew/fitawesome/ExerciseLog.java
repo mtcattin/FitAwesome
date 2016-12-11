@@ -39,7 +39,7 @@ public class ExerciseLog extends AppCompatActivity implements OnClickListener {
         setContentView(R.layout.activity_exercise_log);
 
         // link the variables to the buttons
-       week1 = (Button) findViewById(R.id.btn_week1);
+        week1 = (Button) findViewById(R.id.btn_week1);
         week2 = (Button) findViewById(R.id.btn_week2);
         week3 = (Button) findViewById(R.id.btn_week3);
         week4 = (Button) findViewById(R.id.btn_week4);
@@ -65,7 +65,6 @@ public class ExerciseLog extends AppCompatActivity implements OnClickListener {
         week10.setOnClickListener(this);
         week11.setOnClickListener(this);
         week12.setOnClickListener(this);
-
     }
 
     //submit the selection into the database
@@ -85,9 +84,9 @@ public class ExerciseLog extends AppCompatActivity implements OnClickListener {
         String selectedWeek ="";
         // depending on the week selected open that week's content in the database
         // then go to the weekday Activity
-        if((view==week1) || (view==week2) || (view==week3) || (view==week4) || (view==week5) || (view==week6) || (view==week7) || (view==week8)
-                || (view==week9) || (view==week10) || (view==week11)
-                || (view==week12)) {
+        if((view == week1) || (view == week2) || (view == week3) || (view == week4)
+                || (view == week5) || (view == week6) || (view == week7) || (view ==week8)
+                || (view == week9) || (view == week10) || (view == week11) || (view == week12)) {
             // get the week that has been selected
             selectedWeek = view.toString();
             //week1.getText().toString();
