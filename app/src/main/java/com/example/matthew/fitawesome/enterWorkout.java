@@ -20,11 +20,14 @@ import android.widget.Toast;
 *
 */
 public class enterWorkout extends AppCompatActivity {
+
     ExerciseDBHelper sameDB;
     private Button createNewEx;
     private Button viewWorkout;
    // private SearchView exerciseDatabase;
     private ScrollView displayExercisesInDB;
+    private String weekDay_num;
+    private String week_number;
 
     @Override
     /*
@@ -38,10 +41,13 @@ public class enterWorkout extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_enter_workout);
 
+        weekDay_num = getIntent().getStringExtra("weekDayNum");
+        week_number = getIntent().getStringExtra("weekNUMMM");
+
         sameDB = new ExerciseDBHelper(this);
 
         createNewEx = (Button) findViewById(R.id.createNewEx_btn);
-        viewWorkout = (Button) findViewById(R.id.btn_vewWout);
+        viewWorkout = (Button) findViewById(R.id.btn_week2);
 
         //exerciseDatabase = (SearchView) findViewById(R.id.srchExData);
         displayExercisesInDB = (ScrollView) findViewById(R.id.listPreviousExercises);
@@ -67,7 +73,7 @@ public class enterWorkout extends AppCompatActivity {
             // take to the exerciseDetails activity
             startActivity(new Intent(enterWorkout.this, exerciseDetails.class));
         }
-        if(view.getId() == R.id.btn_vewWout) {
+        if(view.getId() == R.id.btn_week2) {
             // take to the workout view Activity
             startActivity(new Intent(enterWorkout.this, workoutView.class));
 
