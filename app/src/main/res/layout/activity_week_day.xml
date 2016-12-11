@@ -21,16 +21,6 @@
         android:onClick="onClick (WeekDay)"/>
 
     <Button
-        android:layout_height="wrap_content"
-        android:id="@+id/tues_btn"
-        android:layout_above="@+id/wed_btn"
-        android:layout_alignStart="@+id/wed_btn"
-        android:layout_width="110dp"
-        android:textColor="@android:color/black"
-        android:text="Tuesday"
-        android:onClick="onClick (WeekDay)"/>
-
-    <Button
         android:layout_width="110dp"
         android:layout_height="wrap_content"
         android:id="@+id/mon_btn"
@@ -90,5 +80,15 @@
         android:layout_below="@+id/wed_btn"
         android:layout_alignStart="@+id/wed_btn"
         android:onClick="onClick (WeekDay)"/>
+
+    <Button
+        android:layout_height="wrap_content"
+        android:id="@+id/tues_btn"
+        android:layout_width="110dp"
+        android:textColor="@android:color/black"
+        android:text="Tuesday"
+        android:onClick="onClick (WeekDay)"
+        android:layout_above="@+id/wed_btn"
+        android:layout_alignStart="@+id/wed_btn"/>
 
 </RelativeLayout>

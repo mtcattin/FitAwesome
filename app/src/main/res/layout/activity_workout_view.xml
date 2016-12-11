@@ -21,26 +21,6 @@
         android:text="Todays Workout"
         android:textColor="@android:color/white"/>
 
-    <Button
-        android:layout_width="100dp"
-        android:layout_height="75dp"
-        android:id="@+id/clrWout_btn"
-        android:textColor="@android:color/black"
-        android:text="Clear Workout"
-        android:layout_alignParentBottom="true"
-        android:layout_alignEnd="@+id/list_woutContents"
-        android:onClick="onClick (workoutView)"/>
-
-    <Button
-        android:id="@+id/completeWout_btn"
-        android:layout_width="100dp"
-        android:layout_height="75dp"
-        android:textColor="@android:color/black"
-        android:text="complete Workout"
-        android:onClick="onClick (workoutView)"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"/>
-
     <ScrollView
         android:layout_width="300dp"
         android:layout_height="300dp"
@@ -81,5 +61,25 @@
             </TableLayout>
         </LinearLayout>
     </ScrollView>
+
+    <Button
+        android:id="@+id/completeWout_btn"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:textColor="@android:color/black"
+        android:text="complete Workout"
+        android:onClick="onClick (workoutView)"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:id="@+id/clrWout_btn"
+        android:textColor="@android:color/black"
+        android:text="Clear Workout"
+        android:onClick="onClick (workoutView)"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/list_woutContents"/>
 
 </RelativeLayout>
