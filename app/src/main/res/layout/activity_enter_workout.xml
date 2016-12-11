@@ -19,17 +19,19 @@
         android:textColor="@android:color/black"
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/listPreviousExercises"
-        android:text="Create New Exercise"/>
+        android:text="Create New Exercise"
+        android:onClick="onEWClick (enterWorkout)" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_week2"
+        android:id="@+id/btn_vewWout"
         android:drawableTop="@android:color/holo_blue_dark"
         android:textColor="@android:color/black"
         android:layout_alignParentBottom="true"
         android:layout_toEndOf="@+id/createNewEx_btn"
-        android:text="View Workout"/>
+        android:text="View Workout"
+        android:onClick="onEWClick" />
 
     <TextView
         android:text="Previous Exercises"

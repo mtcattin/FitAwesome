@@ -13,8 +13,8 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/btn_week2"
-        android:layout_toEndOf="@+id/btn_week2"
+        android:layout_alignTop="@+id/btn_vewWout"
+        android:layout_toEndOf="@+id/btn_vewWout"
         android:id="@+id/btn_week3"
         android:textColor="@android:color/black"
         android:text="Week 3"/>
@@ -111,7 +111,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_week2"
+        android:id="@+id/btn_vewWout"
         android:textColor="@android:color/black"
         android:text="Week 2"
         android:layout_alignBaseline="@+id/btn_week1"

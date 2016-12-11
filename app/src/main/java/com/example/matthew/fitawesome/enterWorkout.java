@@ -19,7 +19,7 @@ import android.widget.Toast;
 *  It displays all the exercises as buttons
 *
 */
-public class enterWorkout extends AppCompatActivity implements OnClickListener {
+public class enterWorkout extends AppCompatActivity {
     ExerciseDBHelper sameDB;
     private Button createNewEx;
     private Button viewWorkout;
@@ -41,19 +41,18 @@ public class enterWorkout extends AppCompatActivity implements OnClickListener {
         sameDB = new ExerciseDBHelper(this);
 
         createNewEx = (Button) findViewById(R.id.createNewEx_btn);
-        viewWorkout = (Button) findViewById(R.id.btn_week2);
+        viewWorkout = (Button) findViewById(R.id.btn_vewWout);
 
         //exerciseDatabase = (SearchView) findViewById(R.id.srchExData);
         displayExercisesInDB = (ScrollView) findViewById(R.id.listPreviousExercises);
         //
-        createNewEx.setOnClickListener(this);
-        viewWorkout.setOnClickListener(this);
+        //createNewEx.setOnClickListener(this);
+        //viewWorkout.setOnClickListener(this);
 
         viewExercises();
 
     }
 
-    @Override
     /*
     * onClick
     *
@@ -63,12 +62,12 @@ public class enterWorkout extends AppCompatActivity implements OnClickListener {
     * specifically this one sets up either option to the activities they are linked to.
     * @param view
     */
-    public void onClick(View view) {
-        if(view == createNewEx) {
+    public void onEWClick(View view) {
+        if(view.getId() == R.id.createNewEx_btn) {
             // take to the exerciseDetails activity
             startActivity(new Intent(enterWorkout.this, exerciseDetails.class));
         }
-        if(view == viewWorkout) {
+        if(view.getId() == R.id.btn_vewWout) {
             // take to the workout view Activity
             startActivity(new Intent(enterWorkout.this, workoutView.class));
 
@@ -78,7 +77,7 @@ public class enterWorkout extends AppCompatActivity implements OnClickListener {
         }
     }
 
-    // displays all exercises in DB
+    // displays all exercises in DB as buttons
     private void viewExercises(){
 
         TableLayout ewTableLayout = (TableLayout)findViewById(R.id.ew_scrollTable);
