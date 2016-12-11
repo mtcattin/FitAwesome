@@ -32,7 +32,7 @@ public class CreateAnAccount extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_an_account);
 
-         mydb = new DBHelper(this);
+        mydb = new DBHelper(this);
         editFirst = (EditText) findViewById(R.id.First_Name);
         editLast = (EditText) findViewById(R.id.Last_Name);
         editEmail = (EditText) findViewById(R.id.email);
