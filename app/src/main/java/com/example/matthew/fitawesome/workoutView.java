@@ -6,7 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.ScrollView;
+import android.widget.TableLayout;
+import android.widget.TableRow;
+import android.widget.TextView;
 
 /**
  * Class WorkoutView
@@ -20,7 +22,7 @@ public class workoutView extends AppCompatActivity implements OnClickListener {
     ExerciseDBHelper exDB;
     private Button completeWorkout;
     private Button clearWorkout;
-    private ScrollView workoutDisplay;
+    //private ScrollView workoutDisplay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +31,7 @@ public class workoutView extends AppCompatActivity implements OnClickListener {
 
         completeWorkout = (Button) findViewById(R.id.completeWout_btn);
         clearWorkout = (Button) findViewById(R.id.clrWout_btn);
-        workoutDisplay = (ScrollView) findViewById(R.id.list_woutContents);
+      //  workoutDisplay = (ScrollView) findViewById(R.id.list_woutContents);
 
         // set up the buttons
         completeWorkout.setOnClickListener(this);
@@ -38,19 +40,19 @@ public class workoutView extends AppCompatActivity implements OnClickListener {
         //Uses the database
         exDB = new ExerciseDBHelper(this);
 
-        viewAllExercises();
+        viewAllExercises4day();
     }
 
-    @Override
+   @Override
     public void onClick(View view) {
-        if(view == completeWorkout) {
+        if(view.getId() == R.id.completeWout_btn) {
             // Go back to the menu Options page
             startActivity(new Intent(workoutView.this, menuoption.class));
         }
-        if(view == clearWorkout) {
+        if(view.getId() == R.id.clrWout_btn) {
             // delete currect days workout from the database
+            // get the exercise name and the week number and delete that row.
         }
-
     }
 
     /**
@@ -58,8 +60,32 @@ public class workoutView extends AppCompatActivity implements OnClickListener {
      *
      *
      */
-    public void viewAllExercises(){
+    public void viewAllExercises4day(){
+        TableLayout wvTableLayout = (TableLayout)findViewById(R.id.wv_tl_scrollview);
+        //int count = sameDB.countRowsInDB();
+        int count = 10;
+        String temp;
+        // display number of buttons based on the ros of data in the DB
+        for (int row = 0; row < count; row++){
+            TableRow wVtableRow = new TableRow(this);
+            // setting up properties
+            wVtableRow.setLayoutParams(new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT,
+                    TableLayout.LayoutParams.MATCH_PARENT, 1.0f));
+            // adds new row inside table
+            wvTableLayout.addView(wVtableRow);
 
+            // create a new TextView
+            TextView wVtextView = new TextView(this);
+
+            // set text parameters
+            wVtextView.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT,
+                    TableRow.LayoutParams.MATCH_PARENT, 3.0f));
+            //set text view display
+            temp = "text " + row;
+            wVtextView.setText(temp);
+            wVtextView.setTextSize(25);
+            wVtableRow.addView(wVtextView);
+        }
     }
 
 }

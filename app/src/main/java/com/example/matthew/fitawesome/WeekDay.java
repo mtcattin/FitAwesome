@@ -25,6 +25,7 @@ public class WeekDay extends AppCompatActivity implements OnClickListener {
     private Button thursday;
     private Button friday;
     private Button saturday;
+
     private EditText weekNum;
 
     /**
@@ -34,6 +35,7 @@ public class WeekDay extends AppCompatActivity implements OnClickListener {
      *
      * @param savedInstanceState
      */
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,7 +46,7 @@ public class WeekDay extends AppCompatActivity implements OnClickListener {
         weekNum.setText(weekNumSTR);
 
         // link the buttons to the variables
-        sunday = (Button) findViewById(R.id.sun_btn);
+       sunday = (Button) findViewById(R.id.sun_btn);
         monday = (Button) findViewById(R.id.mon_btn);
         tuesday = (Button) findViewById(R.id.tues_btn);
         wednesday = (Button) findViewById(R.id.wed_btn);
@@ -74,13 +76,14 @@ public class WeekDay extends AppCompatActivity implements OnClickListener {
            String selectedDay ="";
 
             if ((view == sunday) || (view == monday) || (view == tuesday) || (view == wednesday)
-                    || (view == thursday) || (view == friday) || (view == saturday)) {
+                    || (view == thursday) || (view == friday) || (view == saturday))
+            {
                 // get the day that has been selected
                 selectedDay = view.toString();
                 // pass the value to the next screen
                 Intent nextActivityEnterWOUT = new Intent(WeekDay.this, enterWorkout.class);
                 // to handoff the variable to the next activity, need to pass a unique string value
-                nextActivityEnterWOUT.putExtra("weekDay#",selectedDay);
+                nextActivityEnterWOUT.putExtra("weekDayNum",selectedDay);
 
                 // also need to handoff the weekNumber  they selected on the last activity
                 nextActivityEnterWOUT.putExtra("weekNUMMM",weekNumSTR);

@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class exerciseDetails extends AppCompatActivity implements OnClickListener {
     // variables
@@ -18,7 +19,18 @@ public class exerciseDetails extends AppCompatActivity implements OnClickListene
     private Button viewWorkout;
     private Button saveExercise;
     // create the DB
-    DBHelper ExerciseDB;
+    ExerciseDBHelper ExerciseDB;
+
+
+    // to capture details from previous activity
+    String edexName;
+    String edweek_Number;
+    String edweekDay;
+
+    // get strings from dislpayed values
+    String ed_sets;
+    String ed_reps;
+    String ed_lb;
 
     /**
      * Name: onCreate
@@ -36,8 +48,11 @@ public class exerciseDetails extends AppCompatActivity implements OnClickListene
         // link the variables to the buttons in the XML
         nameExercise =(EditText) findViewById(R.id.input_exName);
         // set up text fill in link similar to the weeks/days set up finish when Nikhit is done!!
+        edexName= getIntent().getStringExtra("ewExercise_Name");
+        edweek_Number= getIntent().getStringExtra("ewWeekNumber");
+        edweekDay = getIntent().getStringExtra("ewWeekDay");
 
-
+        nameExercise.setText(edexName);
         sets = (EditText) findViewById(R.id.input_sets);
         reps = (EditText) findViewById(R.id.input_reps);
         lb = (EditText) findViewById(R.id.input_lb);
@@ -52,7 +67,7 @@ public class exerciseDetails extends AppCompatActivity implements OnClickListene
         saveExercise.setOnClickListener(this);
 
         //create instance of the DB
-        ExerciseDB = new DBHelper(this);
+        ExerciseDB = new ExerciseDBHelper(this);
     }
 
     /**
@@ -60,27 +75,40 @@ public class exerciseDetails extends AppCompatActivity implements OnClickListene
      *
      * Set up the buttons to do what we wanted them to do, most of these will send data
      * to the database.
-     * @param view
+     * @param view onclick options
      */
     @Override
     public void onClick(View view) {
+        ed_sets= sets.getText().toString();
+        ed_reps = reps.getText().toString();
+        ed_lb = lb.getText().toString();
+
+        Intent get2nextActivity;
+
         if(view == addExercise) {
             // add another new exercise to the day workout --> back to previous activity
-            //save to the database
-            startActivity(new Intent(exerciseDetails.this, enterWorkout.class));
+            get2nextActivity = new Intent(exerciseDetails.this, enterWorkout.class);
+
+            get2nextActivity.putExtra("weekNUMMM",edweek_Number);
+            get2nextActivity.putExtra("weekDayNum",edweekDay);
+
+            startActivity(get2nextActivity);
         }
         if(view == viewWorkout) {
             //takes to workoutView activity that will display the workout
-            startActivity(new Intent(exerciseDetails.this, workoutView.class));
+            get2nextActivity = new Intent(exerciseDetails.this, workoutView.class);
+            startActivity(get2nextActivity);
         }
         if(view == saveExercise) {
+            Boolean isInserted;
+            isInserted=ExerciseDB.updateExerciseData(edweek_Number,edweekDay,edexName,ed_sets,ed_reps,ed_lb);
             //update & insert the database
             // display  pop up if it saved to database
-            /*if(isInserted == true){
-                Toast.makeText(CreateAnAccount.this, "Exercise saved", Toast.LENGTH_LONG).show();
+            if(isInserted){
+                Toast.makeText(exerciseDetails.this, "Exercise saved", Toast.LENGTH_LONG).show();
             } else {
-                Toast.makeText(CreateAnAccount.this, "Error saving exercise", Toast.LENGTH_LONG).show();
-            }*/
+                Toast.makeText(exerciseDetails.this, "Error saving exercise", Toast.LENGTH_LONG).show();
+            }
         }
     }
 

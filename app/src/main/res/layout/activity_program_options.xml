@@ -19,7 +19,8 @@
         android:layout_below="@+id/SC2S_P2_btn"
         android:layout_alignStart="@+id/SC2S_P2_btn"
         android:textColor="@android:color/black"
-        android:text="Phase 3"/>
+        android:text="Phase 3"
+        android:onClick="onClick (programOptions)"/>
 
     <Button
         android:id="@+id/SC2S_P2_btn"
@@ -28,7 +29,8 @@
         android:layout_below="@+id/SC2S_P1_btn"
         android:layout_alignStart="@+id/SC2S_P1_btn"
         android:textColor="@android:color/black"
-        android:text="Phase 2"/>
+        android:text="Phase 2"
+        android:onClick="onClick (programOptions)"/>
 
     <Button
         android:layout_width="95dp"
@@ -37,16 +39,17 @@
         android:layout_below="@+id/LF_P2_btn"
         android:layout_alignStart="@+id/LF_P2_btn"
         android:textColor="@android:color/black"
-        android:text="Phase 3"/>
+        android:text="Phase 3"
+        android:onClick="onClick (programOptions)"/>
 
     <Button
-        android:layout_width="600dp"
+        android:id="@+id/SC2S_btn"
+        android:layout_alignParentTop="true"
         android:layout_height="40dp"
-        android:id="@+id/livfit_btn"
-        android:layout_below="@+id/SC2Sz_P3_btn"
-        android:layout_centerHorizontal="true"
+        android:layout_width="500dp"
         android:textColor="@android:color/black"
-        android:text="Live Fit"/>
+        android:text="Shortcut to Shred"
+        android:onClick="onClick (programOptions)"/>
 
     <Button
         android:layout_width="600dp"
@@ -55,7 +58,8 @@
         android:layout_below="@+id/SC2S_P3_btn"
         android:layout_toEndOf="@+id/textView5"
         android:textColor="@android:color/black"
-        android:text="Shortcut to Size"/>
+        android:text="Shortcut to Size"
+        android:onClick="onClick (programOptions)"/>
 
     <Button
         android:layout_width="95dp"
@@ -64,7 +68,8 @@
         android:layout_below="@+id/livfit_btn"
         android:layout_alignStart="@+id/SC2Sz_P3_btn"
         android:textColor="@android:color/black"
-        android:text="Phase 1"/>
+        android:text="Phase 1"
+        android:onClick="onClick (programOptions)"/>
 
     <Button
         android:layout_width="95dp"
@@ -73,7 +78,8 @@
         android:layout_below="@+id/SC2Sz_P2_btn"
         android:layout_alignStart="@+id/SC2Sz_P2_btn"
         android:textColor="@android:color/black"
-        android:text="Phase 3"/>
+        android:text="Phase 3"
+        android:onClick="onClick (programOptions)"/>
 
     <Button
         android:id="@+id/SC2S_P1_btn"
@@ -82,7 +88,8 @@
         android:layout_below="@+id/SC2S_btn"
         android:layout_centerHorizontal="true"
         android:textColor="@android:color/black"
-        android:text="Phase 1"/>
+        android:text="Phase 1"
+        android:onClick="onClick (programOptions)"/>
 
     <Button
         android:layout_width="95dp"
@@ -91,7 +98,8 @@
         android:layout_below="@+id/SC2SZ_btn"
         android:layout_alignStart="@+id/SC2S_P3_btn"
         android:textColor="@android:color/black"
-        android:text="Phase 1"/>
+        android:text="Phase 1"
+        android:onClick="onClick (programOptions)"/>
 
     <Button
         android:layout_width="95dp"
@@ -100,7 +108,8 @@
         android:textColor="@android:color/black"
         android:layout_below="@+id/SC2Sz_P1_btn"
         android:layout_alignStart="@+id/SC2Sz_P1_btn"
-        android:text="Phase 2"/>
+        android:text="Phase 2"
+        android:onClick="onClick (programOptions)"/>
 
     <Button
         android:layout_width="95dp"
@@ -109,7 +118,18 @@
         android:textColor="@android:color/black"
         android:layout_below="@+id/LF_P1_btn"
         android:layout_alignStart="@+id/LF_P1_btn"
-        android:text="Phase 2"/>
+        android:text="Phase 2"
+        android:onClick="onClick (programOptions)"/>
+
+    <Button
+        android:layout_width="600dp"
+        android:layout_height="40dp"
+        android:id="@+id/livfit_btn"
+        android:textColor="@android:color/black"
+        android:text="Live Fit"
+        android:layout_below="@+id/SC2Sz_P3_btn"
+        android:layout_alignParentStart="true"
+        android:onClick="onClick (programOptions)"/>
 
     <ImageButton
         android:layout_width="50dp"

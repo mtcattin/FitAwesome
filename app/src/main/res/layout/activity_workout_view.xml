@@ -18,7 +18,8 @@
         android:textColor="@android:color/black"
         android:text="complete Workout"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"/>
+        android:layout_alignParentStart="true"
+        android:onClick="on_WV_Click (workoutView)" />
 
     <Button
         android:layout_width="100dp"
@@ -28,29 +29,53 @@
         android:textColor="@android:color/black"
         android:text="Clear Workout"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"/>
+        android:layout_alignParentEnd="true"
+        android:onClick="on_WV_Click (workoutView)" />
 
     <TextView
         android:layout_height="50dp"
-        android:id="@+id/todayWorkout "
+        android:id="@+id/today_Workout"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:layout_width="250dp"
+        android:layout_width="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:text="Todays Workout"
+        android:text="@string/today_s_workout"
         android:textColor="@android:color/white"/>
 
     <ScrollView
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:id="@+id/list_woutContents"
-        android:layout_below="@+id/todayWorkout "
+        android:layout_below="@id/today_Workout"
         android:layout_centerHorizontal="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"/>
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/wv_tl_scrollview">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </TableLayout>
+        </LinearLayout>
     </ScrollView>
 
 </RelativeLayout>
