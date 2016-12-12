@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_week_day"
     android:layout_width="match_parent"
@@ -60,6 +61,8 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:layout_alignParentTop="true"
         android:layout_marginTop="13dp"/>
+        android:text="Sunday"
+        android:onClick="onClick (WeekDay)"/>
 
     <Button
         android:layout_width="110dp"
@@ -90,5 +93,29 @@
         android:onClick="onClick (WeekDay)"
         android:layout_above="@+id/wed_btn"
         android:layout_alignStart="@+id/wed_btn"/>
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/homewhite2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/go_to_menu_option6"
+        android:scaleType="fitXY"
+        android:layout_above="@+id/weekNumber"
+        android:elevation="24dp"/>
+
+    <EditText
+        android:layout_width="100dp"
+        android:inputType="textPersonName"
+        android:text="Days "
+        android:ems="10"
+        android:id="@+id/weekNumber"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:layout_height="60dp"
+        android:layout_above="@+id/mon_btn"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="37dp" />
+
 
 </RelativeLayout>

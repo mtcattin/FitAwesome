@@ -85,11 +85,12 @@
     </ScrollView>
 
     <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         app:srcCompat="@drawable/homewhite2"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/imageButton" />
+        android:id="@+id/go_to_menu_option2"
+        android:scaleType="fitXY"/>
 
 </RelativeLayout>
