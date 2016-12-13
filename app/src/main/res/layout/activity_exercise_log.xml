@@ -13,7 +13,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_week2"
+        android:id="@+id/btn_View_Wout"
         android:textColor="@android:color/black"
         android:text="Week 2"
         android:onClick="onClick (ExerciseLog)"
@@ -29,8 +29,8 @@
         android:text="Week 3"
         android:onClick="onClick (ExerciseLog)"
         android:layout_marginTop="11dp"
-        android:layout_below="@+id/btn_week2"
-        android:layout_alignStart="@+id/btn_week2" />
+        android:layout_below="@+id/btn_View_Wout"
+        android:layout_alignStart="@+id/btn_View_Wout" />
 
     <Button
         android:layout_width="wrap_content"
@@ -131,8 +131,8 @@
         android:textColor="@android:color/black"
         android:text="Week 8"
         android:onClick="onClick (ExerciseLog)"
-        android:layout_alignBaseline="@+id/btn_week2"
-        android:layout_alignBottom="@+id/btn_week2"
+        android:layout_alignBaseline="@+id/btn_View_Wout"
+        android:layout_alignBottom="@+id/btn_View_Wout"
         android:layout_alignStart="@+id/btn_week7" />
 
     <Button

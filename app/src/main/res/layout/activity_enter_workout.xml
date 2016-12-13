@@ -26,13 +26,13 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_week2"
+        android:id="@+id/btn_View_Wout"
         android:drawableTop="@android:color/holo_blue_dark"
         android:textColor="@android:color/black"
         android:layout_alignParentBottom="true"
         android:layout_toEndOf="@+id/createNewEx_btn"
         android:text="View Workout"
-        android:onClick="onEWClick" />
+        android:onClick="onClick (enterWorkout)" />
 
     <TextView
         android:text="Previous Exercises"

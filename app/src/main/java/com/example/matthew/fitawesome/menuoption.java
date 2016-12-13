@@ -19,14 +19,14 @@ public class menuoption extends AppCompatActivity implements OnClickListener {
     private static final String moTAG = menuoption.class.getSimpleName();
     private Button exProgram;
     private Button woLog;
-    private Button progLog;
+    //private Button progLog;
     private EditText mmUserName;
 
     /**
      * name:  onCreate
      *
      *     This sets up the basic options for people to choose from to get to the next activities.
-     * @param savedInstanceState
+     * @param savedInstanceState no clue
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +41,9 @@ public class menuoption extends AppCompatActivity implements OnClickListener {
         exProgram = (Button) findViewById(R.id.exercise_prg_btn);
         woLog = (Button) findViewById(R.id.workoutLog_btn);
         mmUserName = (EditText) findViewById(R.id.MOuserNameET);
-        mmUserNameSTR = mmUserNameSTR + "!";
+
+
+        //mmUserNameSTR = mmUserNameSTR + "!";
         Log.i(moTAG,"MO mmUserNameSTR is " + mmUserNameSTR );
 
         mmUserName.setText(mmUserNameSTR);
@@ -54,7 +56,7 @@ public class menuoption extends AppCompatActivity implements OnClickListener {
      * name: onClick
      *    Set up the various buttons to link to the next pages. Exercise Program activity &
      *    the other which will let the user enter thier workout.
-     * @param view
+     * @param view to set up button views
      */
     @Override
     public void onClick(View view) {
@@ -64,11 +66,9 @@ public class menuoption extends AppCompatActivity implements OnClickListener {
         }
         if(view == woLog) {
             // send to exerciseLog activity
-            startActivity(new Intent(menuoption.this, ExerciseLog.class));
+            startActivity(new Intent(menuoption.this, ExerciseLog.class).putExtra("userLoginMO",mmUserName.getText().toString() ));
         }
 
-
-        // NOT SETTING UP THE PROGLOG YET...
     }
 }
 

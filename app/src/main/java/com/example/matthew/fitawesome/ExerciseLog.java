@@ -27,7 +27,7 @@ public class ExerciseLog extends AppCompatActivity implements OnClickListener {
     private Button week10;
     private Button week11;
     private Button week12;
-
+    String usernameEL;
     /**
      *  Name: onCreate
      *    This is the initial set up of all the variables and thier buttons.
@@ -38,9 +38,12 @@ public class ExerciseLog extends AppCompatActivity implements OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exercise_log);
 
+        // receive user name
+        usernameEL = getIntent().getStringExtra("userLoginMO");
+
         // link the variables to the buttons
         week1 = (Button) findViewById(R.id.btn_week1);
-        week2 = (Button) findViewById(R.id.btn_week2);
+        week2 = (Button) findViewById(R.id.btn_View_Wout);
         week3 = (Button) findViewById(R.id.btn_week3);
         week4 = (Button) findViewById(R.id.btn_week4);
         week5 = (Button) findViewById(R.id.btn_week5);
@@ -84,19 +87,54 @@ public class ExerciseLog extends AppCompatActivity implements OnClickListener {
         String selectedWeek ="";
         // depending on the week selected open that week's content in the database
         // then go to the weekday Activity
-        if((view == week1) || (view == week2) || (view == week3) || (view == week4)
-                || (view == week5) || (view == week6) || (view == week7) || (view ==week8)
-                || (view == week9) || (view == week10) || (view == week11) || (view == week12)) {
-            // get the week that has been selected
-            selectedWeek = view.toString();
+        if(view == week1){
+            selectedWeek = "1";
+        }
+
+        if(view == week2){
+            selectedWeek = "2";
+        }
+        if(view == week3){
+            selectedWeek = "3";
+        }
+        if(view == week4){
+            selectedWeek = "4";
+        }
+        if(view == week5){
+            selectedWeek = "5";
+        }
+        if(view == week6){
+            selectedWeek = "6";
+        }
+        if(view == week7){
+            selectedWeek = "7";
+        }
+        if(view == week8){
+            selectedWeek = "8";
+        }
+        if(view == week9){
+            selectedWeek = "9";
+        }
+        if(view == week10){
+            selectedWeek = "10";
+        }
+        if(view == week11){
+            selectedWeek = "11";
+        }
+        if(view == week12){
+            selectedWeek = "12";
+        }
+        // get the week that has been selected
+            //selectedWeek = view.toString();
             //week1.getText().toString();
 
             // pass the value to the next screen
-            Intent nextActivityDays = new Intent(ExerciseLog.this, WeekDay.class);
-            // to handoff the variable to the next activity, need to pass a unique string value
-            nextActivityDays.putExtra("exerciseLogWeek#",selectedWeek);
-            startActivity(nextActivityDays);
-        }
-
+        Intent nextActivityDays = new Intent(ExerciseLog.this, WeekDay.class);
+        // to handoff the variable to the next activity, need to pass a unique string value
+        nextActivityDays.putExtra("exerciseLogWeek",selectedWeek);
+        nextActivityDays.putExtra("userLoginEL",usernameEL);
+        startActivity(nextActivityDays);
     }
+
+
 }

@@ -89,7 +89,8 @@
         android:gravity="center_vertical|center_horizontal|center"
         android:layout_below="@+id/password2ET"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="28dp" />
+        android:layout_marginTop="28dp"
+        android:onClick="onCreateButtonClick" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -103,14 +104,5 @@
         android:clickable="false"
         android:layout_below="@+id/Last_Name"
         android:layout_alignParentStart="true" />
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
-
-    </LinearLayout>
 
 </RelativeLayout>

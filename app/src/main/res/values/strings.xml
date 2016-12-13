@@ -24,4 +24,6 @@
     <string name="usernameMM">Username</string>
     <string name="passwordMM">Password</string>
     <string name="today_s_workout">Today\'s Workout</string>
+    <string name="save_exerciseCAE">Save Exercise</string>
+    <string name="view_workoutCAE">View Workout</string>
 </resources>

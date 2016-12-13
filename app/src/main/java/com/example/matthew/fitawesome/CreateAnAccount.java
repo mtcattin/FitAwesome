@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -16,8 +15,6 @@ import android.widget.Toast;
 */
 public class CreateAnAccount extends AppCompatActivity {
     DBHelper mydb;
-    private EditText editFirst, editLast, editEmail, PWD1, PWD2, usernameET;
-    private Button btn_CreateAccount;
 
     @Override
     /*
@@ -33,15 +30,10 @@ public class CreateAnAccount extends AppCompatActivity {
         setContentView(R.layout.activity_create_an_account);
 
         mydb = new DBHelper(this);
-        editFirst = (EditText) findViewById(R.id.First_Name);
-        editLast = (EditText) findViewById(R.id.Last_Name);
-        editEmail = (EditText) findViewById(R.id.email);
-        PWD1 = (EditText) findViewById(R.id.password1ET);
-        PWD2 = (EditText) findViewById(R.id.password2ET);
-        usernameET = (EditText) findViewById(R.id.UserNameIDET);
-        btn_CreateAccount = (Button) findViewById(R.id.btn_CAA);
-        // insert the details into database
-        AddData();
+
+        //btn_CreateAccount = (Button) findViewById(R.id.btn_CAA);
+
+
     }
 
     /*
@@ -55,7 +47,7 @@ public class CreateAnAccount extends AppCompatActivity {
     *
     * @param view
     */
-    public void AddData(){
+ /*   public void AddData(){
         btn_CreateAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -64,19 +56,23 @@ public class CreateAnAccount extends AppCompatActivity {
                 String password2 = PWD2.getText().toString();
 
                 // check password match
-                if((password1.equals(""))||(password2.equals(""))){
-                    Toast.makeText(CreateAnAccount.this, "passwords are empty", Toast.LENGTH_LONG).show();
-                  // clearPasswords();
-                  // startActivity(new Intent(CreateAnAccount.this, MainMenu.class));
-                }
-                else if (!password1.equals(password2)){
-                    Toast.makeText(CreateAnAccount.this, "passwords do not match!", Toast.LENGTH_LONG).show();
-                }
+                do {
+                    if ((password1.equals("")) || (password2.equals(""))) {
+                        Toast.makeText(CreateAnAccount.this, "passwords are empty", Toast.LENGTH_LONG).show();
+
+                        // startActivity(new Intent(CreateAnAccount.this, MainMenu.class));
+                    }
+                    else {
+                        Toast.makeText(CreateAnAccount.this, "passwords do not match!", Toast.LENGTH_LONG).show();
+                    }
+                    //clearPasswords();
+                }while (!password1.equals(password2));
+
 
                 boolean isInserted = mydb.insertData(editFirst.getText().toString(),
                         editLast.getText().toString(), editEmail.getText().toString(),
                         usernameET.getText().toString(), PWD1.getText().toString());
-            if(isInserted == true){
+            if(isInserted){
                 Toast.makeText(CreateAnAccount.this, "Data inserted", Toast.LENGTH_LONG).show();
 
             } else {
@@ -89,6 +85,43 @@ public class CreateAnAccount extends AppCompatActivity {
             }
         });
     }
+*/
+
+    public void onCreateButtonClick(View view){
+        boolean isInserted;
+
+        EditText editFirst = (EditText) findViewById(R.id.First_Name);
+        EditText editLast = (EditText) findViewById(R.id.Last_Name);
+        EditText editEmail = (EditText) findViewById(R.id.email);
+        EditText PWD1 = (EditText) findViewById(R.id.password1ET);
+        EditText PWD2 = (EditText) findViewById(R.id.password2ET);
+        EditText usernameET = (EditText) findViewById(R.id.UserNameIDET);
+
+        if (view.getId() == R.id.btn_CAA){
+
+            String password1 = PWD1.getText().toString();
+            String password2 = PWD2.getText().toString();
+
+            // check password match
+            if (!password1.equals(password2) || (password1.equals("")) || (password2.equals(""))){
+
+                    Toast.makeText(CreateAnAccount.this, "Passwords do not match!", Toast.LENGTH_LONG).show();
+                }
+            else {
+                isInserted = mydb.insertData(editFirst.getText().toString(),
+                        editLast.getText().toString(), editEmail.getText().toString(),
+                        usernameET.getText().toString(), PWD1.getText().toString());
+                if(isInserted){
+                    Toast.makeText(CreateAnAccount.this, "Data inserted", Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(CreateAnAccount.this, MainMenu.class));
+
+                } else {
+                    Toast.makeText(CreateAnAccount.this, "Data not inserted", Toast.LENGTH_LONG).show();
+                }
+            }
+        }
+    }
+
 
     /*
    * Name: clearPasswords
@@ -97,8 +130,9 @@ public class CreateAnAccount extends AppCompatActivity {
    *
    *  @param none
    */
-    private void clearPasswords(){
+ /*   private void clearPasswords(){
         PWD1.setText("");
         PWD2.setText("");
     }
+ */
 }

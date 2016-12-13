@@ -26,6 +26,8 @@ public class MainMenu extends AppCompatActivity {
     private EditText password;
     private DBHelper myDB;
 
+
+
     /**
      * Name: onCreate
      *
