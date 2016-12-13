@@ -130,7 +130,7 @@
         android:layout_alignParentEnd="true"/>
 
     <ImageButton
-        app:srcCompat="@drawable/homewhite2"
+        app:srcCompat="@mipmap/btn_home"
         android:id="@+id/go_to_menu_option3"
         android:scaleType="fitXY"
         android:layout_width="50dp"

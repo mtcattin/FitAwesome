@@ -26,12 +26,10 @@ public class enterWorkout extends AppCompatActivity implements OnClickListener{
     ExerciseDBHelper sameDB;
     private Button createNewEx;
     private Button viewWorkout;
-   // private SearchView exerciseDatabase;
     private ScrollView displayExercisesInDB;
     private String weekDay_num;
     private String week_number;
     String exercise_name ="";
-    private SearchView exerciseDatabase;
     // Go to menuoptions activity icon
     private ImageButton menuhomepageview;
 
