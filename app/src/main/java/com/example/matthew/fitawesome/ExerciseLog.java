@@ -128,6 +128,7 @@ public class ExerciseLog extends AppCompatActivity implements OnClickListener {
             //selectedWeek = view.toString();
             //week1.getText().toString();
 
+
             // pass the value to the next screen
         Intent nextActivityDays = new Intent(ExerciseLog.this, WeekDay.class);
         // to handoff the variable to the next activity, need to pass a unique string value

@@ -150,7 +150,6 @@
         android:layout_alignParentEnd="true"/>
 
     <ImageButton
-        app:srcCompat="@drawable/homewhite2"
         android:id="@+id/go_to_menu_option3"
         android:scaleType="fitXY"
         android:layout_width="50dp"

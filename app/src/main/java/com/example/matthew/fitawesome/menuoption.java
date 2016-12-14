@@ -69,6 +69,7 @@ public class menuoption extends AppCompatActivity implements OnClickListener {
             startActivity(new Intent(menuoption.this, ExerciseLog.class).putExtra("userLoginMO",mmUserName.getText().toString() ));
         }
 
+
     }
 }
 

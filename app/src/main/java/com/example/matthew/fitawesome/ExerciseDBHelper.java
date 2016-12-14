@@ -120,6 +120,7 @@ public class ExerciseDBHelper extends SQLiteOpenHelper {
     }
     // Create one to get just the list of exercise names (independent of the week)
 
+
     // Create one to get just the weekNum
 
     // create one to get the day WITHIN the current weekNum

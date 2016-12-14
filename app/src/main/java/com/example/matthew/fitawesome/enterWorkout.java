@@ -92,6 +92,7 @@ public class enterWorkout extends AppCompatActivity implements OnClickListener{
             // take to the exerciseDetails activity
             Intent afterWrkoutAct = new Intent(enterWorkout.this, exerciseDetails.class);
             exercise_name="";
+
             afterWrkoutAct.putExtra("ewExercise_Name", exercise_name);
             afterWrkoutAct.putExtra("ewWeekDay", weekDayEW);
             afterWrkoutAct.putExtra("ewWeekNumber", week_numberEW);

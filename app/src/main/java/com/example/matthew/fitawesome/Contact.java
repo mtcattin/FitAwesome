@@ -14,6 +14,7 @@ public class Contact {
     }
 
     public int getContactNumber() {
+
         return contactNumber;
     }
 

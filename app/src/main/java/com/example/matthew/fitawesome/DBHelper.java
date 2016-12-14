@@ -22,6 +22,7 @@ public class DBHelper extends SQLiteOpenHelper {
     //private SQLiteDatabase db;
     // create DB name
     private static final String DATABASE_NAME = "FitnessAppUser.db";
+
     // DB version
     private static final int DATABASE_VERSION = 1;
     // create table name

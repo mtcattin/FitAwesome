@@ -160,6 +160,7 @@ public class workoutView extends AppCompatActivity implements OnClickListener {
                 wVtextView3.setTextSize(25);
                 wVtextView4.setTextSize(25);
 
+
                 wVtableRow.addView(wVtextView1);
                 wVtableRow.addView(wVtextView2);
                 wVtableRow.addView(wVtextView3);

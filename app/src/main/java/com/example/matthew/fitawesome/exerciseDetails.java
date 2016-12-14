@@ -114,6 +114,7 @@ public class exerciseDetails extends AppCompatActivity implements View.OnClickLi
             get2nextActivity.putExtra("selectedDayWD",edweekDay);
             get2nextActivity.putExtra("userloginWD",userNameED);
             startActivity(get2nextActivity);
+
         }
         if(view == saveExercise) {
             Boolean isInserted;

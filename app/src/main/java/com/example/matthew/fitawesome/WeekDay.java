@@ -109,6 +109,7 @@ public class WeekDay extends AppCompatActivity implements OnClickListener {
                 selectedDay = "saturday";
             }
 
+
             Log.i(wDTAG,"set WDay selectedDayWD = " + selectedDay ) ;
             Log.i(wDTAG,"Rcvd from Ex Log weekNumWD = " + weekNumWD.getText().toString() ) ;
             Log.i(wDTAG,"Rcvd userloginWD = " + userLoginWD ) ;

@@ -16,6 +16,7 @@ public class programOptions extends AppCompatActivity implements OnClickListener
     private Button SC2Sprgm_p2;
     private Button SC2Sprgm_p3;
 
+
 // short cut to size buttons
     private Button SC2Szprgm;
     private Button SC2Szprgm_p1;
