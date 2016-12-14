@@ -12,16 +12,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.matthew.fitawesome.exerciseDetails">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/textView"
-        tools:text=" "
-        android:textSize="30sp"
-        android:text="Details"/>
-
     <Button
         android:layout_height="75dp"
         android:id="@+id/addEx_btnED"
@@ -121,7 +111,7 @@
 
     <Button
         android:layout_width="100dp"
-        android:id="@+id/button2"
+        android:id="@+id/save_ex_btn"
         android:layout_height="75dp"
         android:textColor="@android:color/black"
         android:text="Save Exercise"
@@ -148,13 +138,5 @@
         android:onClick="onExerciseClick"
         android:layout_alignTop="@+id/addEx_btnED"
         android:layout_alignParentEnd="true"/>
-
-    <ImageButton
-        android:id="@+id/go_to_menu_option3"
-        android:scaleType="fitXY"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

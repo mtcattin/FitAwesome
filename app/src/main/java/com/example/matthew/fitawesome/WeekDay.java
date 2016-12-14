@@ -23,7 +23,7 @@ public class WeekDay extends AppCompatActivity implements OnClickListener {
 
     // to receive strings from exercise log
     private String userLoginWD;
-    private String weekNumSTR;
+    String weekNumSTR;
     private EditText weekNumWD;
 
     // for buttons displayed in this activity
@@ -55,7 +55,8 @@ public class WeekDay extends AppCompatActivity implements OnClickListener {
         userLoginWD = getIntent().getStringExtra("userLoginEL");
 
         weekNumWD = (EditText) findViewById(R.id.weekNumber);
-        weekNumWD.setText("Week "+weekNumSTR);
+        weekNumSTR = "Week " + weekNumSTR;
+        weekNumWD.setText(weekNumSTR);
 
         // link the buttons to the variables
         sunday = (Button) findViewById(R.id.sun_btn);
@@ -81,7 +82,7 @@ public class WeekDay extends AppCompatActivity implements OnClickListener {
      *
      * This sets up the various days which the user will choose from and pass off both the week day
      * they selected as well as the previously selected week number.
-     * @param view
+     * @param view based on button clicked String is given the value of the button label
      */
         @Override
         public void onClick (View view){

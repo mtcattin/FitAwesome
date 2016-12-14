@@ -9,11 +9,9 @@ import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.ScrollView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.Toast;
-
 
 /*
 *  enterWorkout Class
@@ -23,7 +21,7 @@ import android.widget.Toast;
 *  It displays all the exercises as buttons
 *
 */
-public class enterWorkout extends AppCompatActivity implements OnClickListener{
+public class enterWorkout extends AppCompatActivity implements OnClickListener {
 
     // this is what the debugger string is looking for(see below)
     private static final String eWTAG = enterWorkout.class.getSimpleName();
@@ -31,15 +29,11 @@ public class enterWorkout extends AppCompatActivity implements OnClickListener{
     ExerciseDBHelper sameDB;
     private Button createNewEx;
     private Button viewWorkout;
-   // private SearchView exerciseDatabase;
-    private ScrollView displayExercisesInDB;
 
     private String userNameEW;
     private String weekDayEW;
     private String week_numberEW;
-    private String exercise_name ="";
-
-
+    private String exercise_name = "";
 
 
     @Override
@@ -58,9 +52,9 @@ public class enterWorkout extends AppCompatActivity implements OnClickListener{
         weekDayEW = getIntent().getStringExtra("selectedDayWD");
         week_numberEW = getIntent().getStringExtra("weekNumWD");
 
-        Log.i(eWTAG,"rcvdFromWD userloginWD " + userNameEW ) ;
-        Log.i(eWTAG,"rcvdFromWD selectedDayWD " + weekDayEW );
-        Log.i(eWTAG,"rcvdFromWD weekNumWD " + week_numberEW );
+        Log.i(eWTAG, "rcvdFromWD userloginWD " + userNameEW);
+        Log.i(eWTAG, "rcvdFromWD selectedDayWD " + weekDayEW);
+        Log.i(eWTAG, "rcvdFromWD weekNumWD " + week_numberEW);
 
 
         sameDB = new ExerciseDBHelper(this);
@@ -88,10 +82,11 @@ public class enterWorkout extends AppCompatActivity implements OnClickListener{
     public void onClick(View view) {
 
         //Intent afterWrkoutAct;
-        if(view == createNewEx) {
+        if (view == createNewEx) {
             // take to the exerciseDetails activity
             Intent afterWrkoutAct = new Intent(enterWorkout.this, exerciseDetails.class);
-            exercise_name="";
+            exercise_name = "";
+
 
             afterWrkoutAct.putExtra("ewExercise_Name", exercise_name);
             afterWrkoutAct.putExtra("ewWeekDay", weekDayEW);
@@ -99,7 +94,7 @@ public class enterWorkout extends AppCompatActivity implements OnClickListener{
             afterWrkoutAct.putExtra("ewUserName", userNameEW);
             startActivity(afterWrkoutAct);
         }
-        if(view == viewWorkout) {
+        if (view == viewWorkout) {
             // take to the workout view Activity
             Intent afterWrkoutAct2 = new Intent(enterWorkout.this, workoutView.class);
             afterWrkoutAct2.putExtra("selectedDayWD", weekDayEW);
@@ -111,18 +106,19 @@ public class enterWorkout extends AppCompatActivity implements OnClickListener{
     }
 
     // displays all exercises in DB as buttons
-    private void viewExercises(){
+    private void viewExercises() {
 
-        TableLayout ewTableLayout = (TableLayout)findViewById(R.id.ew_scrollTable);
+        TableLayout ewTableLayout = (TableLayout) findViewById(R.id.ew_scrollTable);
 
         // get row count from DB
         int count = sameDB.countRowsInDB();
 
+        //set up Database to send queries
         SQLiteDatabase exdb_temp;
         exdb_temp = sameDB.getReadableDatabase();
 
-        Cursor cursor = exdb_temp.rawQuery("select Exercise from UserExercise_table",null);
-        Log.i(eWTAG,"ViewExercisesEW Ex name " + exercise_name ) ;
+        Cursor cursor = exdb_temp.rawQuery("select Exercise from UserExercise_table", null);
+        Log.i(eWTAG, "ViewExercisesEW Ex name " + exercise_name);
 
         if (cursor.moveToFirst()) {
             //int count = 10;
@@ -137,22 +133,26 @@ public class enterWorkout extends AppCompatActivity implements OnClickListener{
 
                 exercise_name = cursor.getString(0);
 
-                Log.i(eWTAG,"EWViewExercises Name " + row + exercise_name);
-                        // create a new button
-                Button button = new Button(this);
+                Log.i(eWTAG, "EWViewExercises Name " + row + exercise_name);
+
+                // create a new button
+                final Button button = new Button(this);
 
                 // set button parameters
                 button.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT,
                         TableRow.LayoutParams.MATCH_PARENT, 1.0f));
                 //set button text display
                 button.setText(exercise_name);
+                exercise_name = button.getText().toString();
                 // set button to be clickable
                 button.setOnClickListener(new OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        gotoExercise();
+
+                        Toast.makeText(enterWorkout.this, "Note: This creates another workout log with the same name", Toast.LENGTH_LONG).show();
                         Intent nextExerciseDetails = new Intent(enterWorkout.this, exerciseDetails.class);
-                        nextExerciseDetails.putExtra("ewExercise_Name", exercise_name);
+                        nextExerciseDetails.putExtra("ewExercise_Name", button.getText().toString());
+                        Log.i(eWTAG, "EW OnClickListsten 4 button" + exercise_name);
                         nextExerciseDetails.putExtra("ewWeekDay", weekDayEW);
                         nextExerciseDetails.putExtra("ewWeekNumber", week_numberEW);
                         nextExerciseDetails.putExtra("ewUserName", userNameEW);
@@ -162,7 +162,7 @@ public class enterWorkout extends AppCompatActivity implements OnClickListener{
                 tableRow.addView(button);
                 cursor.moveToNext();
 
-                if(cursor.isAfterLast()){
+                if (cursor.isAfterLast()) {
                     break;
                 }
             }
@@ -170,9 +170,4 @@ public class enterWorkout extends AppCompatActivity implements OnClickListener{
         cursor.close();
 
     }
-    // Function to view exercise
-    public void gotoExercise(){
-        Toast.makeText(enterWorkout.this, "In Go to Exercise link", Toast.LENGTH_SHORT).show();
-    }
-
 }

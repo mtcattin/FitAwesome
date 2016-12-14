@@ -32,9 +32,9 @@ public class menuoption extends AppCompatActivity implements OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menuoption);
-        //degbug
+        //debug
         Log.i(moTAG,"OnCreate in MO" );
-        //6.37 time on video
+
         String mmUserNameSTR = getIntent().getStringExtra("usernamefromMM");
 
         // link the variables to the buttons in the XML
@@ -42,8 +42,6 @@ public class menuoption extends AppCompatActivity implements OnClickListener {
         woLog = (Button) findViewById(R.id.workoutLog_btn);
         mmUserName = (EditText) findViewById(R.id.MOuserNameET);
 
-
-        //mmUserNameSTR = mmUserNameSTR + "!";
         Log.i(moTAG,"MO mmUserNameSTR is " + mmUserNameSTR );
 
         mmUserName.setText(mmUserNameSTR);
@@ -68,7 +66,6 @@ public class menuoption extends AppCompatActivity implements OnClickListener {
             // send to exerciseLog activity
             startActivity(new Intent(menuoption.this, ExerciseLog.class).putExtra("userLoginMO",mmUserName.getText().toString() ));
         }
-
 
     }
 }

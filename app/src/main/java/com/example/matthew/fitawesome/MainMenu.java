@@ -26,14 +26,12 @@ public class MainMenu extends AppCompatActivity {
     private EditText password;
     private DBHelper myDB;
 
-
-
     /**
      * Name: onCreate
      *
      *     This deals with creating an instance of the database and also sets up the
      *     edit Text fields.
-     * @param savedInstanceState
+     * @param savedInstanceState initializes values in the class
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,7 +76,8 @@ public class MainMenu extends AppCompatActivity {
      * It also deals with converting the username and password to a string so it can be matched in
      * the DB. It also checks that an entered password matches the password that has been stored
      * within the database.
-     * @param view
+     * @param view based on button clicked it either the user log in is
+     *             success or user has to create an account
      */
     public void onButtonClick(View view){
         if (view.getId()== R.id.BtnSignIn){
@@ -109,6 +108,4 @@ public class MainMenu extends AppCompatActivity {
             startActivity(nextActivity);
         }
     }
-
-
 }

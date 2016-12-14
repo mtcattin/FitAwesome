@@ -138,8 +138,8 @@ public class DBHelper extends SQLiteOpenHelper {
     /**
      * Name:  searchPassword
      *      Searches for the users saved password and returns that password from the database
-     * @param checkUser
-     * @return password
+     * @param checkUser username is passed to the function
+     * @return password username's password from the DB is returned
      */
     public String searchPassword(String checkUser){
         //this lets

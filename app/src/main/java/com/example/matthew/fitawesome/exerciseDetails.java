@@ -25,7 +25,6 @@ public class exerciseDetails extends AppCompatActivity implements View.OnClickLi
     // create the DB
     ExerciseDBHelper ExerciseDB;
 
-
     // to capture details from previous activity
     String edexName;
     String edweek_Number;
@@ -96,7 +95,6 @@ public class exerciseDetails extends AppCompatActivity implements View.OnClickLi
         ed_reps = reps.getText().toString();
         ed_lb = lb.getText().toString();
 
-
         if(view == addExercise) {
             // add another new exercise to the day workout --> back to previous activity
             Intent get2nextActivity = new Intent(exerciseDetails.this, enterWorkout.class);
@@ -144,5 +142,4 @@ public class exerciseDetails extends AppCompatActivity implements View.OnClickLi
         reps.setText("");
         lb.setText("");
     }
-
 }

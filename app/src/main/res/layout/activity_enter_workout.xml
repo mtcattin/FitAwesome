@@ -32,7 +32,7 @@
         android:layout_alignParentBottom="true"
         android:layout_toEndOf="@+id/createNewEx_btn"
         android:text="View Workout"
-        android:onClick="onClick (enterWorkout)" />
+        android:onClick="onEWClick" />
 
     <TextView
         android:text="Previous Exercises"
@@ -83,13 +83,5 @@
             </TableLayout>
         </LinearLayout>
     </ScrollView>
-
-    <ImageButton
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/go_to_menu_option2"
-        android:scaleType="fitXY"/>
 
 </RelativeLayout>

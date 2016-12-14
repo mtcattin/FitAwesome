@@ -44,49 +44,17 @@ public class CreateAnAccount extends AppCompatActivity {
     * don't match and also checks to make sure that the data is entered into the database if they
     * do enter the data correctly. Once they have successfully set up an account it will also
     * redirect the user back to the Login page.
-    *
-    * @param view
-    */
- /*   public void AddData(){
-        btn_CreateAccount.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                String password1 = PWD1.getText().toString();
-                String password2 = PWD2.getText().toString();
-
-                // check password match
-                do {
-                    if ((password1.equals("")) || (password2.equals(""))) {
-                        Toast.makeText(CreateAnAccount.this, "passwords are empty", Toast.LENGTH_LONG).show();
-
-                        // startActivity(new Intent(CreateAnAccount.this, MainMenu.class));
-                    }
-                    else {
-                        Toast.makeText(CreateAnAccount.this, "passwords do not match!", Toast.LENGTH_LONG).show();
-                    }
-                    //clearPasswords();
-                }while (!password1.equals(password2));
 
 
-                boolean isInserted = mydb.insertData(editFirst.getText().toString(),
-                        editLast.getText().toString(), editEmail.getText().toString(),
-                        usernameET.getText().toString(), PWD1.getText().toString());
-            if(isInserted){
-                Toast.makeText(CreateAnAccount.this, "Data inserted", Toast.LENGTH_LONG).show();
-
-            } else {
-                Toast.makeText(CreateAnAccount.this, "Data not inserted", Toast.LENGTH_LONG).show();
-            }
-                //mydb.close();
-
-                // Go back to main menu
-                startActivity(new Intent(CreateAnAccount.this, MainMenu.class));
-            }
-        });
-    }
-*/
-
+    /**
+     * This function attempts sets up the create an account. This function checks to make sure the
+     * user has entered a correct password. It checks to see if passwords are empty, if they
+     * don't match and also checks to make sure that the data is entered into the database if they
+     * do enter the data correctly. Once they have successfully set up an account it will also
+     * redirect the user back to the Login page.
+     * Name: onCreateButtonClick
+     * @param view
+     */
     public void onCreateButtonClick(View view){
         boolean isInserted;
 

@@ -166,27 +166,3 @@ public class programOptions extends AppCompatActivity implements OnClickListener
         }
     }
 }
-//Use this code for the image buttons
-//    // Go to menuoptions activity icon
-//       private ImageButton menuhomepageview;
-
-//// Link to Home Page View (Menu Option Activity)
-//         menuhomepageview = (ImageButton) findViewById(R.id.go_to_menu_option1);
-//
-//        //If selected Return To Home Page button then go to menuoption activity
-//        if(view == menuhomepageview) {
-//        // Send to menuoption activity
-//        startActivity(new Intent(exerciseDetails.this, menuoption.class));
-//        }
-//***Dont use this code below***
-//    // Menu Options button
-//    private Button menuhomepageview;
-
-//// Link to Home Page View (Menu Option Activity)
-//menuhomepageview = (Button) findViewById(R.id.menu_option_btn);
-//
-//        //If selected Return To Home Page button then go to menuoption activity
-//        if(view == menuhomepageview) {
-//        // send to exerciseLog activity
-//        startActivity(new Intent(programOptions.this, menuoption.class));
-//        }

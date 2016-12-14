@@ -69,12 +69,12 @@ public class ExerciseDBHelper extends SQLiteOpenHelper {
      *    Name: updateExerciseData
      *
      *    This inserts data for every row of the database.
-     * @param WeekNum
-     * @param dayOfWeek
-     * @param eX_Name
-     * @param newSet
-     * @param newRepsPerSet
-     * @param newWeightPerSet
+     * @param WeekNum insert week number into DB
+     * @param dayOfWeek insert Week Day into DB
+     * @param eX_Name insert exercise name into DB
+     * @param newSet insert set number into DB
+     * @param newRepsPerSet insert reps into DB
+     * @param newWeightPerSet insert weight used into DB
      *
      * @return T or F, depending if it was able to insert the data or not
      */
@@ -104,27 +104,12 @@ public class ExerciseDBHelper extends SQLiteOpenHelper {
             return true;
     }
 
-// displays everything in the DB
-/*    public Cursor getAllExData() {
-        SQLiteDatabase exdb = this.getWritableDatabase();
-        Cursor res = exdb.rawQuery("select * from "+TABLE_NAME,null);
-        return res;
-    }
-*/
-
-
-    public Cursor getAllExercises(){
-        SQLiteDatabase exdb = this.getWritableDatabase();
-        Cursor res = exdb.rawQuery("select * from "+TABLE_NAME,null);
-        return res;
-    }
-    // Create one to get just the list of exercise names (independent of the week)
-
-
-    // Create one to get just the weekNum
-
-    // create one to get the day WITHIN the current weekNum
-
+    /**
+     *
+     * @param weekNumFromDB Week number to get rows from DB
+     * @param weekDayFromDB Week day to get rows from DB
+     * @return returns a cursor to the required rows in DB
+     */
     public Cursor getRowValues(String weekNumFromDB, String weekDayFromDB) {
         SQLiteDatabase exdb = this.getReadableDatabase();
         //String from[] = { "Exercise", "SetNumber","RepsPerSet","WeightPerSet" };
@@ -135,6 +120,12 @@ public class ExerciseDBHelper extends SQLiteOpenHelper {
         return cursor;
     }
 
+    /**
+     * Gets the exercises for the day
+     * @param weekNumRCVD retrieve information based on week number
+     * @param weekDayRCVD retrieve information based on week day
+     * @return returns a cursor to the rows pointing to the rows requested in parameters
+     */
     public Cursor getCurrentExercises(String weekNumRCVD, String weekDayRCVD){
         SQLiteDatabase exdb = this.getReadableDatabase();
         String [] columns = {"WeekNum", "WeekDay", "Exercise", "SetNumber","RepsPerSet" };
@@ -149,16 +140,15 @@ public class ExerciseDBHelper extends SQLiteOpenHelper {
      *
      *    Delete a value from the database, this is intended to allow the user to detele
      *    a specified exercise when they wish to.
-     * @param id
-     * @return T or F, if it deleted or not
+     *    @return T or F, if it deleted or not
      *
      */
-    // deletes an exercise by the ID
-    public Integer deleteExData (String id) {
+    // deletes an exercise by the ID to be implemented later
+ /*   public Integer deleteExData (String id) {
         SQLiteDatabase exdb = this.getWritableDatabase();
         return exdb.delete(TABLE_NAME, "ID = ?",new String[] {id});
     }
-
+*/
     // get the count of rows in the DB
     public int countRowsInDB(){
         SQLiteDatabase exdb = this.getReadableDatabase();
