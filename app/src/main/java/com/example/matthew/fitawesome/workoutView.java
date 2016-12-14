@@ -109,7 +109,6 @@ public class workoutView extends AppCompatActivity implements OnClickListener {
                         TableLayout.LayoutParams.MATCH_PARENT, 1.0f));
                 // adds new row inside table
                 wvTableLayout.addView(wVtableRow);
-
                 // converting cursor to string values
                 temp = cursordb.getString(0);
                 temp2 = cursordb.getString(1);

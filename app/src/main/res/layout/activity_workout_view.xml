@@ -11,17 +11,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.matthew.fitawesome.workoutView">
 
-    <Button
-        android:id="@+id/completeWout_btn"
-        android:layout_width="100dp"
-        android:layout_height="75dp"
-        android:textColor="@android:color/black"
-        android:text="complete Workout"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:onClick="on_WV_Click (workoutView)" />
-
-    <Button
+    <!--<Button
         android:layout_width="100dp"
         android:layout_height="75dp"
         android:layout_marginEnd="25dp"
@@ -30,7 +20,7 @@
         android:text="Clear Workout"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:onClick="on_WV_Click (workoutView)" />
+        android:onClick="on_WV_Click (workoutView)" />-->
 
     <TextView
         android:layout_height="50dp"
@@ -42,32 +32,22 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/list_woutContents"
-        android:weightSum="1"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@+id/today_Workout"
-        android:layout_alignParentStart="true">
-
-        <TextView
-            android:text="TextView"
-            android:layout_width="158dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView9"
-            android:textSize="30sp"
-            android:textAlignment="center" />
-    </LinearLayout>
+    <Button
+        android:id="@+id/completeWout_btn"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:textColor="@android:color/black"
+        android:text="complete Workout"
+        android:onClick="on_WV_Click (workoutView)"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
     <ScrollView
-        android:layout_width="300dp"
-        android:layout_height="300dp"
         android:id="@+id/list_woutContents"
-        android:layout_centerVertical="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true">
+        android:layout_height="400dp"
+        android:layout_width="400dp"
+        android:layout_below="@+id/today_Workout"
+        android:layout_alignParentStart="true">
 
         <LinearLayout
             android:layout_width="match_parent"
